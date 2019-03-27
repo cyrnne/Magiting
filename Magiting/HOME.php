@@ -1,3 +1,7 @@
+<?php
+include('includes/session.php');
+?>
+
 <html>
 
 <head>
@@ -16,7 +20,7 @@
             <div class="container-fluid"><button data-toggle="collapse" data-target="#navcol-1" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navcol-1"><a href="#" class="blank"></a><a href="#" class="blank"></a><a href="#" class="blank"></a>
                     <ul class="nav navbar-nav mx-auto" style="margin: 0px;padding: 0px;">
-                        <li role="presentation" class="nav-item"><a href="Home.php" class="nav-link">HOME</a></li>
+                        <li role="presentation" class="nav-item"><a href="index.php" class="nav-link">HOME</a></li>
                         <li role="presentation" class="nav-item"><a href="#" class="nav-link">ABOUT US</a></li>
                         <li class="dropdown nav-item"><a data-toggle="dropdown" aria-expanded="false" href="#" class="dropdown-toggle nav-link">PRODUCTS</a>
                             <div role="menu" class="dropdown-menu"><a role="presentation" href="#" class="dropdown-item">Tees</a><a role="presentation" href="#" class="dropdown-item">Caps</a><a role="presentation" href="#" class="dropdown-item">Stickers</a></div>
