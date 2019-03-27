@@ -1,3 +1,79 @@
+<?php
+
+session_start();
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+   
+    
+    if ($_POST['action'] == 'Login') {
+        
+       
+           loginCheck();
+        
+    
+    }
+    
+}
+
+ function loginCheck(){
+  $verify = "";
+    include("includes/indexdb.php");
+      
+      $getid = $_POST["username"];
+      $getpass = $_POST["pass"];
+    
+
+      $encryptedPass = md5($getpass);
+
+
+   
+      $conn = new mysqli($servername, $username, $password, $dbname);
+      $sql = "SELECT * FROM tbllogin where username like '".$getid."' and password like '".$encryptedPass."'";
+      $result = $conn->query($sql);
+       
+     if ($result->num_rows > 0) {
+    // output data of each r1ow
+    
+    
+  
+        while($row = $result->fetch_assoc()) {
+              $role = $row["role"]; 
+        
+             if($role == "user"){
+                  
+
+                       $_SESSION['login_user'] = $getid;
+                       $_SESSION['login_userStat'] = $role;
+                       $_SESSION['login_pass'] = $encryptedPass;
+                       
+                       header("location: index.php");
+           
+                          }else {
+               
+                       $_SESSION['login_user'] = $getid;
+                       $_SESSION['login_userStat'] = $role;
+                       $_SESSION['login_pass'] = $encryptedPass;
+                       
+                         header("location: admin.php");          
+             
+                    
+                    }
+    }  
+
+}else{
+    echo "<script>alert('Wrong Password')</script>";
+}
+
+    
+     
+        
+                    
+}
+        
+   
+
+?>
+
 <html>
 
 <head>
@@ -27,13 +103,14 @@
         </div>
         </nav>
         <div class="login-clean" style="background-color: rgba(0,0,0,0.1);">
-            <form method="post">
+             <form class="login100-form validate-form" method="post" class="well">
                 <h2 class="sr-only">Login Form</h2>
                 <h4 class="text-center login-heading" style="margin-top: -15px;margin-bottom: 15px;">RETURNING CUSTOMER</h4>
                 <div class="illustration"><img src="assets/img/login.png" alt="test" style="margin-bottom: 8px;" /></div>
-                <div class="form-group"><input type="email" name="email" placeholder="Email" class="form-control" /></div>
-                <div class="form-group"><input type="password" name="password" placeholder="Password" class="form-control" /></div>
-                <div class="form-group"><button class="btn btn-primary btn-block" type="submit" style="background-color: #000000;">Log In</button></div><a href="#" class="forgot">Forgot your email or password?</a></form>
+                <div class="form-group"><input type="text" id="username" name="username" placeholder="Email" class="form-control" /></div>
+                <div class="form-group"><input type="password" id="pass" name="pass" placeholder="Password" class="form-control" /></div>
+                <div class="form-group"><button class="btn btn-primary btn-block" type="submit" name="action" id="but" value="Login" style="background-color: #000000;">Log In</button></div><a href="#" class="forgot">Forgot your email or password?</a>
+            </form>
         </div>
     </body>
 

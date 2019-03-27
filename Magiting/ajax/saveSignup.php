@@ -10,12 +10,13 @@ include("../includes/indexdb.php");
         $user = $_POST['username1'];
         $password = $_POST["password1"];
         $encryptedPass = md5($password);
+        $role = "user";
 
 
        
          
         
-             $sql = "INSERT INTO tbllogin (username, password) VALUES ('$user', '$encryptedPass')";
+             $sql = "INSERT INTO tbllogin (username, password, role) VALUES ('$user', '$encryptedPass','$role')";
       
 
           
