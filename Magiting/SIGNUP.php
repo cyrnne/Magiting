@@ -30,11 +30,14 @@
         </nav>
         <div class="register-photo" style="background-color: rgba(0,0,0,0.1);">
 
-        <div class="form-container">
+        <div class="form-container" style="background-image: url('assets/img/cover.jpg');">
             <form id="myform" name="myform" onsubmit="return false">
 
               
-                <div class="image-holder" style="background-image: url('assets/img/cover.jpg');"></div>
+             
+                    <img src="assets/img/cover.jpg" height="500px" width="320px;" class="img-responsive" >
+               
+                <div class="col-md-6" style="float: right;">
                 <form method="post">
                     <h4 class="text-center newcustomer-heading" style="margin-top: -15px;margin-bottom: 20px;">NEW CUSTOMER</h4>
                     <div class="text-center illustration"><img src="assets/img/signup.png" alt="test" style="width: 128px;margin-bottom: 25px;" /></div>
@@ -46,7 +49,7 @@
                     </div>
                     <div class="form-group"><button class="btn btn-primary btn-block" type="submit" name="action" id="signup">Sign Up</button></div><a href="LOGIN.php" class="already">You already have an account? Login here.</a>
                 </form>
-
+                </div>
         </div>
         </div>
     </body>
