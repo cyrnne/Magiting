@@ -22,7 +22,7 @@
                     <li class="dropdown nav-item"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">PRODUCTS</a>
                         <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="PTees.php">Tees</a><a class="dropdown-item" role="presentation" href="PHats.php">Hats</a><a class="dropdown-item" role="presentation" href="PStick.php">Stickers</a></div>
                     </li>
-                    </ul><a href="LogIn.php" class="login">Log In</a><a class="btn btn-light action-button" role="button" href="SignUp.php">Sign Up</a></div>
+                    </ul><a href="LOGIN.php" class="login">Log In</a><a class="btn btn-light action-button" role="button" href="SignUp.php">Sign Up</a></div>
         </div>
         </nav>
         <section class="page-section about-heading">

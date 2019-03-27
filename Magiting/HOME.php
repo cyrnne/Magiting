@@ -21,7 +21,7 @@
                         <li class="dropdown nav-item"><a data-toggle="dropdown" aria-expanded="false" href="#" class="dropdown-toggle nav-link">PRODUCTS</a>
                             <div role="menu" class="dropdown-menu"><a role="presentation" href="#" class="dropdown-item">Tees</a><a role="presentation" href="#" class="dropdown-item">Caps</a><a role="presentation" href="#" class="dropdown-item">Stickers</a></div>
                         </li>
-                    </ul><a href="LogIn.php" class="login">Log In</a><a class="btn btn-light action-button" role="button" href="SignUp.php">Sign Up</a></div>
+                    </ul><a href="LOGIN.php" class="login">Log In</a><a class="btn btn-light action-button" role="button" href="SignUp.php">Sign Up</a></div>
             </div>
         </nav>
         <section class="page-section about-heading">
