@@ -23,7 +23,7 @@ include('includes/session.php');
                         <li role="presentation" class="nav-item"><a href="index.php" class="nav-link">HOME</a></li>
                         <li role="presentation" class="nav-item"><a href="#" class="nav-link">ABOUT US</a></li>
                         <li class="dropdown nav-item"><a data-toggle="dropdown" aria-expanded="false" href="#" class="dropdown-toggle nav-link">PRODUCTS</a>
-                            <div role="menu" class="dropdown-menu"><a role="presentation" href="#" class="dropdown-item">Tees</a><a role="presentation" href="#" class="dropdown-item">Caps</a><a role="presentation" href="#" class="dropdown-item">Stickers</a></div>
+                            <div role="menu" class="dropdown-menu"><a role="presentation" href="PTEES.php" class="dropdown-item">Tees</a><a role="presentation" href="#" class="dropdown-item">Caps</a><a role="presentation" href="#" class="dropdown-item">Stickers</a></div>
                         </li>
                     </ul><a href="LOGIN.php" class="login">Log In</a><a class="btn btn-light action-button" role="button" href="SignUp.php">Sign Up</a></div>
             </div>
