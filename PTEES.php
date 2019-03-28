@@ -12,6 +12,10 @@ include('includes/session.php');
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/STYLES.css">
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
 </head>
 
 <body style="color: rgb(255,255,255);">
@@ -43,52 +47,86 @@ include('includes/session.php');
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Cell 1</td>
-                                <td>Cell 2</td>
-                                <td>Cell 3</td>
-                                <td>Cell 3</td>
+                                <td>
+                                <div class="Pcontainer">
+                                <img src="assets/img/sample.jpg" class="img-thumbnail" width="250" height="250" data-toggle="modal" data-target="#myModal">
+                                <div class="modal fade" id="myModal" role="dialog" style ="color: black; margin-top: 1in;">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                <h4 class="modal-title">Name of Product</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                <img src="assets/img/sample.jpg" class="img" width="250" height="250" style = "padding-bottom: 1rem;">
+                                <p>Description of product</p>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div></div></div></div></div>
+
+                                </td>
+                                <td>
+                                <div class="Pcontainer">         
+                                <img src="assets/img/sample.jpg" class="img-thumbnail" width="250" height="250"> 
+                                </div>
+                                </td>
+
+                                <td>
+                                <div class="Pcontainer">         
+                                <img src="assets/img/sample.jpg" class="img-thumbnail" width="250" height="250"> 
+                                </div>
+                                </td>
+
+                                <td>
+                                <div class="Pcontainer">         
+                                <img src="assets/img/sample.jpg" class="img-thumbnail" width="250" height="250"> 
+                                </div>
+                                </td>
                             </tr>
                             <tr>
-                                <td>Cell 3</td>
-                                <td>Cell 4</td>
-                                <td>Cell 3</td>
-                                <td>Cell 3</td>
+                            <td>
+                                <div class="Pcontainer">         
+                                <img src="assets/img/sample.jpg" class="img-thumbnail" width="250" height="250"> 
+                                </div>
+                                </td>
+                                <td>
+                                <div class="Pcontainer">         
+                                <img src="assets/img/sample.jpg" class="img-thumbnail" width="250" height="250"> 
+                                </div>
+                                </td>
+                                <td>
+                                <div class="Pcontainer">         
+                                <img src="assets/img/sample.jpg" class="img-thumbnail" width="250" height="250"> 
+                                </div>
+                                </td>
+                                <td>
+                                <div class="Pcontainer">         
+                                <img src="assets/img/sample.jpg" class="img-thumbnail" width="250" height="250"> 
+                                </div>
+                                </td>
                             </tr>
                             <tr>
-                                <td>Cell 1</td>
-                                <td>Cell 2</td>
-                                <td>Cell 3</td>
-                                <td>Cell 3</td>
-                            </tr>
-                            <tr>
-                                <td>Cell 1</td>
-                                <td>Cell 2</td>
-                                <td>Cell 3</td>
-                                <td>Cell 3</td>
-                            </tr>
-                            <tr>
-                                <td>Cell 1</td>
-                                <td>Cell 2</td>
-                                <td>Cell 3</td>
-                                <td>Cell 3</td>
-                            </tr>
-                            <tr>
-                                <td>Cell 1</td>
-                                <td>Cell 2</td>
-                                <td>Cell 3</td>
-                                <td>Cell 3</td>
-                            </tr>
-                            <tr>
-                                <td>Cell 1</td>
-                                <td>Cell 2</td>
-                                <td>Cell 3</td>
-                                <td>Cell 3</td>
-                            </tr>
-                            <tr>
-                                <td>Cell 1</td>
-                                <td>Cell 2</td>
-                                <td>Cell 3</td>
-                                <td>Cell 3</td>
+                            <td>
+                                <div class="Pcontainer">         
+                                <img src="assets/img/sample.jpg" class="img-thumbnail" width="250" height="250"> 
+                                </div>
+                                </td>
+                                <td>
+                                <div class="Pcontainer">         
+                                <img src="assets/img/sample.jpg" class="img-thumbnail" width="250" height="250"> 
+                                </div>
+                                </td>
+                                <td>
+                                <div class="Pcontainer">         
+                                <img src="assets/img/sample.jpg" class="img-thumbnail" width="250" height="250"> 
+                                </div>
+                                </td>
+                                <td>
+                                <div class="Pcontainer">         
+                                <img src="assets/img/sample.jpg" class="img-thumbnail" width="250" height="250"> 
+                                </div>
+                                </td>
                             </tr>
                         </tbody>
                     </table>

@@ -1,3 +1,4 @@
+/* HOME AND BODY */
 body {
   overflow-x: hidden;
   background-image: url('../../assets/img/bg.png');
@@ -40,7 +41,7 @@ body {
 
 
 
-
+/* LOGIN*/
 .text-center.login-heading {
     font-family: century gothic;
     background-color: white;
@@ -154,7 +155,7 @@ body {
 
 
 
-
+  /* SIGNUP*/
   .text-center.newcustomer-heading {
     font-family: century gothic;
     background-color: white;
@@ -280,7 +281,7 @@ body {
 
 
 
-
+/* NAVBAR*/
 #mainNav {
     margin-top: 1cm;
     font-family: century gothic;
@@ -359,11 +360,15 @@ body {
 
 
 
-
+/* PRODUCTS*/
   .prod-heading {
     font-family: century gothic;
   }
-  
+  .modal-body {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+  }
   
   
   
