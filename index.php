@@ -3,7 +3,6 @@ include('includes/session.php');
 ?>
 
 <html>
-<!-- hello noime -->
 <head>
     <link rel="shortcut icon" href="assets/img/logowhite.png" />
     <meta charset="utf-8">
