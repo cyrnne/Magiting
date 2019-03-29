@@ -95,7 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <ul
                     class="nav navbar-nav mx-auto" style="margin: 0px;padding: 0px;">
                     <li class="nav-item" role="presentation"><a class="nav-link" href="index.php">HOME</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">ABOUT US</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="ABOUTUS.php">ABOUT US</a></li>
                     <li class="dropdown nav-item"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">PRODUCTS</a>
                         <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="PTees.php">Tees</a><a class="dropdown-item" role="presentation" href="PHats.php">Hats</a><a class="dropdown-item" role="presentation" href="PStick.php">Stickers</a></div>
                     </li>

@@ -27,11 +27,11 @@ include('includes/session.php');
                 <ul
                     class="nav navbar-nav mx-auto" style="margin: 0px;padding: 0px;">
                     <li class="nav-item" role="presentation"><a class="nav-link" href="index.php">HOME</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">ABOUT US</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="ABOUTUS.PHP">ABOUT US</a></li>
                     <li class="dropdown nav-item"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">PRODUCTS</a>
-                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="PTEES.php">Tees</a><a class="dropdown-item" role="presentation" href="PHats.php">Hats</a><a class="dropdown-item" role="presentation" href="PStick.php">Stickers</a></div>
+                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="PTees.php">Tees</a><a class="dropdown-item" role="presentation" href="PHats.php">Hats</a><a class="dropdown-item" role="presentation" href="PStick.php">Stickers</a></div>
                     </li>
-                    </ul><a href="LOGIN.php" class="login">Log In</a><a class="btn btn-light action-button" role="button" href="SIGNUP.php">Sign Up</a></div>
+                    </ul><?php echo $menuBar; ?></div>
         </div>
         </nav>
         
