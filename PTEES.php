@@ -66,7 +66,8 @@ include('includes/session.php');
                                     <input type="number" id="qty" name="quantity" min="1" max="4"> </p>
                                 </div>
                                 <div class="modal-footer">    
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Add to cart</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color: blue;">Add to cart</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Buy now</button>
                                 </div></div></div></div></div>
                                 </td>
 
