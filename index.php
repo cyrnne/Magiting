@@ -13,7 +13,11 @@ include('includes/session.php');
 </head>
 
     <body style="color: rgb(255,255,255);">
+    <!--
     <h1 class="home-heading" style="color: rgb(255,255,255);"><span class="text-center home-heading-upper" style="color: rgb(116,116,116);font-size: 30px;">A Baybayin Movement</span><span class="text-center home-heading-lower" style="font-size: 120px;">MAGITING</span></h1>
+    -->
+    <center><img src="assets/img/header.jpg"></center>
+
     <nav class="navbar navbar-light navbar-expand-lg bg-white"
         id="mainNav" style="background-color: #ffffff;">
         <div class="container-fluid"><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="navbar-toggler-icon"></span></button>
