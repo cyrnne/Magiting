@@ -66,7 +66,226 @@ include('includes/session.php');
                                     <input type="number" id="qty" name="quantity" min="1" max="4"> </p>
                                 </div>
                                 <div class="modal-footer">    
-                                <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color: blue;">Add to cart</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color: gray;">Add to cart</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Buy now</button>
+                                </div></div></div></div></div>
+                                </td>
+
+                                <td>
+                                <div class="Pcontainer">
+                                <img src="assets/img/sample.jpg" class="img-thumbnail" width="250" height="250" data-toggle="modal" data-target="#myModal">
+                                <div class="modal fade" id="myModal" role="dialog" style ="color: black;">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                <h4 class="modal-title">Name of Product</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                <img src="assets/img/sample.jpg" class="img" width="250" height="250" style = "padding-bottom: 1rem;">
+                                <p>Digmaan (War) <br> a state of armed conflict between different nations or states or different groups within a nation or state.</p>
+                                <p class="modal-price" style="color: red; font-size: 16px;">Php 350.00</p>
+                                <p class="modal-stock" style="color: grey; font-size: 13px; font-family: arial narrow;">Only 4 stocks left.</p>
+                                <p class="modal-quantity"style="font-family: arial narrow;">Quantity: &nbsp; 
+                                    <input type="number" id="qty" name="quantity" min="1" max="4"> </p>
+                                </div>
+                                <div class="modal-footer">    
+                                <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color: gray;">Add to cart</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Buy now</button>
+                                </div></div></div></div></div>
+                                </td>
+
+                                <td>
+                                <div class="Pcontainer">
+                                <img src="assets/img/sample.jpg" class="img-thumbnail" width="250" height="250" data-toggle="modal" data-target="#myModal">
+                                <div class="modal fade" id="myModal" role="dialog" style ="color: black;">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                <h4 class="modal-title">Name of Product</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                <img src="assets/img/sample.jpg" class="img" width="250" height="250" style = "padding-bottom: 1rem;">
+                                <p>Digmaan (War) <br> a state of armed conflict between different nations or states or different groups within a nation or state.</p>
+                                <p class="modal-price" style="color: red; font-size: 16px;">Php 350.00</p>
+                                <p class="modal-stock" style="color: grey; font-size: 13px; font-family: arial narrow;">Only 4 stocks left.</p>
+                                <p class="modal-quantity"style="font-family: arial narrow;">Quantity: &nbsp; 
+                                    <input type="number" id="qty" name="quantity" min="1" max="4"> </p>
+                                </div>
+                                <div class="modal-footer">    
+                                <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color: gray;">Add to cart</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Buy now</button>
+                                </div></div></div></div></div>
+                                </td>
+
+                                <td>
+                                <div class="Pcontainer">
+                                <img src="assets/img/sample.jpg" class="img-thumbnail" width="250" height="250" data-toggle="modal" data-target="#myModal">
+                                <div class="modal fade" id="myModal" role="dialog" style ="color: black;">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                <h4 class="modal-title">Name of Product</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                <img src="assets/img/sample.jpg" class="img" width="250" height="250" style = "padding-bottom: 1rem;">
+                                <p>Digmaan (War) <br> a state of armed conflict between different nations or states or different groups within a nation or state.</p>
+                                <p class="modal-price" style="color: red; font-size: 16px;">Php 350.00</p>
+                                <p class="modal-stock" style="color: grey; font-size: 13px; font-family: arial narrow;">Only 4 stocks left.</p>
+                                <p class="modal-quantity"style="font-family: arial narrow;">Quantity: &nbsp; 
+                                    <input type="number" id="qty" name="quantity" min="1" max="4"> </p>
+                                </div>
+                                <div class="modal-footer">    
+                                <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color: gray;">Add to cart</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Buy now</button>
+                                </div></div></div></div></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                <div class="Pcontainer">
+                                <img src="assets/img/sample.jpg" class="img-thumbnail" width="250" height="250" data-toggle="modal" data-target="#myModal">
+                                <div class="modal fade" id="myModal" role="dialog" style ="color: black;">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                <h4 class="modal-title">Name of Product</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                <img src="assets/img/sample.jpg" class="img" width="250" height="250" style = "padding-bottom: 1rem;">
+                                <p>Digmaan (War) <br> a state of armed conflict between different nations or states or different groups within a nation or state.</p>
+                                <p class="modal-price" style="color: red; font-size: 16px;">Php 350.00</p>
+                                <p class="modal-stock" style="color: grey; font-size: 13px; font-family: arial narrow;">Only 4 stocks left.</p>
+                                <p class="modal-quantity"style="font-family: arial narrow;">Quantity: &nbsp; 
+                                    <input type="number" id="qty" name="quantity" min="1" max="4"> </p>
+                                </div>
+                                <div class="modal-footer">    
+                                <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color: gray;">Add to cart</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Buy now</button>
+                                </div></div></div></div></div>
+                                </td>
+
+                                <td>
+                                <div class="Pcontainer">
+                                <img src="assets/img/sample.jpg" class="img-thumbnail" width="250" height="250" data-toggle="modal" data-target="#myModal">
+                                <div class="modal fade" id="myModal" role="dialog" style ="color: black;">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                <h4 class="modal-title">Name of Product</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                <img src="assets/img/sample.jpg" class="img" width="250" height="250" style = "padding-bottom: 1rem;">
+                                <p>Digmaan (War) <br> a state of armed conflict between different nations or states or different groups within a nation or state.</p>
+                                <p class="modal-price" style="color: red; font-size: 16px;">Php 350.00</p>
+                                <p class="modal-stock" style="color: grey; font-size: 13px; font-family: arial narrow;">Only 4 stocks left.</p>
+                                <p class="modal-quantity"style="font-family: arial narrow;">Quantity: &nbsp; 
+                                    <input type="number" id="qty" name="quantity" min="1" max="4"> </p>
+                                </div>
+                                <div class="modal-footer">    
+                                <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color: gray;">Add to cart</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Buy now</button>
+                                </div></div></div></div></div>
+                                </td>
+
+                                <td>
+                                <div class="Pcontainer">
+                                <img src="assets/img/sample.jpg" class="img-thumbnail" width="250" height="250" data-toggle="modal" data-target="#myModal">
+                                <div class="modal fade" id="myModal" role="dialog" style ="color: black;">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                <h4 class="modal-title">Name of Product</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                <img src="assets/img/sample.jpg" class="img" width="250" height="250" style = "padding-bottom: 1rem;">
+                                <p>Digmaan (War) <br> a state of armed conflict between different nations or states or different groups within a nation or state.</p>
+                                <p class="modal-price" style="color: red; font-size: 16px;">Php 350.00</p>
+                                <p class="modal-stock" style="color: grey; font-size: 13px; font-family: arial narrow;">Only 4 stocks left.</p>
+                                <p class="modal-quantity"style="font-family: arial narrow;">Quantity: &nbsp; 
+                                    <input type="number" id="qty" name="quantity" min="1" max="4"> </p>
+                                </div>
+                                <div class="modal-footer">    
+                                <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color: gray;">Add to cart</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Buy now</button>
+                                </div></div></div></div></div>
+                                </td>
+
+                                <td>
+                                <div class="Pcontainer">
+                                <img src="assets/img/sample.jpg" class="img-thumbnail" width="250" height="250" data-toggle="modal" data-target="#myModal">
+                                <div class="modal fade" id="myModal" role="dialog" style ="color: black;">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                <h4 class="modal-title">Name of Product</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                <img src="assets/img/sample.jpg" class="img" width="250" height="250" style = "padding-bottom: 1rem;">
+                                <p>Digmaan (War) <br> a state of armed conflict between different nations or states or different groups within a nation or state.</p>
+                                <p class="modal-price" style="color: red; font-size: 16px;">Php 350.00</p>
+                                <p class="modal-stock" style="color: grey; font-size: 13px; font-family: arial narrow;">Only 4 stocks left.</p>
+                                <p class="modal-quantity"style="font-family: arial narrow;">Quantity: &nbsp; 
+                                    <input type="number" id="qty" name="quantity" min="1" max="4"> </p>
+                                </div>
+                                <div class="modal-footer">    
+                                <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color: gray;">Add to cart</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Buy now</button>
+                                </div></div></div></div></div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                <div class="Pcontainer">
+                                <img src="assets/img/sample.jpg" class="img-thumbnail" width="250" height="250" data-toggle="modal" data-target="#myModal">
+                                <div class="modal fade" id="myModal" role="dialog" style ="color: black;">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                <h4 class="modal-title">Name of Product</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                <img src="assets/img/sample.jpg" class="img" width="250" height="250" style = "padding-bottom: 1rem;">
+                                <p>Digmaan (War) <br> a state of armed conflict between different nations or states or different groups within a nation or state.</p>
+                                <p class="modal-price" style="color: red; font-size: 16px;">Php 350.00</p>
+                                <p class="modal-stock" style="color: grey; font-size: 13px; font-family: arial narrow;">Only 4 stocks left.</p>
+                                <p class="modal-quantity"style="font-family: arial narrow;">Quantity: &nbsp; 
+                                    <input type="number" id="qty" name="quantity" min="1" max="4"> </p>
+                                </div>
+                                <div class="modal-footer">    
+                                <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color: gray;">Add to cart</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Buy now</button>
+                                </div></div></div></div></div>
+                                </td>
+
+                                <td>
+                                <div class="Pcontainer">
+                                <img src="assets/img/sample.jpg" class="img-thumbnail" width="250" height="250" data-toggle="modal" data-target="#myModal">
+                                <div class="modal fade" id="myModal" role="dialog" style ="color: black;">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                <h4 class="modal-title">Name of Product</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                <img src="assets/img/sample.jpg" class="img" width="250" height="250" style = "padding-bottom: 1rem;">
+                                <p>Digmaan (War) <br> a state of armed conflict between different nations or states or different groups within a nation or state.</p>
+                                <p class="modal-price" style="color: red; font-size: 16px;">Php 350.00</p>
+                                <p class="modal-stock" style="color: grey; font-size: 13px; font-family: arial narrow;">Only 4 stocks left.</p>
+                                <p class="modal-quantity"style="font-family: arial narrow;">Quantity: &nbsp; 
+                                    <input type="number" id="qty" name="quantity" min="1" max="4"> </p>
+                                </div>
+                                <div class="modal-footer">    
+                                <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color: gray;">Add to cart</button>
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Buy now</button>
                                 </div></div></div></div></div>
                                 </td>
@@ -113,217 +332,8 @@ include('includes/session.php');
                                     <input type="number" id="qty" name="quantity" min="1" max="4"> </p>
                                 </div>
                                 <div class="modal-footer">    
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Add to cart</button>
-                                </div></div></div></div></div>
-                                </td>
-
-                                <td>
-                                <div class="Pcontainer">
-                                <img src="assets/img/sample.jpg" class="img-thumbnail" width="250" height="250" data-toggle="modal" data-target="#myModal">
-                                <div class="modal fade" id="myModal" role="dialog" style ="color: black;">
-                                <div class="modal-dialog">
-                                <div class="modal-content">
-                                <div class="modal-header">
-                                <h4 class="modal-title">Name of Product</h4>
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                </div>
-                                <div class="modal-body">
-                                <img src="assets/img/sample.jpg" class="img" width="250" height="250" style = "padding-bottom: 1rem;">
-                                <p>Digmaan (War) <br> a state of armed conflict between different nations or states or different groups within a nation or state.</p>
-                                <p class="modal-price" style="color: red; font-size: 16px;">Php 350.00</p>
-                                <p class="modal-stock" style="color: grey; font-size: 13px; font-family: arial narrow;">Only 4 stocks left.</p>
-                                <p class="modal-quantity"style="font-family: arial narrow;">Quantity: &nbsp; 
-                                    <input type="number" id="qty" name="quantity" min="1" max="4"> </p>
-                                </div>
-                                <div class="modal-footer">    
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Add to cart</button>
-                                </div></div></div></div></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                <div class="Pcontainer">
-                                <img src="assets/img/sample.jpg" class="img-thumbnail" width="250" height="250" data-toggle="modal" data-target="#myModal">
-                                <div class="modal fade" id="myModal" role="dialog" style ="color: black;">
-                                <div class="modal-dialog">
-                                <div class="modal-content">
-                                <div class="modal-header">
-                                <h4 class="modal-title">Name of Product</h4>
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                </div>
-                                <div class="modal-body">
-                                <img src="assets/img/sample.jpg" class="img" width="250" height="250" style = "padding-bottom: 1rem;">
-                                <p>Digmaan (War) <br> a state of armed conflict between different nations or states or different groups within a nation or state.</p>
-                                <p class="modal-price" style="color: red; font-size: 16px;">Php 350.00</p>
-                                <p class="modal-stock" style="color: grey; font-size: 13px; font-family: arial narrow;">Only 4 stocks left.</p>
-                                <p class="modal-quantity"style="font-family: arial narrow;">Quantity: &nbsp; 
-                                    <input type="number" id="qty" name="quantity" min="1" max="4"> </p>
-                                </div>
-                                <div class="modal-footer">    
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Add to cart</button>
-                                </div></div></div></div></div>
-                                </td>
-
-                                <td>
-                                <div class="Pcontainer">
-                                <img src="assets/img/sample.jpg" class="img-thumbnail" width="250" height="250" data-toggle="modal" data-target="#myModal">
-                                <div class="modal fade" id="myModal" role="dialog" style ="color: black;">
-                                <div class="modal-dialog">
-                                <div class="modal-content">
-                                <div class="modal-header">
-                                <h4 class="modal-title">Name of Product</h4>
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                </div>
-                                <div class="modal-body">
-                                <img src="assets/img/sample.jpg" class="img" width="250" height="250" style = "padding-bottom: 1rem;">
-                                <p>Digmaan (War) <br> a state of armed conflict between different nations or states or different groups within a nation or state.</p>
-                                <p class="modal-price" style="color: red; font-size: 16px;">Php 350.00</p>
-                                <p class="modal-stock" style="color: grey; font-size: 13px; font-family: arial narrow;">Only 4 stocks left.</p>
-                                <p class="modal-quantity"style="font-family: arial narrow;">Quantity: &nbsp; 
-                                    <input type="number" id="qty" name="quantity" min="1" max="4"> </p>
-                                </div>
-                                <div class="modal-footer">    
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Add to cart</button>
-                                </div></div></div></div></div>
-                                </td>
-
-                                <td>
-                                <div class="Pcontainer">
-                                <img src="assets/img/sample.jpg" class="img-thumbnail" width="250" height="250" data-toggle="modal" data-target="#myModal">
-                                <div class="modal fade" id="myModal" role="dialog" style ="color: black;">
-                                <div class="modal-dialog">
-                                <div class="modal-content">
-                                <div class="modal-header">
-                                <h4 class="modal-title">Name of Product</h4>
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                </div>
-                                <div class="modal-body">
-                                <img src="assets/img/sample.jpg" class="img" width="250" height="250" style = "padding-bottom: 1rem;">
-                                <p>Digmaan (War) <br> a state of armed conflict between different nations or states or different groups within a nation or state.</p>
-                                <p class="modal-price" style="color: red; font-size: 16px;">Php 350.00</p>
-                                <p class="modal-stock" style="color: grey; font-size: 13px; font-family: arial narrow;">Only 4 stocks left.</p>
-                                <p class="modal-quantity"style="font-family: arial narrow;">Quantity: &nbsp; 
-                                    <input type="number" id="qty" name="quantity" min="1" max="4"> </p>
-                                </div>
-                                <div class="modal-footer">    
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Add to cart</button>
-                                </div></div></div></div></div>
-                                </td>
-
-                                <td>
-                                <div class="Pcontainer">
-                                <img src="assets/img/sample.jpg" class="img-thumbnail" width="250" height="250" data-toggle="modal" data-target="#myModal">
-                                <div class="modal fade" id="myModal" role="dialog" style ="color: black;">
-                                <div class="modal-dialog">
-                                <div class="modal-content">
-                                <div class="modal-header">
-                                <h4 class="modal-title">Name of Product</h4>
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                </div>
-                                <div class="modal-body">
-                                <img src="assets/img/sample.jpg" class="img" width="250" height="250" style = "padding-bottom: 1rem;">
-                                <p>Digmaan (War) <br> a state of armed conflict between different nations or states or different groups within a nation or state.</p>
-                                <p class="modal-price" style="color: red; font-size: 16px;">Php 350.00</p>
-                                <p class="modal-stock" style="color: grey; font-size: 13px; font-family: arial narrow;">Only 4 stocks left.</p>
-                                <p class="modal-quantity"style="font-family: arial narrow;">Quantity: &nbsp; 
-                                    <input type="number" id="qty" name="quantity" min="1" max="4"> </p>
-                                </div>
-                                <div class="modal-footer">    
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Add to cart</button>
-                                </div></div></div></div></div>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                <div class="Pcontainer">
-                                <img src="assets/img/sample.jpg" class="img-thumbnail" width="250" height="250" data-toggle="modal" data-target="#myModal">
-                                <div class="modal fade" id="myModal" role="dialog" style ="color: black;">
-                                <div class="modal-dialog">
-                                <div class="modal-content">
-                                <div class="modal-header">
-                                <h4 class="modal-title">Name of Product</h4>
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                </div>
-                                <div class="modal-body">
-                                <img src="assets/img/sample.jpg" class="img" width="250" height="250" style = "padding-bottom: 1rem;">
-                                <p>Digmaan (War) <br> a state of armed conflict between different nations or states or different groups within a nation or state.</p>
-                                <p class="modal-price" style="color: red; font-size: 16px;">Php 350.00</p>
-                                <p class="modal-stock" style="color: grey; font-size: 13px; font-family: arial narrow;">Only 4 stocks left.</p>
-                                <p class="modal-quantity"style="font-family: arial narrow;">Quantity: &nbsp; 
-                                    <input type="number" id="qty" name="quantity" min="1" max="4"> </p>
-                                </div>
-                                <div class="modal-footer">    
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Add to cart</button>
-                                </div></div></div></div></div>
-                                </td>
-
-                                <td>
-                                <div class="Pcontainer">
-                                <img src="assets/img/sample.jpg" class="img-thumbnail" width="250" height="250" data-toggle="modal" data-target="#myModal">
-                                <div class="modal fade" id="myModal" role="dialog" style ="color: black;">
-                                <div class="modal-dialog">
-                                <div class="modal-content">
-                                <div class="modal-header">
-                                <h4 class="modal-title">Name of Product</h4>
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                </div>
-                                <div class="modal-body">
-                                <img src="assets/img/sample.jpg" class="img" width="250" height="250" style = "padding-bottom: 1rem;">
-                                <p>Digmaan (War) <br> a state of armed conflict between different nations or states or different groups within a nation or state.</p>
-                                <p class="modal-price" style="color: red; font-size: 16px;">Php 350.00</p>
-                                <p class="modal-stock" style="color: grey; font-size: 13px; font-family: arial narrow;">Only 4 stocks left.</p>
-                                <p class="modal-quantity"style="font-family: arial narrow;">Quantity: &nbsp; 
-                                    <input type="number" id="qty" name="quantity" min="1" max="4"> </p>
-                                </div>
-                                <div class="modal-footer">    
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Add to cart</button>
-                                </div></div></div></div></div>
-                                </td>
-
-                                <td>
-                                <div class="Pcontainer">
-                                <img src="assets/img/sample.jpg" class="img-thumbnail" width="250" height="250" data-toggle="modal" data-target="#myModal">
-                                <div class="modal fade" id="myModal" role="dialog" style ="color: black;">
-                                <div class="modal-dialog">
-                                <div class="modal-content">
-                                <div class="modal-header">
-                                <h4 class="modal-title">Name of Product</h4>
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                </div>
-                                <div class="modal-body">
-                                <img src="assets/img/sample.jpg" class="img" width="250" height="250" style = "padding-bottom: 1rem;">
-                                <p>Digmaan (War) <br> a state of armed conflict between different nations or states or different groups within a nation or state.</p>
-                                <p class="modal-price" style="color: red; font-size: 16px;">Php 350.00</p>
-                                <p class="modal-stock" style="color: grey; font-size: 13px; font-family: arial narrow;">Only 4 stocks left.</p>
-                                <p class="modal-quantity"style="font-family: arial narrow;">Quantity: &nbsp; 
-                                    <input type="number" id="qty" name="quantity" min="1" max="4"> </p>
-                                </div>
-                                <div class="modal-footer">    
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Add to cart</button>
-                                </div></div></div></div></div>
-                                </td>
-
-                                <td>
-                                <div class="Pcontainer">
-                                <img src="assets/img/sample.jpg" class="img-thumbnail" width="250" height="250" data-toggle="modal" data-target="#myModal">
-                                <div class="modal fade" id="myModal" role="dialog" style ="color: black;">
-                                <div class="modal-dialog">
-                                <div class="modal-content">
-                                <div class="modal-header">
-                                <h4 class="modal-title">Name of Product</h4>
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                </div>
-                                <div class="modal-body">
-                                <img src="assets/img/sample.jpg" class="img" width="250" height="250" style = "padding-bottom: 1rem;">
-                                <p>Digmaan (War) <br> a state of armed conflict between different nations or states or different groups within a nation or state.</p>
-                                <p class="modal-price" style="color: red; font-size: 16px;">Php 350.00</p>
-                                <p class="modal-stock" style="color: grey; font-size: 13px; font-family: arial narrow;">Only 4 stocks left.</p>
-                                <p class="modal-quantity"style="font-family: arial narrow;">Quantity: &nbsp; 
-                                    <input type="number" id="qty" name="quantity" min="1" max="4"> </p>
-                                </div>
-                                <div class="modal-footer">    
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Add to cart</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color: gray;">Add to cart</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Buy now</button>
                                 </div></div></div></div></div>
                                 </td>
                             </tr>
