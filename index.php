@@ -111,8 +111,8 @@ include('includes/session.php');
                 <div class="col-sm-6 col-md-3 text-left item">
                     <h3>ABOUT US</h3>
                     <ul>
-                        <li><a href="AboutUs.html">Mission Vision</a></li>
-                        <li><a href="AboutUs.html">Owners</a></li>
+                        <li><a href="ABOUTUS.php">Mission Vision</a></li>
+                        <li><a href="ABOUTUS.php">Owners</a></li>
                         <li></li>
                     </ul>
                 </div>
