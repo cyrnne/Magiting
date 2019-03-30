@@ -11,6 +11,10 @@ include('includes/session.php');
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/STYLES.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     
 </head>
 
@@ -32,24 +36,64 @@ include('includes/session.php');
 </header>    
 
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css" />
+
+<div style="padding-top: 5px;">
+    <div class="d-inline-block swiper-container" style="width: 500px;height: 500px;margin-left: 5px;">
+        <div class="swiper-wrapper" style="height: 1000px;">
+            <div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=68&amp;txt=Slideshow+Image&amp;w=1920&amp;h=500);"><img src="assets/img/1slide1.jpg" class="d-inline-block float-left" style="width: 500px;" /></div>
+            <div class="swiper-slide" style="background-image: url('FB_IMG_1552958342682.jpg');"><img src="assets/img/1slide2.jpg" style="width: 500px;" /></div>
+            <div class="swiper-slide" style="background-image: url(https://placeholdit.imgix.net/~text?txtsize=68&amp;txt=Slideshow+Image&amp;w=1920&amp;h=500);"><img src="assets/img/1slide3.jpg" style="width: 500px;" /></div>
+            <div class="swiper-slide" style="background-image: url(https://placeholdit.imgix.net/~text?txtsize=68&amp;txt=Slideshow+Image&amp;w=1920&amp;h=500);"><img src="assets/img/1slide4.jpg" style="width: 500px;" /></div>
+            <div class="swiper-slide" style="background-image: url(https://placeholdit.imgix.net/~text?txtsize=68&amp;txt=Slideshow+Image&amp;w=1920&amp;h=500);"><img src="assets/img/1slide5.jpg" style="width: 500px;" /></div>
+            <div class="swiper-slide" style="background-image: url(https://placeholdit.imgix.net/~text?txtsize=68&amp;txt=Slideshow+Image&amp;w=1920&amp;h=500);"><img src="assets/img/1slide6.jpg" style="width: 500px;" /></div>
+            <div class="swiper-slide" style="background-image: url(https://placeholdit.imgix.net/~text?txtsize=68&amp;txt=Slideshow+Image&amp;w=1920&amp;h=500);"><img src="assets/img/1slide7.jpg" style="width: 500px;" /></div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+    <div class="d-inline-block swiper-container" style="width: 835px;height: 500px;">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=68&amp;txt=Slideshow+Image&amp;w=1920&amp;h=500);"><img src="assets/img/2slide1.jpg" style="width: 840px;" /></div>
+            <div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=68&amp;txt=Slideshow+Image&amp;w=1920&amp;h=500);"><img src="assets/img/2slide2.jpg" style="width: 840px;" /></div>
+            <div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=68&amp;txt=Slideshow+Image&amp;w=1920&amp;h=500);"><img src="assets/img/2slide3.jpg" style="width: 840px;" /></div>
+            <div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=68&amp;txt=Slideshow+Image&amp;w=1920&amp;h=500);"><img src="assets/img/2slide4.jpg" style="width: 840px;" /></div>
+            <div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=68&amp;txt=Slideshow+Image&amp;w=1920&amp;h=500);"><img src="assets/img/2slide5.jpg" style="width: 840px;" /></div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<section class="text-center" style="margin-right: -15px;margin-left: -15px;padding-top: 50px;">
+    <h1 style="margin-bottom: 30px;">New This Month</h1>
+    <div class="row" style="margin-right: 100px;margin-left: 100px;background-color: #ffffff;color: #000000;font-size: 15px;margin-bottom: 100px;">
+        <div class="col">
+            <div class="table-responsive" style="padding-top: 25px;">
+                <table class="table">
+                    <thead>
+                        <tr></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="height: 311px;width: 400px;"><img src="Paraiso Black_Back .jpg" style="width: 300px;height: 300px;" /></td>
+                            <td style="width: 400px;"><img src="Magiting_Brave P350.jpg" style="width: 300px;" /></td>
+                            <td style="width: 400px;"><img src="Marahuyo.jpg" style="width: 300px;height: 300px;" /></td>
+                        </tr>
+                        <tr>
+                            <td>PARAISO / PARADISE</td>
+                            <td>MAGITING BRAVE</td>
+                            <td>MARAHUYO / ENCHANTED</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 
@@ -100,6 +144,20 @@ include('includes/session.php');
         </div>
     </footer>
 </div>
+
+<script>
+$(function(){
+var mySwiper = new Swiper ('.swiper-container', {
+    loop: true,
+    pagination: '.swiper-pagination',
+    paginationClickable: true,
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev'
+});
+
+});
+</script>
+
 </body>
 
 </html>
