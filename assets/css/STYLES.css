@@ -37,6 +37,64 @@ body {
 
 
 
+/* ADMIN */
+.admin-heading {
+  font-family: century gothic;
+}
+
+.btn.btn-primary.dropdown-toggle {
+  border-color: black;
+}
+
+.btn.btn-primary.dropdown-toggle {
+  background-color: transparent;
+  color: black;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: black;
+  border-color: black;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: black;
+  border-color: black;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: black;
+  border-color: black;
+}
+
+.btn-primary:hover {
+  color: black;
+  background-color: black;
+  border-color: black;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 .1rem black;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: black;
+  border-color: black;
+}
+
+.btn.focus, .btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 .1rem black;
+}
+
+
+
+
+
+
 
 
 
@@ -48,6 +106,7 @@ body {
 
 
 /* FOOTER*/
+
 .footer-dark {
   padding: 50px 0;
   color: #f0f9ff;
@@ -114,13 +173,13 @@ body {
 
 .footer-dark .item.social > a {
   font-size: 20px;
-  width: 36px;
-  height: 36px;
+  width: 30px;
+  height: 30px;
   line-height: 36px;
   display: inline-block;
   text-align: center;
   border-radius: 50%;
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.4);
+ 
   margin: 0 8px;
   color: #fff;
   opacity: 0.75;
