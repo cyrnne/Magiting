@@ -79,14 +79,14 @@ include('includes/session.php');
                     </thead>
                     <tbody>
                         <tr>
-                            <td style="height: 311px;width: 400px;"><img src="Paraiso Black_Back .jpg" style="width: 300px;height: 300px;" /></td>
-                            <td style="width: 400px;"><img src="Magiting_Brave P350.jpg" style="width: 300px;" /></td>
-                            <td style="width: 400px;"><img src="Marahuyo.jpg" style="width: 300px;height: 300px;" /></td>
+                            <td style="width: 400px;"><center><img src="assets/img/Paraiso.jpg" style="width: 300px;height: 300px;"/></center>PARAISO / PARADISE</td>
+                            <td style="width: 400px;"><center><img src="assets/img/Brave.jpg" style="width: 300px;"/></center></td>
+                            <td style="width: 400px;"><center><img src="assets/img/Marahuyo.jpg" style="width: 300px;height: 300px;"/></center></td>
                         </tr>
                         <tr>
-                            <td>PARAISO / PARADISE</td>
-                            <td>MAGITING BRAVE</td>
-                            <td>MARAHUYO / ENCHANTED</td>
+                            <td style="color: black"><center>PARAISO / PARADISE<center></td>
+                            <td style="color: black"><center>MAGITING BRAVE</center></td>
+                            <td style="color: black"><center>MARAHUYO / ENCHANTED<center></td>
                         </tr>
                     </tbody>
                 </table>
@@ -94,21 +94,6 @@ include('includes/session.php');
         </div>
     </div>
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <div class="footer-dark" style="padding-top: 40px;padding-bottom: 30px;background-color: #000000;">
