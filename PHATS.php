@@ -8,7 +8,7 @@ include('includes/session.php');
     <link rel="shortcut icon" href="assets/img/logowhite.png" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Magiting | Tees</title>
+    <title>Magiting | Hats</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/STYLES.css">
 
@@ -38,7 +38,7 @@ include('includes/session.php');
     <div class="about-heading-content">
         <div class="row">
             <div class="col-9 text-center mx-auto" style="background-color: #ffffff;color: rgb(0,0,0);opacity: 1;height: 2000px;margin-top: 50px;margin-bottom: 50px;">
-                <h1 class="prod-heading" style="margin-top: 25px;margin-bottom: 25px;">TEES</h1>
+                <h1 class="prod-heading" style="margin-top: 25px;margin-bottom: 25px;">HATS</h1>
                 <div class="table-responsive">
                     <table class="table">
                         <thead>
