@@ -342,6 +342,41 @@ include('includes/session.php');
             </div>
         </div>
     </div>
+
+    <div class="footer-dark" style="padding-top: 40px;padding-bottom: 30px;background-color: #000000;">
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-3 text-left item">
+                    <h3>CUSTOMER SERVICE</h3>
+                    <ul>
+                        <li><a href="#">FAQ<br /></a></li>
+                        <li><a href="#">Size Guide<br /></a></li>
+                        <li><a href="#">Contact Us<br /></a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-3 text-left item">
+                    <h3>ABOUT US</h3>
+                    <ul>
+                        <li><a href="AboutUs.html">Mission Vision</a></li>
+                        <li><a href="AboutUs.html">Owners</a></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 text-left item text">
+                    <h3>MAGITING PH</h3>
+                    <p>A Baybayin movement that aims to parttake in the co-creation <br />of a generation of Active Participation and Appreciation for the <br />Filipino Identity.<br /><br /></p>
+                </div>
+                <div class="col item social"><a href="https://www.facebook.com/MagitingPH" target="_blank"><img src="assets/img/icofb.png" style="width: 30px">
+                <i class="icon ion-social-facebook"></i></a><a href="https://twitter.com/Magitingph" target="_blank"><img src="assets/img/icotwit.png" style="width: 30px">
+                <i class="icon ion-social-twitter"></i></a><a href="https://www.instagram.com/magitingph" target="_blank"><img src="assets/img/icoig.png" style="width: 30px">
+                <i class="icon ion-social-instagram"></i></a></div>
+            </div><img src="assets/img/logowhite.png" class="d-flex d-xl-flex justify-content-center mx-auto justify-content-xl-center" style="width: 50px;padding-top: 30px;" />
+            <p class="copyright" style="padding-top: 10px;">Magiting PH © 2017</p>
+        </div>
+    </footer>
+</div>
+
 </section>
     </body>
 
