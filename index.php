@@ -38,32 +38,42 @@ include('includes/session.php');
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css" />
 
-<div style="padding-top: 5px;">
-    <div class="d-inline-block swiper-container" style="width: 500px;height: 500px;margin-left: 5px;">
-        <div class="swiper-wrapper" style="height: 1000px;">
-            <div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=68&amp;txt=Slideshow+Image&amp;w=1920&amp;h=500);"><img src="assets/img/1slide1.jpg" class="d-inline-block float-left" style="width: 500px;" /></div>
-            <div class="swiper-slide" style="background-image: url('FB_IMG_1552958342682.jpg');"><img src="assets/img/1slide2.jpg" style="width: 500px;" /></div>
-            <div class="swiper-slide" style="background-image: url(https://placeholdit.imgix.net/~text?txtsize=68&amp;txt=Slideshow+Image&amp;w=1920&amp;h=500);"><img src="assets/img/1slide3.jpg" style="width: 500px;" /></div>
-            <div class="swiper-slide" style="background-image: url(https://placeholdit.imgix.net/~text?txtsize=68&amp;txt=Slideshow+Image&amp;w=1920&amp;h=500);"><img src="assets/img/1slide4.jpg" style="width: 500px;" /></div>
-            <div class="swiper-slide" style="background-image: url(https://placeholdit.imgix.net/~text?txtsize=68&amp;txt=Slideshow+Image&amp;w=1920&amp;h=500);"><img src="assets/img/1slide5.jpg" style="width: 500px;" /></div>
-            <div class="swiper-slide" style="background-image: url(https://placeholdit.imgix.net/~text?txtsize=68&amp;txt=Slideshow+Image&amp;w=1920&amp;h=500);"><img src="assets/img/1slide6.jpg" style="width: 500px;" /></div>
-            <div class="swiper-slide" style="background-image: url(https://placeholdit.imgix.net/~text?txtsize=68&amp;txt=Slideshow+Image&amp;w=1920&amp;h=500);"><img src="assets/img/1slide7.jpg" style="width: 500px;" /></div>
+<div class="d-inline-block" style="width: 1400px;height: 500px;">
+    <div class="d-inline-block mx-auto carousel slide" id="Div_Promo_Carousel" data-ride="carousel" style="width: 500px;height: 500px;">
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active"><img src="assets/img/1slide1.jpg" style="width: 500px;" /></div>
+            <div class="carousel-item"><img src="assets/img/1slide2.jpg" style="width: 500px;height: 500px;" /></div>
+            <div class="carousel-item"><img src="assets/img/1slide3.jpg" style="width: 500px;height: 500px;" /></div>
+            <div class="carousel-item"><img src="assets/img/1slide4.jpg" style="width: 500px;height: 500px;" /></div>
+            <div class="carousel-item"><img src="assets/img/1slide5.jpg" style="width: 500px;height: 500px;" /></div>
+            <div class="carousel-item"><img src="assets/img/1slide6.jpg" style="width: 500px;height: 500px;" /></div>
+            <div class="carousel-item"><img src="assets/img/1slide7.jpg" style="width: 500px;height: 500px;" /></div>
         </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div><a href="#Div_Promo_Carousel" class="carousel-control-prev" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Prev </span></a><a href="#Div_Promo_Carousel" class="carousel-control-next"
+                role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next </span></a></div>
+        <ul class="carousel-indicators" role>
+            <li class="active" data-slide-to="0" data-target="#Div_Promo_Carousel">Item 1</li>
+            <li data-slide-to="1" data-target="#Div_Promo_Carousel">Item 1</li>
+            <li data-slide-to="2" data-target="#Div_Promo_Carousel">Item 1</li>
+        </ul>
     </div>
-    <div class="d-inline-block swiper-container" style="width: 835px;height: 500px;">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=68&amp;txt=Slideshow+Image&amp;w=1920&amp;h=500);"><img src="assets/img/2slide1.jpg" style="width: 840px;" /></div>
-            <div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=68&amp;txt=Slideshow+Image&amp;w=1920&amp;h=500);"><img src="assets/img/2slide2.jpg" style="width: 840px;" /></div>
-            <div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=68&amp;txt=Slideshow+Image&amp;w=1920&amp;h=500);"><img src="assets/img/2slide3.jpg" style="width: 840px;" /></div>
-            <div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=68&amp;txt=Slideshow+Image&amp;w=1920&amp;h=500);"><img src="assets/img/2slide4.jpg" style="width: 840px;" /></div>
-            <div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=68&amp;txt=Slideshow+Image&amp;w=1920&amp;h=500);"><img src="assets/img/2slide5.jpg" style="width: 840px;" /></div>
+    <div data-ride="carousel" class="carousel slide d-inline-block" id="carousel-1" style="width: 843px;height: 500px;">
+        <div role="listbox" class="carousel-inner">
+    <div class="carousel-item active"><img src="assets/img/2slide1.jpg" alt="Slide Image" class="w-100 d-block" style="width: 839px;height: 500px;"/></div>
+            <div class="carousel-item"><img src="assets/img/2slide2.jpg" alt="Slide Image" class="w-100 d-block" style="width: 839px;height: 500px;"/></div>
+            <div class="carousel-item"><img src="assets/img/2slide3.jpg" alt="Slide Image" class="w-100 d-block" style="width: 839px;height: 500px;"/></div>
+            <div class="carousel-item"><img src="assets/img/2slide4.jpg" alt="Slide Image" class="w-100 d-block" style="width: 839px;height: 500px;" /></div>
+            <div class="carousel-item"><img src="assets/img/2slide5.jpg" alt="Slide Image" class="w-100 d-block" style="width: 839px;height: 500px;"/></div>
         </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div><a href="#carousel-1" role="button" data-slide="prev" class="carousel-control-prev"><span class="carousel-control-prev-icon"></span><span class="sr-only">Previous</span></a><a href="#carousel-1" role="button" data-slide="next" class="carousel-control-next"><span class="carousel-control-next-icon"></span><span class="sr-only">Next</span></a></div>
+        <ol
+            class="carousel-indicators">
+            <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-1" data-slide-to="1"></li>
+            <li data-target="#carousel-1" data-slide-to="2"></li>
+            <li data-target="#carousel-1" data-slide-to="3"></li>
+            <li data-target="#carousel-1" data-slide-to="4"></li>
+            </ol>
     </div>
 </div>
 
