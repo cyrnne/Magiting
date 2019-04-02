@@ -89,9 +89,9 @@ include('includes/session.php');
                     </thead>
                     <tbody>
                         <tr>
-                            <td style="width: 400px;"><center><img src="assets/img/Paraiso.jpg" style="width: 300px;height: 300px;"/></center>PARAISO / PARADISE</td>
-                            <td style="width: 400px;"><center><img src="assets/img/Brave.jpg" style="width: 300px;"/></center></td>
-                            <td style="width: 400px;"><center><img src="assets/img/Marahuyo.jpg" style="width: 300px;height: 300px;"/></center></td>
+                            <td style="width: 400px;"><center><img src="assets/img/FEATURED/Paraiso.jpg" style="width: 300px;height: 300px;"/></center>PARAISO / PARADISE</td>
+                            <td style="width: 400px;"><center><img src="assets/img/FEATURED/Brave.jpg" style="width: 300px;"/></center></td>
+                            <td style="width: 400px;"><center><img src="assets/img/FEATURED/Marahuyo.jpg" style="width: 300px;height: 300px;"/></center></td>
                         </tr>
                         <tr>
                             <td style="color: black"><center>PARAISO / PARADISE<center></td>
