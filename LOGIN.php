@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                        $_SESSION['login_userStat'] = $role;
                        $_SESSION['login_pass'] = $encryptedPass;
                        
-                         header("location: admin.php");          
+                         header("location: ADMIN.php");          
              
                     
                     }
@@ -96,7 +96,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="container-fluid"><button data-toggle="collapse" data-target="#navcol-1" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navcol-1">
             <ul class="nav navbar-nav mx-auto" style="margin: 0px;padding: 0px;">
-                <li role="presentation" class="nav-item"><a href="#" class="nav-link cart" style="width: 35px;height: 35px;margin: 0px;background-image: url('assets/img/cart.png');padding-left: 8px;margin-right: 300px;"></a></li>
+               
                 <li class="nav-item" role="presentation"><a class="nav-link" href="index.php">HOME</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" href="ABOUTUS.PHP">ABOUT US</a></li>
                 <li class="dropdown nav-item" style="margin-left: 0px;margin-right: 50px;"><a data-toggle="dropdown" aria-expanded="false" href="#" class="dropdown-toggle nav-link" style="margin-right: 65px;">PRODUCTS</a>
@@ -111,8 +111,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <h2 class="sr-only">Login Form</h2>
                 <h4 class="text-center login-heading" style="margin-top: -15px;margin-bottom: 15px;">RETURNING CUSTOMER</h4>
                 <div class="illustration"><img src="assets/img/login.png" alt="test" style="margin-bottom: 8px;" /></div>
-                <div class="form-group"><input type="text" id="username" name="username" placeholder="Username" class="form-control" /></div>
-                <div class="form-group"><input type="password" id="pass" name="pass" placeholder="Password" class="form-control" /></div>
+                <div class="form-group"><input type="text" id="username" name="username" placeholder="Username" class="form-control" required /></div>
+                <div class="form-group"><input type="password" id="pass" name="pass" placeholder="Password" class="form-control" required /></div>
                 <div class="form-group"><button class="btn btn-primary btn-block" type="submit" name="action" id="but" value="Login" style="background-color: #000000;">Log In</button></div><a href="#" class="forgot">Forgot your username or password?</a>
             </form>
         </div>

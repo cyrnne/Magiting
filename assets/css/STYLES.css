@@ -1068,4 +1068,31 @@ body {
     transform: none !important;
   }
   
+  /* Modals */
+/* Important part */
+.modal-dialog{
+    overflow-y: initial !important
+}
+.modal-body{
+    height: 350px;
+    overflow-y: auto;
+}
+
+@media (min-width: 1200px) {
+.container {
+    width: 1088px;
+}
+}
+/* Media Queries */
+    
+/* Dashboard table */
+@media screen and (max-width: 990px) {
+.latest-users {
+    margin-right: -15px;
+}
+.sales {
+    margin-left: -16px;
+}
+}
+
   
