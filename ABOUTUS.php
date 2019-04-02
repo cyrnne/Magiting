@@ -18,7 +18,7 @@ include('includes/session.php');
 </head>
 
 <body style="color: rgb(255,255,255);">
-<header class="home-header" style="margin-top: -10px;margin-bottom: -10px;"><img class="d-block float-left" src="assets/img/aboutus header.jpg" style="width: 100%;" /></header>
+<header class="home-header" style="margin-top: -10px;margin-bottom: -10px;"><img class="d-block float-left" src="assets/img/HEADERS/aboutus header.jpg" style="width: 100%;" /></header>
     <nav class="navbar navbar-light navbar-expand-lg bg-white" id="mainNav" style="background-color: #ffffff;">
     <div class="container-fluid"><button data-toggle="collapse" data-target="#navcol-1" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navcol-1">
@@ -45,7 +45,7 @@ include('includes/session.php');
                     beginning with the<br />Millennials who&#39;ve been captured by this beautiful art form. To forge a<br />generation of Active participation and appreciation for the Filipino identity.<br /><br /><br /><br /></p>
                 <h1 class="prod-heading"
                     style="margin-top: 25px;margin-bottom: 25px;">OWNERS</h1>
-                <section style="padding-top: 20px;padding-bottom: 50px;"><img src="assets/img/job.jpg" class="rounded-circle img-fluid d-inline-block" style="width: 300px;height: 400px;margin-right: 0px;padding-right: 10px;padding-top: 10px;padding-bottom: 10px;padding-left: 10px;" /><img src="assets/img/danaraye.jpg" class="rounded-circle img-fluid d-inline-block"
+                <section style="padding-top: 20px;padding-bottom: 50px;"><img src="assets/img/OWNERS/job.jpg" class="rounded-circle img-fluid d-inline-block" style="width: 300px;height: 400px;margin-right: 0px;padding-right: 10px;padding-top: 10px;padding-bottom: 10px;padding-left: 10px;" /><img src="assets/img/OWNERS/danaraye.jpg" class="rounded-circle img-fluid d-inline-block"
                         style="width: 300px;height: 400px;padding-right: 10px;padding-left: 10px;padding-bottom: 10px;padding-top: 10px;" /></section>
             </div>
         </div>
