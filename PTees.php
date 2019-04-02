@@ -44,7 +44,7 @@ include('includes/session.php');
     <div class="col-sm-6 col-md-4 product-item animation-element slide-top-left">
         <div class="product-container">
             <div class="row">
-                <div class="col-md-12"><a href="#" class="product-image"><img src="assets/img/sample.jpg" /></a></div>
+                <div class="col-md-12"><a href="#" class="product-image"><img src="assets/img/TEES/Laban (Fight).jpg" /></a></div>
             </div>
             <div class="row">
                 <div class="col text-center" style="height: 30px; font-size: 20px; font-family: sans-serif; font-weight: bolder; color: black;">Laban (Fight)</div>
@@ -65,7 +65,7 @@ include('includes/session.php');
     <div class="col-sm-6 col-md-4 product-item animation-element slide-rotate-clockwise">
         <div class="product-container">
             <div class="row">
-                <div class="col-md-12"><a href="#" class="product-image"><img src="assets/img/sample.jpg" /></a></div>
+                <div class="col-md-12"><a href="#" class="product-image"><img src="assets/img/TEES/Liwliwa (Inspiration).jpg" /></a></div>
                 <div class="col text-center" style="height: 30px; font-size: 20px; font-family: sans-serif; font-weight: bolder; color: black;">Liwliwa (Inspiration)</div>
             </div>
             <div class="row">
@@ -86,7 +86,7 @@ include('includes/session.php');
     <div class="col-sm-6 col-md-4 product-item animation-element slide-top-right">
         <div class="product-container">
             <div class="row">
-                <div class="col-md-12"><a href="#" class="product-image"><img src="assets/img/sample.jpg" /></a></div>
+                <div class="col-md-12"><a href="#" class="product-image"><img src="assets/img/TEES/Malaya (Free).jpg" /></a></div>
                 <div class="col text-center" style="height: 30px; font-size: 20px; font-family: sans-serif; font-weight: bolder; color: black;">Malaya (Free)</div>
             </div>
             <div class="row">
@@ -109,10 +109,10 @@ include('includes/session.php');
     <div class="col-sm-6 col-md-4 product-item animation-element slide-top-left">
         <div class="product-container">
             <div class="row">
-                <div class="col-md-12"><a href="#" class="product-image"><img src="assets/img/sample.jpg" /></a></div>
+                <div class="col-md-12"><a href="#" class="product-image"><img src="assets/img/TEES/Alpas (To Break Free).png" /></a></div>
             </div>
             <div class="row">
-            <div class="col text-center" style="height: 30px; font-size: 20px; font-family: sans-serif; font-weight: bolder; color: black;">Laban (Fight)</div>
+            <div class="col text-center" style="height: 30px; font-size: 20px; font-family: sans-serif; font-weight: bolder; color: black;">Alpas (To break free)</div>
                 <div class="col-12">
                     <p class="product-description" style="height: 60px;"><br />A violent confrontation or struggle.<br /><br /></p>
                     <input type="number" min="1" max="10" name="quantity" placeholder="Qty:" id="qty" class="text-center product-quantity" style="width: 60px;height: 30px;" />
@@ -130,12 +130,12 @@ include('includes/session.php');
     <div class="col-sm-6 col-md-4 product-item animation-element slide-rotate-clockwise">
         <div class="product-container">
             <div class="row">
-                <div class="col-md-12"><a href="#" class="product-image"><img src="assets/img/sample.jpg" /></a></div>
-                <div class="col text-center" style="height: 30px; font-size: 20px; font-family: sans-serif; font-weight: bolder; color: black;">Liwliwa (Inspiration)</div>
+                <div class="col-md-12"><a href="#" class="product-image"><img src="assets/img/TEES/Kapayapaan (Peace).jpg" /></a></div>
+                <div class="col text-center" style="height: 30px; font-size: 20px; font-family: sans-serif; font-weight: bolder; color: black;">Kapayapaan (Peace)</div>
             </div>
             <div class="row">
                 <div class="col-12">
-                    <p class="product-description" style="height: 60px;margin-bottom: 20px;"><br />Inspiration is a feeling of enthusiasm you get from someone or something<br /><br /></p>
+                    <p class="product-description" style="height: 60px;margin-bottom: 20px;"><br />A state or period in which there is no war or a war has ended.<br /><br /></p>
                     <input type="number" min="1" max="10" name="quantity" placeholder="Qty:" id="qty" class="text-center product-quantity" style="width: 60px;height: 30px;" />
                     <p class="text-center product-stocks"style="padding-bottom: 15px;"><br>Only 4 stocks left</p>
                     <div class="row">
@@ -151,12 +151,12 @@ include('includes/session.php');
     <div class="col-sm-6 col-md-4 product-item animation-element slide-top-right">
         <div class="product-container">
             <div class="row">
-                <div class="col-md-12"><a href="#" class="product-image"><img src="assets/img/sample.jpg" /></a></div>
-                <div class="col text-center" style="height: 30px; font-size: 20px; font-family: sans-serif; font-weight: bolder; color: black;">Malaya (Free)</div>
+                <div class="col-md-12"><a href="#" class="product-image"><img src="assets/img/TEES/Pagibig (Love).jpg" /></a></div>
+                <div class="col text-center" style="height: 30px; font-size: 20px; font-family: sans-serif; font-weight: bolder; color: black;">Pag-ibig (Love)</div>
             </div>
             <div class="row">
                 <div class="col-12">
-                    <p class="product-description" style="height: 60px;"><br />Not under the control or in the power of another.<br /><br /></p>
+                    <p class="product-description" style="height: 60px;"><br />A great interest and pleasure in something.<br /><br /></p>
                     <input type="number" min="1" max="10" name="quantity" placeholder="Qty:" id="qty" class="text-center product-quantity" style="width: 60px;height: 30px;" />
                     <p class="text-center product-stocks"style="padding-bottom: 15px;"><br>Only 4 stocks left</p>
                     <div class="row">
