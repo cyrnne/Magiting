@@ -40,15 +40,17 @@ include('includes/session.php');
 
 <div class="d-inline-block" style="width: 1400px;height: 500px; margin-top: 5px;">
     <div class="d-inline-block mx-auto carousel slide" id="Div_Promo_Carousel" data-ride="carousel" style="width: 500px;height: 500px;">
+
         <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active"><img src="assets/img/1slide1.jpg" style="width: 500px;" /></div>
-            <div class="carousel-item"><img src="assets/img/1slide2.jpg" style="width: 500px;height: 500px;" /></div>
-            <div class="carousel-item"><img src="assets/img/1slide3.jpg" style="width: 500px;height: 500px;" /></div>
-            <div class="carousel-item"><img src="assets/img/1slide4.jpg" style="width: 500px;height: 500px;" /></div>
-            <div class="carousel-item"><img src="assets/img/1slide5.jpg" style="width: 500px;height: 500px;" /></div>
-            <div class="carousel-item"><img src="assets/img/1slide6.jpg" style="width: 500px;height: 500px;" /></div>
-            <div class="carousel-item"><img src="assets/img/1slide7.jpg" style="width: 500px;height: 500px;" /></div>
+        <div class="carousel-item active"><img src="assets/img/SLIDE1/1slide1.jpg" style="width: 500px;" /></div>
+        <div class="carousel-item"><img src="assets/img/SLIDE1/1slide2.jpg" style="width: 500px;height: 500px;" /></div>
+        <div class="carousel-item"><img src="assets/img/SLIDE1/1slide3.jpg" style="width: 500px;height: 500px;" /></div>
+        <div class="carousel-item"><img src="assets/img/SLIDE1/1slide4.jpg" style="width: 500px;height: 500px;" /></div>
+        <div class="carousel-item"><img src="assets/img/SLIDE1/1slide5.jpg" style="width: 500px;height: 500px;" /></div>
+        <div class="carousel-item"><img src="assets/img/SLIDE1/1slide6.jpg" style="width: 500px;height: 500px;" /></div>
+        <div class="carousel-item"><img src="assets/img/SLIDE1/1slide7.jpg" style="width: 500px;height: 500px;" /></div>
         </div>
+
         <div><a href="#Div_Promo_Carousel" class="carousel-control-prev" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Prev </span></a><a href="#Div_Promo_Carousel" class="carousel-control-next"
                 role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next </span></a></div>
         <ul class="carousel-indicators" role>
@@ -57,14 +59,17 @@ include('includes/session.php');
             <li data-slide-to="2" data-target="#Div_Promo_Carousel">Item 1</li>
         </ul>
     </div>
+
+    
     <div data-ride="carousel" class="carousel slide d-inline-block" id="carousel-1" style="width: 843px;height: 500px;">
         <div role="listbox" class="carousel-inner">
-    <div class="carousel-item active"><img src="assets/img/2slide1.jpg" alt="Slide Image" class="w-100 d-block" style="width: 839px;height: 500px;"/></div>
-            <div class="carousel-item"><img src="assets/img/2slide2.jpg" alt="Slide Image" class="w-100 d-block" style="width: 839px;height: 500px;"/></div>
-            <div class="carousel-item"><img src="assets/img/2slide3.jpg" alt="Slide Image" class="w-100 d-block" style="width: 839px;height: 500px;"/></div>
-            <div class="carousel-item"><img src="assets/img/2slide4.jpg" alt="Slide Image" class="w-100 d-block" style="width: 839px;height: 500px;" /></div>
-            <div class="carousel-item"><img src="assets/img/2slide5.jpg" alt="Slide Image" class="w-100 d-block" style="width: 839px;height: 500px;"/></div>
+    <div class="carousel-item active"><img src="assets/img/SLIDE2/2slide1.jpg" alt="Slide Image" class="w-100 d-block" style="width: 839px;height: 500px;"/></div>
+        <div class="carousel-item"><img src="assets/img/SLIDE2/2slide2.jpg" alt="Slide Image" class="w-100 d-block" style="width: 839px;height: 500px;"/></div>
+        <div class="carousel-item"><img src="assets/img/SLIDE2/2slide3.jpg" alt="Slide Image" class="w-100 d-block" style="width: 839px;height: 500px;"/></div>
+        <div class="carousel-item"><img src="assets/img/SLIDE2/2slide4.jpg" alt="Slide Image" class="w-100 d-block" style="width: 839px;height: 500px;" /></div>
+        <div class="carousel-item"><img src="assets/img/SLIDE2/2slide5.jpg" alt="Slide Image" class="w-100 d-block" style="width: 839px;height: 500px;"/></div>
         </div>
+
         <div><a href="#carousel-1" role="button" data-slide="prev" class="carousel-control-prev"><span class="carousel-control-prev-icon"></span><span class="sr-only">Previous</span></a><a href="#carousel-1" role="button" data-slide="next" class="carousel-control-next"><span class="carousel-control-next-icon"></span><span class="sr-only">Next</span></a></div>
         <ol
             class="carousel-indicators">
