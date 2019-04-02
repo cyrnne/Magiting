@@ -38,7 +38,7 @@ include('includes/session.php');
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css" />
 
-<div class="d-inline-block" style="width: 1400px;height: 500px;">
+<div class="d-inline-block" style="width: 1400px;height: 500px; margin-top: 5px;">
     <div class="d-inline-block mx-auto carousel slide" id="Div_Promo_Carousel" data-ride="carousel" style="width: 500px;height: 500px;">
         <div class="carousel-inner" role="listbox">
             <div class="carousel-item active"><img src="assets/img/1slide1.jpg" style="width: 500px;" /></div>
