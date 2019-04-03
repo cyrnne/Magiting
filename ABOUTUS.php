@@ -36,7 +36,7 @@ include('includes/session.php');
         <section class="page-section about-heading">
     <div class="about-heading-content">
         <div class="row">
-            <div class="col-9 text-center mx-auto" style="background-color: #ffffff;color: rgb(0,0,0);opacity: 1;height: 1250px;margin-top: 50px;margin-bottom: 50px;">
+            <div class="col-9 text-center mx-auto" style="background-color: #ffffff;color: rgb(0,0,0);opacity: 1;margin-top: 50px;margin-bottom: 50px;">
                 <h1 class="prod-heading" style="margin-top: 25px;margin-bottom: 25px;">ABOUT US</h1>
                 <p class="text-center"><br /><strong>Vision</strong><br /><br />Magiting Pilipinas, as a Baybayin movement, envisions a generation<br />that takes pride and actively participates in the Filipino culture as a<br />part of their modern lifestyle. Magiting Pilipinas
                     aims to be known as<br />the leading Baybaying Enterprise not only in the Philippines but also <br />to fellow Filipinos all over the world, within the first 3 years of Operations.<br /><br /><strong>Mission</strong><br /><br />Magiting
@@ -45,7 +45,9 @@ include('includes/session.php');
                     beginning with the<br />Millennials who&#39;ve been captured by this beautiful art form. To forge a<br />generation of Active participation and appreciation for the Filipino identity.<br /><br /><br /><br /></p>
                 <h1 class="prod-heading"
                     style="margin-top: 25px;margin-bottom: 25px;">OWNERS</h1>
-                <section style="padding-top: 20px;padding-bottom: 50px;"><img src="assets/img/OWNERS/job.jpg" class="rounded-circle img-fluid d-inline-block" style="width: 300px;height: 400px;margin-right: 0px;padding-right: 10px;padding-top: 10px;padding-bottom: 10px;padding-left: 10px;" /><img src="assets/img/OWNERS/danaraye.jpg" class="rounded-circle img-fluid d-inline-block"
+                <section style="padding-top: 20px;padding-bottom: 50px;">
+                <img src="assets/img/OWNERS/job.jpg" class="rounded-circle img-fluid d-inline-block" style="width: 300px;height: 400px;margin-right: 0px;padding-right: 10px;padding-top: 10px;padding-bottom: 10px;padding-left: 10px;" />
+                <img src="assets/img/OWNERS/danaraye.jpg" class="rounded-circle img-fluid d-inline-block"
                         style="width: 300px;height: 400px;padding-right: 10px;padding-left: 10px;padding-bottom: 10px;padding-top: 10px;" /></section>
             </div>
         </div>

@@ -36,7 +36,7 @@
         <div class="form-container" style="background-image: url('assets/img/cover.jpg');">
             <form id="myform" name="myform" onsubmit="return false">
 
-                    <img src="assets/img/cover.jpg" height="500px" width="350px" class="img-responsive" >
+                    <img src="assets/img/cover.jpg" height="500px" width="350px" class="img-responsive" style = "margin-bottom: 0.7cm;">
                
                 <div class="col-md-6" style="float: right;">
                 <form method="post">

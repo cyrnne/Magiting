@@ -67,7 +67,7 @@ include('includes/session.php');
 <section class="page-section about-heading">
     <div class="about-heading-content">
         <div class="row">
-            <div class="col-9 text-center mx-auto" style="background-color: #ffffff;color: rgb(0,0,0);opacity: 1;height: 300%;margin-top: 50px;margin-bottom: 50px;">
+            <div class="col-9 text-center mx-auto" style="background-color: #ffffff;color: rgb(0,0,0);opacity: 1;margin-top: 50px;margin-bottom: 50px;">
                 <h1 class="prod-heading" style="margin-top: 25px;margin-bottom: 25px;">TEES</h1>
                 <div class="row product-list dev">
     <div class="col-sm-6 col-md-4 product-item animation-element slide-top-left">

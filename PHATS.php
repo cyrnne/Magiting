@@ -61,13 +61,13 @@ include('includes/session.php');
                 </li>
             </ul><?php echo $menuBar; ?></div>
     </div>
-</nav>
+</nav> 
         
 <!-- CONTENT-->
 <section class="page-section about-heading">
     <div class="about-heading-content">
         <div class="row">
-            <div class="col-9 text-center mx-auto" style="background-color: #ffffff;color: rgb(0,0,0);opacity: 1;height: 300%;margin-top: 50px;margin-bottom: 50px;">
+            <div class="col-9 text-center mx-auto" style="background-color: #ffffff;color: rgb(0,0,0);opacity: 1;margin-top: 50px;margin-bottom: 50px;">
                 <h1 class="prod-heading" style="margin-top: 25px;margin-bottom: 25px;">HATS</h1>
                 <div class="row product-list dev">
     <div class="col-sm-6 col-md-4 product-item animation-element slide-top-left">
@@ -138,7 +138,7 @@ include('includes/session.php');
     <div class="col-sm-6 col-md-4 product-item animation-element slide-top-left">
         <div class="product-container">
             <div class="row">
-                <div class="col-md-12"><a href="#" class="product-image"><img src="assets/img/HATS/Bucket Hats.jpg" /></a></div>
+                <div class="col-md-12"><a href="#" class="product-image"><img src="assets/img/HATS/Bucket Hat.jpg" /></a></div>
             </div>
             <div class="row">
             <div class="col text-center" style="height: 30px; font-size: 20px; font-family: sans-serif; font-weight: bolder; color: black;">Magiting (Warriors) Bucket Hat</div>
