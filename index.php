@@ -149,7 +149,30 @@ include('includes/session.php');
                     <h3>CUSTOMER SERVICE</h3>
                     <ul>
                         <li><a href="#">FAQ<br /></a></li>
-                        <li><a href="#">Size Guide<br /></a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#myModal">Size Guide<br /></a></li>
+                        <!--SIZE GUIDE MODAL-->
+                        <!-- The Modal -->
+                        <div class="modal" id="myModal">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                        <!-- Modal Header -->
+
+                        <div class="modal-header" style="color: black;">
+                        <h4 class="modal-title">Size Guide</h4>
+                        
+                        </div>
+        
+                        <!-- Modal body -->
+                        <div class="modal-body" style="color: black;">
+                        <p style="color: black; text-align: justify; padding: 30px;"> 
+                        <img class="size-guide"src="assets/img/size chart.jpg" style="width: 300px;"/>
+                        </p>
+                    
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+
                         <li><a href="#">Contact Us<br /></a></li>
                     </ul>
                 </div>
