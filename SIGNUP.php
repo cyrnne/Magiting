@@ -47,7 +47,7 @@
                     <div class="form-group"><input type="password" id="password-repeat" placeholder="Repeat password" class="form-control" /></div>
 
                     <div class="form-group">
-                        <div class="form-check"><label class="form-check-label"><input type="checkbox" class="form-check-input" /><a href="#" style = "color: grey;" data-toggle="modal" data-target="#myModal">I agree to the license terms. </a></label></div>
+                        <div class="form-check"><label class="form-check-label">By clicking "Sign Up", you agree to <a href="#" style = "color: brown;" data-toggle="modal" data-target="#myModal">MAGITING PH Terms & Conditions.</a></label></div>
 
                 <!--LICENSE TERMS MODAL-->
                 <!-- The Modal -->
@@ -63,14 +63,13 @@
         
                 <!-- Modal body -->
                     <div class="modal-body" style="color: black;">
-                    <p style="color: black; text-align: justify; padding: 30px;"> Please read these terms and conditions of use 
-                    carefully before accessing, using or obtaining any materials, information, products or services. </p>
+                    <p style="color: black; text-align: justify; padding: 30px;"> 
+                    Welcome to Magiting PH! <br><br>
+                    These terms and conditions outline the rules and regulations for the use of Magiting PH Website. <br><br>
+                    The Magiting Ph is an online shopping website which allows customers to directly buy items from the 
+                    seller over the Internet using a web browser.
+                    </p>
                     
-                    </div>
-        
-                <!-- Modal footer -->
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                         </div>
                         </div>
                         </div>
