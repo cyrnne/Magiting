@@ -194,15 +194,14 @@ include('../session.php');
 
                   if($conn->query($sql) === TRUE) {
 
-                   // echo "Evaluation Submitted";
                       
-                    echo "Evaluation Submitted";
+                    echo "Submitted";
                      
                   }
 
                   else{
                        
-                    echo "Evaluation not Submitted";
+                    echo "Not Submitted";
                        
                       }
 

@@ -25,13 +25,13 @@ include("../includes/indexdb.php");
 
                    // echo "Evaluation Submitted";
                       
-                    echo "Success";
+                    echo "Signed up succesfully";
                      
                   }
 
                   else{
                        
-                    echo "Failed";
+                    echo "Invalid sign up";
                        
                       }
 
