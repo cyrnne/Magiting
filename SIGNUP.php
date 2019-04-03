@@ -45,8 +45,37 @@
                     <div class="form-group"><input type="text" id="username" placeholder="Username" class="form-control" /></div>
                     <div class="form-group"><input type="password" id="password" placeholder="Password" class="form-control" /></div>
                     <div class="form-group"><input type="password" id="password-repeat" placeholder="Repeat password" class="form-control" /></div>
+
                     <div class="form-group">
-                        <div class="form-check"><label class="form-check-label"><input type="checkbox" class="form-check-input" />I agree to the license terms.</label></div>
+                        <div class="form-check"><label class="form-check-label"><input type="checkbox" class="form-check-input" /><a href="#" style = "color: grey;" data-toggle="modal" data-target="#myModal">I agree to the license terms. </a></label></div>
+
+                <!--LICENSE TERMS MODAL-->
+                <!-- The Modal -->
+                    <div class="modal" id="myModal">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                <!-- Modal Header -->
+
+                    <div class="modal-header" style="color: black;">
+                        <h4 class="modal-title">Terms & Conditions</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+        
+                <!-- Modal body -->
+                    <div class="modal-body" style="color: black;">
+                    <p style="color: black; text-align: justify; padding: 30px;"> Please read these terms and conditions of use 
+                    carefully before accessing, using or obtaining any materials, information, products or services. </p>
+                    
+                    </div>
+        
+                <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                    
                     </div>
                     <div class="form-group"><button class="btn btn-primary btn-block" type="submit" name="action" id="signup">Sign Up</button></div><a href="LOGIN.php" class="already">You already have an account? Login here.</a>
                 </form>

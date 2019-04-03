@@ -21,6 +21,7 @@ include('includes/session.php');
 <body style="color: rgb(255,255,255);">
 <header class="home-header" style="margin-top: -10px;margin-bottom: -10px;"><img class="d-block float-left" src="assets/img/HEADERS/home header.png" style="width: 100%;" /></header>
     <nav class="navbar navbar-light navbar-expand-lg bg-white" id="mainNav" style="background-color: #ffffff;">
+    
     <div class="container-fluid"><button data-toggle="collapse" data-target="#navcol-1" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navcol-1">
             <ul class="nav navbar-nav mx-auto" style="margin: 0px;padding: 0px;">
