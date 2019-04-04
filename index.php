@@ -158,13 +158,13 @@ include('includes/session.php');
 
                         <div class="modal-header" style="color: black;">
                         <h4 class="modal-title">FAQ</h4>
-                        
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
         
                         <!-- Modal body -->
                         <div class="FAQmodal-body" style="color: black;">
                         <p style="color: black; text-align: justify;"> 
-                    <center><img class="FAQ-guide" style="width: 400px;"/><form action="/action_page.php">
+                        <center><img class="FAQ-guide" style="width: 400px;"/><form action="/action_page.php">
                     
                         Name*: <input type="text" name="Name" value=""><br>
                         <br>
@@ -189,13 +189,13 @@ include('includes/session.php');
 
                         <div class="modal-header" style="color: black;">
                         <h4 class="modal-title">Size Guide</h4>
-                        
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
         
                         <!-- Modal body -->
                         <div class="sizemodal-body" style="color: black;">
                         <p style="color: black; text-align: justify;"> 
-                    <center><img class="size-guide" src="assets/img/size chart.jpg" style="width: 400px;"/></center>
+                        <center><img class="size-guide" src="assets/img/size chart.jpg" style="width: 400px;"/></center>
                         </p>
                     
                         </div>
@@ -214,13 +214,13 @@ include('includes/session.php');
 
                         <div class="modal-header" style="color: black;">
                         <h4 class="modal-title">Color Chart</h4>
-                        
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
         
                         <!-- Modal body -->
                         <div class="chartmodal-body" style="color: black;">
                         <p style="color: black; text-align: justify;"> 
-                    <center><img class="chart-guide" src="assets/img/color.jpg" style="width: 400px;"/></center>
+                        <center><img class="chart-guide" src="assets/img/color.jpg" style="width: 400px;"/></center>
                         </p>
                     
                         </div>
@@ -238,7 +238,7 @@ include('includes/session.php');
 
                         <div class="modal-header" style="color: black;">
                         <h4 class="modal-title">Contact Us</h4>
-                        
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
         
                         <!-- Modal body -->
@@ -257,9 +257,6 @@ include('includes/session.php');
                         </div>
                  
                 </div>
-
-
-
 
                 <div class="col-sm-6 col-md-3 text-left item">
                     <h3>ABOUT US</h3>
