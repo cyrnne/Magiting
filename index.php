@@ -148,11 +148,41 @@ include('includes/session.php');
                 <div class="col-sm-6 col-md-3 text-left item">
                     <h3>CUSTOMER SERVICE</h3>
                     <ul>
-                        <li><a href="#">FAQ<br /></a></li>
-                        <li><a href="#" data-toggle="modal" data-target="#myModal">Size Guide<br /></a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#myModalFAQ">FAQ<br /></a></li>
+                        <!--FAQ MODAL-->
+                        <!-- The Modal -->
+                        <div class="modal" id="myModalFAQ">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                        <!-- Modal Header -->
+
+                        <div class="modal-header" style="color: black;">
+                        <h4 class="modal-title">FAQ</h4>
+                        
+                        </div>
+        
+                        <!-- Modal body -->
+                        <div class="FAQmodal-body" style="color: black;">
+                        <p style="color: black; text-align: justify;"> 
+                    <center><img class="FAQ-guide" style="width: 400px;"/><form action="/action_page.php">
+                    
+                        Name*: <input type="text" name="Name" value=""><br>
+                        <br>
+                        Question: <input type="text" name="Question" value="" style="padding-right: 13px;"><br>
+                        <br>
+                        <input type="submit" value="Ask Question">
+                        </form></center>
+                        </p>
+                    
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        
+                        <li><a href="#" data-toggle="modal" data-target="#myModalsize">Size Guide<br /></a></li>
                         <!--SIZE GUIDE MODAL-->
                         <!-- The Modal -->
-                        <div class="modal" id="myModal">
+                        <div class="modal" id="myModalsize">
                         <div class="modal-dialog">
                         <div class="modal-content">
                         <!-- Modal Header -->
@@ -163,9 +193,9 @@ include('includes/session.php');
                         </div>
         
                         <!-- Modal body -->
-                        <div class="modal-body" style="color: black;">
-                        <p style="color: black; text-align: justify; padding: 30px;"> 
-                        <img class="size-guide"src="assets/img/size chart.jpg" style="width: 300px;"/>
+                        <div class="sizemodal-body" style="color: black;">
+                        <p style="color: black; text-align: justify;"> 
+                    <center><img class="size-guide" src="assets/img/size chart.jpg" style="width: 400px;"/></center>
                         </p>
                     
                         </div>
@@ -173,9 +203,64 @@ include('includes/session.php');
                         </div>
                         </div>
 
-                        <li><a href="#">Contact Us<br /></a></li>
-                    </ul>
+
+                        <li><a href="#" data-toggle="modal" data-target="#myModalchart">Color Chart<br /></a></li>
+                        <!--COLOR CHART MODAL-->
+                        <!-- The Modal -->
+                        <div class="modal" id="myModalchart">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                        <!-- Modal Header -->
+
+                        <div class="modal-header" style="color: black;">
+                        <h4 class="modal-title">Color Chart</h4>
+                        
+                        </div>
+        
+                        <!-- Modal body -->
+                        <div class="chartmodal-body" style="color: black;">
+                        <p style="color: black; text-align: justify;"> 
+                    <center><img class="chart-guide" src="assets/img/color.jpg" style="width: 400px;"/></center>
+                        </p>
+                    
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+
+                        <li><a href="#" data-toggle="modal" data-target="#myModalcontact">Contact Us<br /></a></li>
+                        <!--CONTACT MODAL-->
+                        <!-- The Modal -->
+                        <div class="modal" id="myModalcontact">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                        <!-- Modal Header -->
+
+                        <div class="modal-header" style="color: black;">
+                        <h4 class="modal-title">Contact Us</h4>
+                        
+                        </div>
+        
+                        <!-- Modal body -->
+                        <div class="contactmodal-body" style="color: black;">
+            <p style="color: black; text-align: justify;"><br><b style="padding-left: 50px; font-size: 18px;">How may we help you?</b><br><b style="padding-left: 50px; font-size: 15px;">Contact us thru:</b> 
+        <center><br><a href="https://www.facebook.com/MagitingPH" target="_blank"><img src="assets/img/icofb.png" style="width: 30px"></a>
+       <a href="https://twitter.com/Magitingph" target="_blank"><img src="assets/img/icotwit.png" style="width: 30px">
+       <a href="https://www.instagram.com/magitingph" target="_blank">
+        <img src="assets/img/icoig.png" style="width: 30px">
+        </a></center></a>
+                        </p>
+                    
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                 
                 </div>
+
+
+
+
                 <div class="col-sm-6 col-md-3 text-left item">
                     <h3>ABOUT US</h3>
                     <ul>
@@ -197,6 +282,7 @@ include('includes/session.php');
         </div>
     </footer>
 </div>
+
 
 <script>
 $(function(){
