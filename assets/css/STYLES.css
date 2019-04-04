@@ -579,20 +579,8 @@ body {
 
 
 
-
-/* PRODUCTS*/
-  .prod-heading {
-    font-family: century gothic;
-  }
-  .modal-body {
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    font-family: century gothic;
-  }
-
   
-  
+
 
 
 
@@ -1094,5 +1082,77 @@ body {
     margin-left: -16px;
 }
 }
+
+
+
+/*Size Modal*/
+
+.sizemodal-dialog{
+    overflow-y: initial !important
+}
+.sizemodal-body{
+    height: 450px;
+    overflow-y: auto;
+}
+
+@media (min-width: 1200px) {
+.container {
+    width: 1088px;
+}
+}
+
+
+/*Chart Modal*/
+
+.chartmodal-dialog{
+    overflow-y: initial !important
+}
+.chartmodal-body{
+    height: 450px;
+    overflow-y: auto;
+}
+
+@media (min-width: 1200px) {
+.container {
+    width: 1088px;
+}
+}
+
+
+/*FAQ Modal*/
+
+.FAQmodal-dialog{
+    overflow-y: initial !important
+}
+.FAQmodal-body{
+    height: 300px;
+    overflow-y: auto;
+}
+
+@media (min-width: 1200px) {
+.container {
+    width: 1088px;
+}
+}
+
+
+/*Contact Us Modal*/
+
+.contactmodal-dialog{
+    overflow-y: initial !important
+}
+.contactmodal-body{
+    height: 200px;
+    overflow-y: auto;
+}
+
+@media (min-width: 1200px) {
+.container {
+    width: 1088px;
+}
+}
+
+
+
 
   

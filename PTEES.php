@@ -69,6 +69,54 @@ include('includes/session.php');
         <div class="row">
             <div class="col-9 text-center mx-auto" style="background-color: #ffffff;color: rgb(0,0,0);opacity: 1;margin-top: 50px;margin-bottom: 50px;">
                 <h1 class="prod-heading" style="margin-top: 25px;margin-bottom: 25px;">TEES</h1>
+                <a href="#" data-toggle="modal" data-target="#myModalsize" style="color: red;">Size Guide<br /></a>
+                        <!--SIZE GUIDE MODAL-->
+                        <!-- The Modal -->
+                        <div class="modal" id="myModalsize">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                        <!-- Modal Header -->
+
+                        <div class="modal-header">
+                        <h4 class="modal-title">Size Guide</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+        
+                        <!-- Modal body -->
+                        <div class="sizemodal-body" style="color: black;">
+                        <p style="color: black; text-align: justify;"> 
+                        <center><img class="size-guide" src="assets/img/size chart.jpg" style="width: 400px;"/></center>
+                        </p>
+                    
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+
+                        <a href="#" data-toggle="modal" data-target="#myModalchart" style="color: red;">Color Chart<br /></a>
+                        <!--COLOR CHART MODAL-->
+                        <!-- The Modal -->
+                        <div class="modal" id="myModalchart">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                        <!-- Modal Header -->
+
+                        <div class="modal-header" style="color: black;">
+                        <h4 class="modal-title">Color Chart</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+        
+                        <!-- Modal body -->
+                        <div class="chartmodal-body" style="color: black;">
+                        <p style="color: black; text-align: justify;"> 
+                        <center><img class="chart-guide" src="assets/img/color.jpg" style="width: 400px;"/></center>
+                        </p>
+                    
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+
                 <div class="row product-list dev">
     <div class="col-sm-6 col-md-4 product-item animation-element slide-top-left">
         <div class="product-container">
@@ -80,7 +128,36 @@ include('includes/session.php');
                 <div class="col-12">
                     <p class="product-description" style="height: 60px;"><br />A violent confrontation or struggle.<br /><br /></p>
                     <input type="number" min="1" max="10" name="quantity" placeholder="Qty:" id="qty" class="text-center product-quantity" style="width: 60px;height: 30px;" />
-                    <p class="text-center product-stocks"style="padding-bottom: 15px;"><br>Only 4 stocks left</p>
+                    <p class="text-center product-stocks"style="padding-bottom: 0px;"><br>Only 4 stocks left</p>
+                    <center><select style="margin-bottom: 15px;">
+                    <option value="" disabled selected style="display: none;">Size</option>
+                                <option value="volvo">XS</option>
+                                <option value="saab">S</option>
+                                <option value="opel">M</option>
+                                <option value="audi">L</option>
+                                <option value="saab">XL</option>
+                                <option value="opel">2XL</option>
+                        </select>
+
+                        <select style="margin-bottom: 15px;">
+                        <option value="" disabled selected style="display: none;">Color</option>
+                                <option value="volvo">Navy Blue</option>
+                                <option value="saab">Red</option>
+                                <option value="opel">Royal Blue</option>
+                                <option value="audi">Black</option>
+                                <option value="saab">Yellow</option>
+                                <option value="volvo">Violet</option>
+                                <option value="saab">Sky Blue</option>
+                                <option value="opel">Dark Grey</option>
+                                <option value="audi">white</option>
+                                <option value="saab">Light Green</option>
+                                <option value="volvo">Pink</option>
+                                <option value="saab">Plum</option>
+                                <option value="opel">Light Grey</option>
+                                <option value="audi">Orange</option>
+                                <option value="saab">Dark Green</option>
+                        </select></center>
+
                     <div class="row">
                         <div class="col-6"><button class="btn btn-light" type="button">Buy Now!</button></div>
                         <div class="col-6">
@@ -101,7 +178,36 @@ include('includes/session.php');
                 <div class="col-12">
                     <p class="product-description" style="height: 60px;margin-bottom: 20px;"><br />Inspiration is a feeling of enthusiasm you get from someone or something<br /><br /></p>
                     <input type="number" min="1" max="10" name="quantity" placeholder="Qty:" id="qty" class="text-center product-quantity" style="width: 60px;height: 30px;" />
-                    <p class="text-center product-stocks"style="padding-bottom: 15px;"><br>Only 4 stocks left</p>
+                    <p class="text-center product-stocks"style="padding-bottom: 0px;"><br>Only 4 stocks left</p>
+                    <center><select style="margin-bottom: 15px;">
+                    <option value="" disabled selected style="display: none;">Size</option>
+                                <option value="volvo">XS</option>
+                                <option value="saab">S</option>
+                                <option value="opel">M</option>
+                                <option value="audi">L</option>
+                                <option value="saab">XL</option>
+                                <option value="opel">2XL</option>
+                        </select>
+
+                        <select style="margin-bottom: 15px;">
+                        <option value="" disabled selected style="display: none;">Color</option>
+                                <option value="volvo">Navy Blue</option>
+                                <option value="saab">Red</option>
+                                <option value="opel">Royal Blue</option>
+                                <option value="audi">Black</option>
+                                <option value="saab">Yellow</option>
+                                <option value="volvo">Violet</option>
+                                <option value="saab">Sky Blue</option>
+                                <option value="opel">Dark Grey</option>
+                                <option value="audi">white</option>
+                                <option value="saab">Light Green</option>
+                                <option value="volvo">Pink</option>
+                                <option value="saab">Plum</option>
+                                <option value="opel">Light Grey</option>
+                                <option value="audi">Orange</option>
+                                <option value="saab">Dark Green</option>
+                        </select></center>
+
                     <div class="row">
                         <div class="col-6"><button class="btn btn-light" type="button">Buy Now!</button></div>
                         <div class="col">
@@ -122,7 +228,36 @@ include('includes/session.php');
                 <div class="col-12">
                     <p class="product-description" style="height: 60px;"><br />Not under the control or in the power of another.<br /><br /></p>
                     <input type="number" min="1" max="10" name="quantity" placeholder="Qty:" id="qty" class="text-center product-quantity" style="width: 60px;height: 30px;" />
-                    <p class="text-center product-stocks"style="padding-bottom: 15px;"><br>Only 4 stocks left</p>
+                    <p class="text-center product-stocks"style="padding-bottom: 0px;"><br>Only 4 stocks left</p>
+                    <center><select style="margin-bottom: 15px;">
+                    <option value="" disabled selected style="display: none;">Size</option>
+                                <option value="volvo">XS</option>
+                                <option value="saab">S</option>
+                                <option value="opel">M</option>
+                                <option value="audi">L</option>
+                                <option value="saab">XL</option>
+                                <option value="opel">2XL</option>
+                        </select>
+
+                        <select style="margin-bottom: 15px;">
+                        <option value="" disabled selected style="display: none;">Color</option>
+                                <option value="volvo">Navy Blue</option>
+                                <option value="saab">Red</option>
+                                <option value="opel">Royal Blue</option>
+                                <option value="audi">Black</option>
+                                <option value="saab">Yellow</option>
+                                <option value="volvo">Violet</option>
+                                <option value="saab">Sky Blue</option>
+                                <option value="opel">Dark Grey</option>
+                                <option value="audi">white</option>
+                                <option value="saab">Light Green</option>
+                                <option value="volvo">Pink</option>
+                                <option value="saab">Plum</option>
+                                <option value="opel">Light Grey</option>
+                                <option value="audi">Orange</option>
+                                <option value="saab">Dark Green</option>
+                        </select></center>
+                        
                     <div class="row">
                         <div class="col-6"><button class="btn btn-light" type="button">Buy Now!</button></div>
                         <div class="col">
@@ -145,7 +280,36 @@ include('includes/session.php');
                 <div class="col-12">
                     <p class="product-description" style="height: 60px;"><br />A violent confrontation or struggle.<br /><br /></p>
                     <input type="number" min="1" max="10" name="quantity" placeholder="Qty:" id="qty" class="text-center product-quantity" style="width: 60px;height: 30px;" />
-                    <p class="text-center product-stocks"style="padding-bottom: 15px;"><br>Only 4 stocks left</p>
+                    <p class="text-center product-stocks"style="padding-bottom: 0px;"><br>Only 4 stocks left</p>
+                    <center><select style="margin-bottom: 15px;">
+                    <option value="" disabled selected style="display: none;">Size</option>
+                                <option value="volvo">XS</option>
+                                <option value="saab">S</option>
+                                <option value="opel">M</option>
+                                <option value="audi">L</option>
+                                <option value="saab">XL</option>
+                                <option value="opel">2XL</option>
+                        </select>
+
+                        <select style="margin-bottom: 15px;">
+                        <option value="" disabled selected style="display: none;">Color</option>
+                                <option value="volvo">Navy Blue</option>
+                                <option value="saab">Red</option>
+                                <option value="opel">Royal Blue</option>
+                                <option value="audi">Black</option>
+                                <option value="saab">Yellow</option>
+                                <option value="volvo">Violet</option>
+                                <option value="saab">Sky Blue</option>
+                                <option value="opel">Dark Grey</option>
+                                <option value="audi">white</option>
+                                <option value="saab">Light Green</option>
+                                <option value="volvo">Pink</option>
+                                <option value="saab">Plum</option>
+                                <option value="opel">Light Grey</option>
+                                <option value="audi">Orange</option>
+                                <option value="saab">Dark Green</option>
+                        </select></center>
+                        
                     <div class="row">
                         <div class="col-6"><button class="btn btn-light" type="button">Buy Now!</button></div>
                         <div class="col-6">
@@ -166,7 +330,36 @@ include('includes/session.php');
                 <div class="col-12">
                     <p class="product-description" style="height: 60px;margin-bottom: 20px;"><br />A state or period in which there is no war or a war has ended.<br /><br /></p>
                     <input type="number" min="1" max="10" name="quantity" placeholder="Qty:" id="qty" class="text-center product-quantity" style="width: 60px;height: 30px;" />
-                    <p class="text-center product-stocks"style="padding-bottom: 15px;"><br>Only 4 stocks left</p>
+                    <p class="text-center product-stocks"style="padding-bottom: 0px;"><br>Only 4 stocks left</p>
+                    <center><select style="margin-bottom: 15px;">
+                    <option value="" disabled selected style="display: none;">Size</option>
+                                <option value="volvo">XS</option>
+                                <option value="saab">S</option>
+                                <option value="opel">M</option>
+                                <option value="audi">L</option>
+                                <option value="saab">XL</option>
+                                <option value="opel">2XL</option>
+                        </select>
+
+                        <select style="margin-bottom: 15px;">
+                        <option value="" disabled selected style="display: none;">Color</option>
+                                <option value="volvo">Navy Blue</option>
+                                <option value="saab">Red</option>
+                                <option value="opel">Royal Blue</option>
+                                <option value="audi">Black</option>
+                                <option value="saab">Yellow</option>
+                                <option value="volvo">Violet</option>
+                                <option value="saab">Sky Blue</option>
+                                <option value="opel">Dark Grey</option>
+                                <option value="audi">white</option>
+                                <option value="saab">Light Green</option>
+                                <option value="volvo">Pink</option>
+                                <option value="saab">Plum</option>
+                                <option value="opel">Light Grey</option>
+                                <option value="audi">Orange</option>
+                                <option value="saab">Dark Green</option>
+                        </select></center>
+                        
                     <div class="row">
                         <div class="col-6"><button class="btn btn-light" type="button">Buy Now!</button></div>
                         <div class="col">
@@ -187,7 +380,36 @@ include('includes/session.php');
                 <div class="col-12">
                     <p class="product-description" style="height: 60px;"><br />A great interest and pleasure in something.<br /><br /></p>
                     <input type="number" min="1" max="10" name="quantity" placeholder="Qty:" id="qty" class="text-center product-quantity" style="width: 60px;height: 30px;" />
-                    <p class="text-center product-stocks"style="padding-bottom: 15px;"><br>Only 4 stocks left</p>
+                    <p class="text-center product-stocks"style="padding-bottom: 0px;"><br>Only 4 stocks left</p>
+                    <center><select style="margin-bottom: 15px;">
+                    <option value="" disabled selected style="display: none;">Size</option>
+                                <option value="volvo">XS</option>
+                                <option value="saab">S</option>
+                                <option value="opel">M</option>
+                                <option value="audi">L</option>
+                                <option value="saab">XL</option>
+                                <option value="opel">2XL</option>
+                        </select>
+
+                        <select style="margin-bottom: 15px;">
+                        <option value="" disabled selected style="display: none;">Color</option>
+                                <option value="volvo">Navy Blue</option>
+                                <option value="saab">Red</option>
+                                <option value="opel">Royal Blue</option>
+                                <option value="audi">Black</option>
+                                <option value="saab">Yellow</option>
+                                <option value="volvo">Violet</option>
+                                <option value="saab">Sky Blue</option>
+                                <option value="opel">Dark Grey</option>
+                                <option value="audi">white</option>
+                                <option value="saab">Light Green</option>
+                                <option value="volvo">Pink</option>
+                                <option value="saab">Plum</option>
+                                <option value="opel">Light Grey</option>
+                                <option value="audi">Orange</option>
+                                <option value="saab">Dark Green</option>
+                        </select></center>
+                        
                     <div class="row">
                         <div class="col-6"><button class="btn btn-light" type="button">Buy Now!</button></div>
                         <div class="col">

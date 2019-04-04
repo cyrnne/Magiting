@@ -7,7 +7,7 @@ $(document).ready(function() {
 // Returns successful data sybmission message when the entered information is stored in database
 
 if(password != passwordrepeat){
-alert("invalid password");
+alert("Password does not match");
 }
 else{
 

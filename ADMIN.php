@@ -108,7 +108,7 @@ else if ($_REQUEST['action']=="Save"){
                 <div class="col-9 text-center mx-auto" style="background-color: #ffffff;color: rgb(0,0,0);opacity: 1;height: 2000px;margin-top: 50px;margin-bottom: 50px;">
                     <h1 class="admin-heading" style="margin-top: 25px;margin-bottom: 25px;">MANAGE PRODUCTS</h1>
                     <div class="dropdown"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" style="margin-right: 0px;">PRODUCTS</button>
-                        <div role="menu" class="dropdown-menu"><a role="presentation" href="PTees.html" class="dropdown-item">Tees</a><a role="presentation" href="PHats.html" class="dropdown-item">Hats</a><a role="presentation" href="#" class="dropdown-item">Stickers</a></div>
+                        <div role="menu" class="dropdown-menu"><a role="presentation" href="PTees.html" class="dropdown-item">Tees</a><a role="presentation" href="PHats.html" class="dropdown-item">Hats</a></div>
                     </div>
 
                    <!-- Table Dynamic -->
@@ -117,7 +117,7 @@ else if ($_REQUEST['action']=="Save"){
             <div class="panel panel-default">
               <div class="panel-heading main-color-bg">
                 <h3 class="panel-title">T - shirts</h3>
-                <button class="btn-primary" id="addBtn" style="color: white; background-color: black; border: none; float: left; margin-bottom: 10px;" data-toggle="modal" data-target="#addUser" onclick="showAddBtn();">Add Item</button>
+                <button class="btn btn-light action-button" id="addBtn" style="color: white; background-color: black; border: none; float: left; margin-bottom: 10px;" data-toggle="modal" data-target="#addUser" onclick="showAddBtn();">Add Item</button>
               </div>
               <div class="panel-body">
                 
@@ -283,16 +283,16 @@ else if ($_REQUEST['action']=="Save"){
           <div class="modal-footer">
             <button type="button" class="btn btn-default" id="closeBtn" onclick="clearText();" data-dismiss="modal" style=" float: right;" >Close</button>
 
-             <button type="submit" class="btn btn-primary" value="Save" id="saveBtn" name="action" style=" float: right; margin-right: 5px; display: none;">Save changes</button>
+             <button type="submit" class="btn btn-light action-button" value="Save" id="saveBtn" name="action" style=" float: right; margin-right: 5px; display: none;">Save changes</button>
 
-             <button type="submit" class="btn btn-primary" value="Add" id="addbtn" name="action" style=" float: right; margin-right: 5px; display: none;">Add Item</button>
+             <button type="submit" class="btn btn-light action-button" value="Add" id="addbtn" name="action" style=" float: right; margin-right: 5px; display: none;">Add Item</button>
 
-             <button type="button" class="btn btn-danger" id="delBtn" onclick="clickDel()" style=" float: right;">Delete</button>
+             <button type="button" class="btn btn-light action-button" id="delBtn" onclick="clickDel()" style=" float: right;">Delete</button>
 
-             
-            <button type="button" onclick="clickNo();" class="btn btn-primary"  id="noBtn" style="display: none; float: right; margin-right: 5px;">No</button>
-             <button type="submit" class="btn btn-danger"  id="yesBtn" name="action" value="Delete" style="display: none; float: right; margin-right: 5px;">Yes</button>
              <p id="confirmationTag" style="margin-right: 5px; display: none; float: right;">Are you sure?</p>
+             <button type="submit" class="btn btn-light action-button"  id="yesBtn" name="action" value="Delete" style="display: none; float: right; margin-right: 5px;">Yes</button>
+             <button type="button" onclick="clickNo();" class="btn btn-light action-button"  id="noBtn" style="display: none; float: right; margin-right: 5px;">No</button>
+             
              
          
               

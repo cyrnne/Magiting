@@ -45,8 +45,36 @@
                     <div class="form-group"><input type="text" id="username" placeholder="Username" class="form-control" /></div>
                     <div class="form-group"><input type="password" id="password" placeholder="Password" class="form-control" /></div>
                     <div class="form-group"><input type="password" id="password-repeat" placeholder="Repeat password" class="form-control" /></div>
+
                     <div class="form-group">
-                        <div class="form-check"><label class="form-check-label"><input type="checkbox" class="form-check-input" />I agree to the license terms.</label></div>
+                        <div class="form-check"><label class="form-check-label">By clicking "Sign Up", you agree to <a href="#" style = "color: brown;" data-toggle="modal" data-target="#myModal">MAGITING PH Terms & Conditions.</a></label></div>
+
+                <!--LICENSE TERMS MODAL-->
+                <!-- The Modal -->
+                    <div class="modal" id="myModal">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                <!-- Modal Header -->
+
+                    <div class="modal-header" style="color: black;">
+                        <h4 class="modal-title">Terms & Conditions</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+        
+                <!-- Modal body -->
+                    <div class="modal-body" style="color: black;">
+                    <p style="color: black; text-align: justify; padding: 30px;"> 
+                    Welcome to Magiting PH! <br><br>
+                    These terms and conditions outline the rules and regulations for the use of Magiting PH Website. <br><br>
+                    The Magiting Ph is an online shopping website which allows customers to directly buy items from the 
+                    seller over the Internet using a web browser.
+                    </p>
+                    
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                    
                     </div>
                     <div class="form-group"><button class="btn btn-primary btn-block" type="submit" name="action" id="signup">Sign Up</button></div><a href="LOGIN.php" class="already">You already have an account? Login here.</a>
                 </form>
