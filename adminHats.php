@@ -14,11 +14,10 @@ if($_REQUEST['action']=="Add")
                   $prodDesc = $_POST['prodDesc'];
                   $prodPrice = $_POST['prodPrice'];
                   $prodStk = $_POST['prodStk'];
-                  $prodSize = $_POST['prodSize'];
                   $prodColor = $_POST['prodColor'];
 
        
-            $sql = "INSERT INTO tblproducts (prodID, prodName ,prodDesc, prodPrice, prodStk, prodSize, prodColor, prodCat, prodImg) VALUES ('$prodID','$prodName','$prodDesc','$prodPrice','$prodStk','$prodSize','$prodColor','Tees','products/blankTshirt.png')";
+            $sql = "INSERT INTO tblproducts (prodID, prodName ,prodDesc, prodPrice, prodStk, prodColor,prodCat, prodImg) VALUES ('$prodID','$prodName','$prodDesc','$prodPrice','$prodStk','$prodColor','Hats','products/blankHat.jpg')";
       
 
           
@@ -56,12 +55,11 @@ else if ($_REQUEST['action']=="Save"){
       $prodDesc = $_POST['prodDesc'];
       $prodPrice = $_POST['prodPrice'];
       $prodStk = $_POST['prodStk'];
-      $prodSize = $_POST['prodSize'];      
       $prodColor = $_POST['prodColor'];
 
 
                       
- $sql = "UPDATE tblproducts SET prodName='$prodName',prodDesc='$prodDesc',prodPrice='$prodPrice',prodStk='$prodStk',prodSize='$prodSize',prodColor='$prodColor' WHERE prodID='$prodID'"; 
+ $sql = "UPDATE tblproducts SET prodName='$prodName',prodDesc='$prodDesc',prodPrice='$prodPrice',prodStk='$prodStk',prodColor='$prodColor' WHERE prodID='$prodID'"; 
         
   if($conn->query($sql) === TRUE) {
         
@@ -87,6 +85,7 @@ else if ($_REQUEST['action']=="Delete"){
     }
 
 }
+
 
 ?>
 
@@ -134,7 +133,7 @@ else if ($_REQUEST['action']=="Delete"){
             <!-- Website Overview-->
             <div class="panel panel-default">
               <div class="panel-heading main-color-bg">
-                <h3 class="panel-title">T - Shirts</h3>
+                <h3 class="panel-title">Hats</h3>
                 <button class="btn btn-light action-button" id="addBtn" style="color: white; background-color: black; border: none; float: left; margin-bottom: 10px;" data-toggle="modal" data-target="#addUser" onclick="showAddBtn();">Add Item</button>
               </div>
               <div class="panel-body">
@@ -149,7 +148,6 @@ else if ($_REQUEST['action']=="Delete"){
                          <td>Description</td>
                          <td>Price</td>
                          <td>Stock</td>
-                         <td>Size</td>
                          <td>Color</td>
                          <td>Category</td>
                          <td>Image</td>
@@ -159,7 +157,7 @@ else if ($_REQUEST['action']=="Delete"){
                     <?php
                        include("includes/indexdb.php");
                       $conn = new mysqli($servername, $username, $password, $dbname);
-                       $sql = "SELECT * FROM tblproducts where prodCat like 'Tees'";
+                       $sql = "SELECT * FROM tblproducts where prodCat like 'Hats'";
                        $result = $conn->query($sql);
                         if ($result->num_rows > 0) {
                         // output data of each row
@@ -172,7 +170,6 @@ else if ($_REQUEST['action']=="Delete"){
                          <td data-label="Description"><?php echo $row['prodDesc']?></td>
                          <td data-label="Price"><?php echo $row['prodPrice']?></td>
                          <td data-label="Stock"><?php echo $row['prodStk']?></td>
-                         <td data-label="Stock"><?php echo $row['prodSize']?></td>
                          <td data-label="Stock"><?php echo $row['prodColor']?></td>
                          <td data-label="Category"><?php echo $row['prodCat']?></td>
                          <td data-label="Image"><img src="<?php echo $row['prodImg']?>" style="height: 50px; width: 60px;"></td>
@@ -290,18 +287,8 @@ else if ($_REQUEST['action']=="Delete"){
                 
             </div>
 
-              <div class="form-group">
-                <select style="margin-bottom: 15px;" id="prodSize" name="prodSize">
-                    <option value="" disabled selected style="display: none;">Size</option>
-                                <option value="xs">XS</option>
-                                <option value="s">S</option>
-                                <option value="m">M</option>
-                                <option value="l">L</option>
-                                <option value="xl">XL</option>
-                                <option value="2xl">2XL</option>
-                        </select>
-
-
+             <div class="form-group">
+              
                  <select style="margin-bottom: 15px;" id="prodColor" name="prodColor">
                     <option value="" disabled selected style="display: none;">Color</option>
                                 <option value="Navy Blue">Navy Blue</option>
@@ -328,8 +315,6 @@ else if ($_REQUEST['action']=="Delete"){
                 <input type="text" id="prodCat" name="prodCat" class="form-control" form="myform" value="Tees" readonly>
              </div>
            
-            
-            
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" id="closeBtn" onclick="clearText();" data-dismiss="modal" style=" float: right;" >Close</button>

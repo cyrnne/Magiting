@@ -94,169 +94,79 @@ include('includes/session.php');
                         </div>
 
                 <div class="row product-list dev">
+
+
+    <?php
+                       include("includes/indexdb.php");
+                      $conn = new mysqli($servername, $username, $password, $dbname);
+                       $sql = "SELECT * FROM tblproducts where prodCat like 'Hats' group by prodName";
+                       $result = $conn->query($sql);
+                        if ($result->num_rows > 0) {
+                        // output data of each row
+                       while($row = $result->fetch_assoc()) {
+    ?>
+
+   
     <div class="col-sm-6 col-md-4 product-item animation-element slide-top-left">
         <div class="product-container">
             <div class="row">
-                <div class="col-md-12"><a href="#" class="product-image"><img src="assets/img/HATS/Laban Cap.jpg" /></a></div>
+                <div class="col-md-12"><a href="#" class="product-image"><img src="<?php echo $row['prodImg']?>" /></a></div>
             </div>
             <div class="row">
-                <div class="col text-center" style="height: 30px; font-size: 20px; font-family: sans-serif; font-weight: bolder; color: black;">Laban (Fight) Cap</div>
+                <div class="col text-center" style="height: 30px; font-size: 20px; font-family: sans-serif; font-weight: bolder; color: black;"><?php echo $row['prodName']?></div>
                 <div class="col-12">
-                    <p class="product-description" style="height: 60px;"><br />A violent confrontation or struggle.<br /><br /></p>
-                    <input type="number" min="1" max="10" name="quantity" placeholder="Qty:" id="qty" class="text-center product-quantity" style="width: 60px;height: 30px;" />
-                    <p class="text-center product-stocks"style="padding-bottom: 0px;"><br>Only 4 stocks left</p>
-                    <center><select style="margin-bottom: 15px;">
-                        <option value="" disabled selected style="display: none;">Color</option>
-                                <option value="volvo">Navy Blue</option>
-                                <option value="saab">Red</option>
-                                <option value="opel">Royal Blue</option>
-                                <option value="audi">Black</option>
-                                <option value="saab">Yellow</option>
-                                <option value="volvo">Violet</option>
-                                <option value="saab">Sky Blue</option>
-                                <option value="opel">Dark Grey</option>
-                                <option value="audi">white</option>
-                                <option value="saab">Light Green</option>
-                                <option value="volvo">Pink</option>
-                                <option value="saab">Plum</option>
-                                <option value="opel">Light Grey</option>
-                                <option value="audi">Orange</option>
-                                <option value="saab">Dark Green</option>
-                        </select></center>
+                    <p class="product-description" style="height: 60px;"><br /><?php echo $row['prodDesc']; $price = $row['prodPrice']; ?><br /><br /></p>
+                    <input type="number" min="1" max="<?php echo $row['prodStk']?>" name="quantity" placeholder="Qty:" id="qty" class="text-center product-quantity" style="width: 60px;height: 30px;" />
+                    <p class="text-center product-stocks"style="padding-bottom: 0px;"><br>Only <?php echo $row['prodStk']?> stocks left</p>
+
+                      <?php
+
+                      
+                          include("includes/indexdb.php");
+                          $conn = new mysqli($servername, $username, $password, $dbname)
+                                  or die ('Cannot connect to db');
+
+                                  $result = $conn->query("select * from tblproducts where prodCat = 'Hats' ");
+
+                     ?>
+                          <select class= "form-control subj-code" name="prodColor" id="prodColor" onchange="showUser(this.value)">
+                             <?php
+                                  echo "<option value=''>Color</option>";
+
+                                  while ($row = $result->fetch_assoc()) {
+
+                                    unset($option1);
+                                    $option1 = $row['prodColor'];
+                                    echo "<option value='$option1'>$option1</option>";
+
+                                   }
+
+                                    echo "</select>";
+
+                                         if(isset($_POST['dropdownvalue'])){ //check if $_POST['examplePHP'] exists
+                
+                                          echo '<script>alert('. $_POST['dropdownvalue'] .')</script>'; // echo the data
+                                          die(); // stop execution of the script.
+                                         }
+
+                             ?> 
                         
                     <div class="row">
                         <div class="col-6"><button class="btn btn-light" type="button">Buy Now!</button></div>
                         <div class="col-6">
-                            <p class="product-price">₱350<br /></p>
+                            <p class="product-price">₱ <?php echo $price; ?><br /></p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="col-sm-6 col-md-4 product-item animation-element slide-rotate-clockwise">
-        <div class="product-container">
-            <div class="row">
-                <div class="col-md-12"><a href="#" class="product-image"><img src="assets/img/HATS/Kapayapaan Cap.jpg" /></a></div>
-                <div class="col text-center" style="height: 30px; font-size: 20px; font-family: sans-serif; font-weight: bolder; color: black;">Kapayapaan (Peace) Cap</div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <p class="product-description" style="height: 60px;margin-bottom: 20px;"><br />A state or period in which there is no war or a war has ended.<br /><br /></p>
-                    <input type="number" min="1" max="10" name="quantity" placeholder="Qty:" id="qty" class="text-center product-quantity" style="width: 60px;height: 30px;" />
-                    <p class="text-center product-stocks"style="padding-bottom: 0px;"><br>Only 4 stocks left</p>
-                    <center><select style="margin-bottom: 15px;">
-                        <option value="" disabled selected style="display: none;">Color</option>
-                                <option value="volvo">Navy Blue</option>
-                                <option value="saab">Red</option>
-                                <option value="opel">Royal Blue</option>
-                                <option value="audi">Black</option>
-                                <option value="saab">Yellow</option>
-                                <option value="volvo">Violet</option>
-                                <option value="saab">Sky Blue</option>
-                                <option value="opel">Dark Grey</option>
-                                <option value="audi">white</option>
-                                <option value="saab">Light Green</option>
-                                <option value="volvo">Pink</option>
-                                <option value="saab">Plum</option>
-                                <option value="opel">Light Grey</option>
-                                <option value="audi">Orange</option>
-                                <option value="saab">Dark Green</option>
-                        </select></center>
-                        
-                    <div class="row">
-                        <div class="col-6"><button class="btn btn-light" type="button">Buy Now!</button></div>
-                        <div class="col">
-                            <p class="product-price">₱350<br /></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-md-4 product-item animation-element slide-top-right">
-        <div class="product-container">
-            <div class="row">
-                <div class="col-md-12"><a href="#" class="product-image"><img src="assets/img/HATS/Malaya Cap.jpg" /></a></div>
-                <div class="col text-center" style="height: 30px; font-size: 20px; font-family: sans-serif; font-weight: bolder; color: black;">Malaya (Free) Cap</div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <p class="product-description" style="height: 60px;"><br />Not under the control or in the power of another.<br /><br /></p>
-                    <input type="number" min="1" max="10" name="quantity" placeholder="Qty:" id="qty" class="text-center product-quantity" style="width: 60px;height: 30px;" />
-                    <p class="text-center product-stocks"style="padding-bottom: 0px;"><br>Only 4 stocks left</p>
-                    <center><select style="margin-bottom: 15px;">
-                        <option value="" disabled selected style="display: none;">Color</option>
-                                <option value="volvo">Navy Blue</option>
-                                <option value="saab">Red</option>
-                                <option value="opel">Royal Blue</option>
-                                <option value="audi">Black</option>
-                                <option value="saab">Yellow</option>
-                                <option value="volvo">Violet</option>
-                                <option value="saab">Sky Blue</option>
-                                <option value="opel">Dark Grey</option>
-                                <option value="audi">white</option>
-                                <option value="saab">Light Green</option>
-                                <option value="volvo">Pink</option>
-                                <option value="saab">Plum</option>
-                                <option value="opel">Light Grey</option>
-                                <option value="audi">Orange</option>
-                                <option value="saab">Dark Green</option>
-                        </select></center>
-                        
-                    <div class="row">
-                        <div class="col-6"><button class="btn btn-light" type="button">Buy Now!</button></div>
-                        <div class="col">
-                            <p class="product-price">₱350<br /></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="row product-list dev">
-    <div class="col-sm-6 col-md-4 product-item animation-element slide-top-left">
-        <div class="product-container">
-            <div class="row">
-                <div class="col-md-12"><a href="#" class="product-image"><img src="assets/img/HATS/Bucket Hat.jpg" /></a></div>
-            </div>
-            <div class="row">
-            <div class="col text-center" style="height: 30px; font-size: 20px; font-family: sans-serif; font-weight: bolder; color: black;">Magiting (Warriors) Bucket Hat</div>
-                <div class="col-12">
-                    <p class="product-description" style="height: 60px;"><br />A brave or experienced fighter.<br /><br /></p>
-                    <input type="number" min="1" max="10" name="quantity" placeholder="Qty:" id="qty" class="text-center product-quantity" style="width: 60px;height: 30px;" />
-                    <p class="text-center product-stocks"style="padding-bottom: 0px;"><br>Only 4 stocks left</p>
-                    <center><select style="margin-bottom: 15px;">
-                        <option value="" disabled selected style="display: none;">Color</option>
-                                <option value="volvo">Navy Blue</option>
-                                <option value="saab">Red</option>
-                                <option value="opel">Royal Blue</option>
-                                <option value="audi">Black</option>
-                                <option value="saab">Yellow</option>
-                                <option value="volvo">Violet</option>
-                                <option value="saab">Sky Blue</option>
-                                <option value="opel">Dark Grey</option>
-                                <option value="audi">white</option>
-                                <option value="saab">Light Green</option>
-                                <option value="volvo">Pink</option>
-                                <option value="saab">Plum</option>
-                                <option value="opel">Light Grey</option>
-                                <option value="audi">Orange</option>
-                                <option value="saab">Dark Green</option>
-                        </select></center>
-                        
-                    <div class="row">
-                        <div class="col-6"><button class="btn btn-light" type="button">Buy Now!</button></div>
-                        <div class="col-6">
-                            <p class="product-price">₱350<br /></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-                </div>
+
+    <?php
+                        }
+                       }
+                    ?>
+
             </div>
         </div>
     </div>
