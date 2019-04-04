@@ -3,13 +3,15 @@
 
                   include('includes/indexdb.php');
 
+                  $prodID = rand(500,10000);
                   $prodName = $_POST['prodName'];
-       
-                  $conn = new mysqli($servername, $username, $password, $dbname);
+                  $prodDesc = $_POST['prodDesc'];
+                  $prodPrice = $_POST['prodPrice'];
+                  $prodStk = $_POST['prodStk'];
          
 
         
-                 $sql = "INSERT INTO tblproducts (prodID,prodName ,prodDesc, prodPrice, prodStk, prodCat, prodImg) VALUES ('1', 'sample name' ,'sample description','100','1','Tees','products/blankTshirt.png')";
+                 $sql = "INSERT INTO tblproducts (prodID,prodName ,prodDesc, prodPrice, prodStk, prodCat, prodImg) VALUES ('$prodID', '$prodName' ,'$prodDesc','$prodPrice','$prodStk','Tees','products/blankTshirt.png')";
       
 
           
