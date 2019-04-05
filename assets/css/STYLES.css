@@ -1056,6 +1056,21 @@ body {
     transform: none !important;
   }
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   /* Modals */
 /* Important part */
 .modal-dialog{
@@ -1085,6 +1100,18 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 /*Size Modal*/
 
 .sizemodal-dialog{
@@ -1100,6 +1127,21 @@ body {
     width: 1088px;
 }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*Chart Modal*/
@@ -1119,21 +1161,17 @@ body {
 }
 
 
-/*FAQ Modal*/
 
-.FAQmodal-dialog{
-    overflow-y: initial !important
-}
-.FAQmodal-body{
-    height: 300px;
-    overflow-y: auto;
-}
 
-@media (min-width: 1200px) {
-.container {
-    width: 1088px;
-}
-}
+
+
+
+
+
+
+
+
+
 
 
 /*Contact Us Modal*/
@@ -1142,15 +1180,55 @@ body {
     overflow-y: initial !important
 }
 .contactmodal-body{
-    height: 200px;
+    height: 1000px;
     overflow-y: auto;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 5000px) {
 .container {
-    width: 1088px;
+    width: 5000px;
 }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.icon-feature {
+  text-align: center;
+}
+
+.icon-feature .glyphicon {
+  font-size: 60px;
+}
+
+section.features {
+  background-color: #369;
+  padding: 40px 0;
+  color: #fff;
+}
+
+.features h2 {
+  color: #fff;
+}
+
+.features .icon-features {
+  margin-top: 15px;
+}
+
+
 
 
 

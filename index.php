@@ -140,7 +140,7 @@ include('includes/session.php');
     </div>
 </section>
 
-
+<!--FOOTER-->
 <div class="footer-dark" style="padding-top: 40px;padding-bottom: 30px;background-color: #000000;">
     <footer>
         <div class="container">
@@ -148,37 +148,7 @@ include('includes/session.php');
                 <div class="col-sm-6 col-md-3 text-left item">
                     <h3>CUSTOMER SERVICE</h3>
                     <ul>
-                        <li><a href="#" data-toggle="modal" data-target="#myModalFAQ">FAQ<br /></a></li>
-                        <!--FAQ MODAL-->
-                        <!-- The Modal -->
-                        <div class="modal" id="myModalFAQ">
-                        <div class="modal-dialog">
-                        <div class="modal-content">
-                        <!-- Modal Header -->
 
-                        <div class="modal-header" style="color: black;">
-                        <h4 class="modal-title">FAQ</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        </div>
-        
-                        <!-- Modal body -->
-                        <div class="FAQmodal-body" style="color: black;">
-                        <p style="color: black; text-align: justify;"> 
-                        <center><img class="FAQ-guide" style="width: 400px;"/><form action="/action_page.php">
-                    
-                        Name*: <input type="text" name="Name" value=""><br>
-                        <br>
-                        Question: <input type="text" name="Question" value="" style="padding-right: 13px;"><br>
-                        <br>
-                        <input type="submit" value="Ask Question">
-                        </form></center>
-                        </p>
-                    
-                        </div>
-                        </div>
-                        </div>
-                        </div>
-                        
                         <li><a href="#" data-toggle="modal" data-target="#myModalsize">Size Guide<br /></a></li>
                         <!--SIZE GUIDE MODAL-->
                         <!-- The Modal -->
@@ -242,14 +212,21 @@ include('includes/session.php');
                         </div>
         
                         <!-- Modal body -->
-                        <div class="contactmodal-body" style="color: black;">
-            <p style="color: black; text-align: justify;"><br><b style="padding-left: 50px; font-size: 18px;">How may we help you?</b><br><b style="padding-left: 50px; font-size: 15px;">Contact us thru:</b> 
-        <center><br><a href="https://www.facebook.com/MagitingPH" target="_blank"><img src="assets/img/icofb.png" style="width: 30px"></a>
-       <a href="https://twitter.com/Magitingph" target="_blank"><img src="assets/img/icotwit.png" style="width: 30px">
-       <a href="https://www.instagram.com/magitingph" target="_blank">
-        <img src="assets/img/icoig.png" style="width: 30px">
-        </a></center></a>
-                        </p>
+                        <div class="contactmodal-body" style="color: black; font-family: century gothic; margin-top:80px; font-size:15px;">
+                        <div class="row text-center m-auto icon-features" style="width: 380px;">
+                            <div class="col-4 icon-feature"><i class="fa fa-map-marker"></i>
+                            <p><b>Location</b></p>
+                            <p>Bazaars are To Be Announced</p>
+                            </div>
+                            <div class="col-4 icon-feature"><i class="fa fa-phone"></i>
+                            <p><b>Call Us</b></p>
+                            <p>+63 956 153 8775<br /></p>
+                            </div>
+                            <div class="col-4 icon-feature"><i class="fa fa-envelope"></i>
+                            <p><b>Email Us</b></p>
+                            <p>magitingph @gmail.com<br /></p>
+                        </div>
+                        </div>
                     
                         </div>
                         </div>
@@ -270,7 +247,7 @@ include('includes/session.php');
                     <h3>MAGITING PH</h3>
                     <p>A Baybayin movement that aims to parttake in the co-creation <br />of a generation of Active Participation and Appreciation for the <br />Filipino Identity.<br /><br /></p>
                 </div>
-                <div class="col item social"><a href="https://www.facebook.com/MagitingPH" target="_blank"><img src="assets/img/icofb.png" style="width: 30px">
+                <div class="col item social"><p style="color: grey; padding-bottom: 5px;">CHECK US OUT ON<br></p><a href="https://www.facebook.com/MagitingPH" target="_blank"><img src="assets/img/icofb.png" style="width: 30px">
                 <i class="icon ion-social-facebook"></i></a><a href="https://twitter.com/Magitingph" target="_blank"><img src="assets/img/icotwit.png" style="width: 30px">
                 <i class="icon ion-social-twitter"></i></a><a href="https://www.instagram.com/magitingph" target="_blank"><img src="assets/img/icoig.png" style="width: 30px">
                 <i class="icon ion-social-instagram"></i></a></div>

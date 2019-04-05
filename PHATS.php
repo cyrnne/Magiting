@@ -173,18 +173,100 @@ include('includes/session.php');
 </section>
 
 <!--FOOTER-->
-    <div class="footer-dark" style="padding-top: 40px;padding-bottom: 30px;background-color: #000000;">
+<div class="footer-dark" style="padding-top: 40px;padding-bottom: 30px;background-color: #000000;">
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-md-3 text-left item">
                     <h3>CUSTOMER SERVICE</h3>
                     <ul>
-                        <li><a href="#">FAQ<br /></a></li>
-                        <li><a href="#">Size Guide<br /></a></li>
-                        <li><a href="#">Contact Us<br /></a></li>
-                    </ul>
+
+                        <li><a href="#" data-toggle="modal" data-target="#myModalsize">Size Guide<br /></a></li>
+                        <!--SIZE GUIDE MODAL-->
+                        <!-- The Modal -->
+                        <div class="modal" id="myModalsize">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                        <!-- Modal Header -->
+
+                        <div class="modal-header" style="color: black;">
+                        <h4 class="modal-title">Size Guide</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+        
+                        <!-- Modal body -->
+                        <div class="sizemodal-body" style="color: black;">
+                        <p style="color: black; text-align: justify;"> 
+                        <center><img class="size-guide" src="assets/img/size chart.jpg" style="width: 400px;"/></center>
+                        </p>
+                    
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+
+
+                        <li><a href="#" data-toggle="modal" data-target="#myModalchart">Color Chart<br /></a></li>
+                        <!--COLOR CHART MODAL-->
+                        <!-- The Modal -->
+                        <div class="modal" id="myModalchart">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                        <!-- Modal Header -->
+
+                        <div class="modal-header" style="color: black;">
+                        <h4 class="modal-title">Color Chart</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+        
+                        <!-- Modal body -->
+                        <div class="chartmodal-body" style="color: black;">
+                        <p style="color: black; text-align: justify;"> 
+                        <center><img class="chart-guide" src="assets/img/color.jpg" style="width: 400px;"/></center>
+                        </p>
+                    
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+
+                        <li><a href="#" data-toggle="modal" data-target="#myModalcontact">Contact Us<br /></a></li>
+                        <!--CONTACT MODAL-->
+                        <!-- The Modal -->
+                        <div class="modal" id="myModalcontact">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                        <!-- Modal Header -->
+
+                        <div class="modal-header" style="color: black;">
+                        <h4 class="modal-title">Contact Us</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+        
+                        <!-- Modal body -->
+                        <div class="contactmodal-body" style="color: black; font-family: century gothic; margin-top:80px; font-size:15px;">
+                        <div class="row text-center m-auto icon-features" style="width: 380px;">
+                            <div class="col-4 icon-feature"><i class="fa fa-map-marker"></i>
+                            <p><b>Location</b></p>
+                            <p>Bazaars are To Be Announced</p>
+                            </div>
+                            <div class="col-4 icon-feature"><i class="fa fa-phone"></i>
+                            <p><b>Call Us</b></p>
+                            <p>+63 956 153 8775<br /></p>
+                            </div>
+                            <div class="col-4 icon-feature"><i class="fa fa-envelope"></i>
+                            <p><b>Email Us</b></p>
+                            <p>magitingph @gmail.com<br /></p>
+                        </div>
+                        </div>
+                    
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                 
                 </div>
+
                 <div class="col-sm-6 col-md-3 text-left item">
                     <h3>ABOUT US</h3>
                     <ul>
@@ -197,7 +279,7 @@ include('includes/session.php');
                     <h3>MAGITING PH</h3>
                     <p>A Baybayin movement that aims to parttake in the co-creation <br />of a generation of Active Participation and Appreciation for the <br />Filipino Identity.<br /><br /></p>
                 </div>
-                <div class="col item social"><a href="https://www.facebook.com/MagitingPH" target="_blank"><img src="assets/img/icofb.png" style="width: 30px">
+                <div class="col item social"><p style="color: grey; padding-bottom: 5px;">CHECK US OUT ON<br></p><a href="https://www.facebook.com/MagitingPH" target="_blank"><img src="assets/img/icofb.png" style="width: 30px">
                 <i class="icon ion-social-facebook"></i></a><a href="https://twitter.com/Magitingph" target="_blank"><img src="assets/img/icotwit.png" style="width: 30px">
                 <i class="icon ion-social-twitter"></i></a><a href="https://www.instagram.com/magitingph" target="_blank"><img src="assets/img/icoig.png" style="width: 30px">
                 <i class="icon ion-social-instagram"></i></a></div>
