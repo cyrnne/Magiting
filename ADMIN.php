@@ -112,7 +112,7 @@ else if ($_REQUEST['action']=="Delete"){
         <div class="container-fluid"><button data-toggle="collapse" data-target="#navcol-1" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1" style="margin-left: 210px;">
                 <ul class="nav navbar-nav mx-auto" style="margin: 0px;padding: 0px;margin-left: 210px;">
-                    <li role="presentation" class="nav-item" style="margin-left: 0px;"><a href="Home.html" class="nav-link">MANAGE PRODUCTS</a></li>
+                    <li role="presentation" class="nav-item" style="margin-left: 0px;"><a href="ADMIN.php" class="nav-link">MANAGE PRODUCTS</a></li>
                     <li role="presentation" class="nav-item"><a href="AboutUs.html" class="nav-link">ACCOUNTS</a></li>
                 </ul><?php echo $menuBar; ?></div>
         </div>
@@ -120,7 +120,7 @@ else if ($_REQUEST['action']=="Delete"){
     <section class="page-section about-heading">
         <div class="about-heading-content">
             <div class="row" style="margin-right: 0px;margin-left: 0px;">
-                <div class="col-9 text-center mx-auto" style="background-color: #ffffff;color: rgb(0,0,0);opacity: 1;height: 2000px;margin-top: 50px;margin-bottom: 50px;">
+                <div class="col-9 text-center mx-auto" style="background-color: #ffffff;color: rgb(0,0,0);opacity: 1;padding-bottom:20px; margin-top: 50px;margin-bottom: 50px;">
                     <h1 class="admin-heading" style="margin-top: 25px;margin-bottom: 25px;">MANAGE PRODUCTS</h1>
                     <div class="dropdown"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" style="margin-right: 0px;">PRODUCTS</button>
                         <div role="menu" class="dropdown-menu"><a role="presentation" href="ADMIN.php" class="dropdown-item">Tees</a><a role="presentation" href="adminHats.php" class="dropdown-item">Hats</a></div>
