@@ -14,11 +14,10 @@ if($_REQUEST['action']=="Add")
                   $prodDesc = $_POST['prodDesc'];
                   $prodPrice = $_POST['prodPrice'];
                   $prodStk = $_POST['prodStk'];
-                  $prodSize = $_POST['prodSize'];
-                  $prodColor = $_POST['prodColor'];
+                 
 
        
-            $sql = "INSERT INTO tblproducts (prodID, prodName ,prodDesc, prodPrice, prodStk, prodSize, prodColor, prodCat, prodImg) VALUES ('$prodID','$prodName','$prodDesc','$prodPrice','$prodStk','$prodSize','$prodColor','Tees','products/blankTshirt.png')";
+            $sql = "INSERT INTO tblproducts (prodID, prodName ,prodDesc, prodPrice, prodStk, prodCat, prodImg) VALUES ('$prodID','$prodName','$prodDesc','$prodPrice','$prodStk','Tees','products/blankTshirt.png')";
       
 
           
@@ -56,12 +55,10 @@ else if ($_REQUEST['action']=="Save"){
       $prodDesc = $_POST['prodDesc'];
       $prodPrice = $_POST['prodPrice'];
       $prodStk = $_POST['prodStk'];
-      $prodSize = $_POST['prodSize'];      
-      $prodColor = $_POST['prodColor'];
 
 
                       
- $sql = "UPDATE tblproducts SET prodName='$prodName',prodDesc='$prodDesc',prodPrice='$prodPrice',prodStk='$prodStk',prodSize='$prodSize',prodColor='$prodColor' WHERE prodID='$prodID'"; 
+ $sql = "UPDATE tblproducts SET prodName='$prodName',prodDesc='$prodDesc',prodPrice='$prodPrice',prodStk='$prodStk' WHERE prodID='$prodID'"; 
         
   if($conn->query($sql) === TRUE) {
         
@@ -149,8 +146,6 @@ else if ($_REQUEST['action']=="Delete"){
                          <td>Description</td>
                          <td>Price</td>
                          <td>Stock</td>
-                         <td>Size</td>
-                         <td>Color</td>
                          <td>Category</td>
                          <td>Image</td>
                        </tr>
@@ -172,8 +167,6 @@ else if ($_REQUEST['action']=="Delete"){
                          <td data-label="Description"><?php echo $row['prodDesc']?></td>
                          <td data-label="Price"><?php echo $row['prodPrice']?></td>
                          <td data-label="Stock"><?php echo $row['prodStk']?></td>
-                         <td data-label="Stock"><?php echo $row['prodSize']?></td>
-                         <td data-label="Stock"><?php echo $row['prodColor']?></td>
                          <td data-label="Category"><?php echo $row['prodCat']?></td>
                          <td data-label="Image"><img src="<?php echo $row['prodImg']?>" style="height: 50px; width: 60px;"></td>
                         
@@ -290,37 +283,9 @@ else if ($_REQUEST['action']=="Delete"){
                 
             </div>
 
-              <div class="form-group">
-                <select style="margin-bottom: 15px;" id="prodSize" name="prodSize">
-                    <option value="" disabled selected style="display: none;">Size</option>
-                                <option value="xs">XS</option>
-                                <option value="s">S</option>
-                                <option value="m">M</option>
-                                <option value="l">L</option>
-                                <option value="xl">XL</option>
-                                <option value="2xl">2XL</option>
-                        </select>
-
-
-                 <select style="margin-bottom: 15px;" id="prodColor" name="prodColor">
-                    <option value="" disabled selected style="display: none;">Color</option>
-                                <option value="Navy Blue">Navy Blue</option>
-                                <option value="Red">Red</option>
-                                <option value="Royal Blue">Royal Blue</option>
-                                <option value="Black">Black</option>
-                                <option value="Yellow">Yellow</option>
-                                <option value="Violet">Violet</option>
-                                <option value="Sky Blue">Sky Blue</option>
-                                <option value="Dark Grey">Dark Grey</option>
-                                <option value="white">white</option>
-                                <option value="Light Green">Light Green</option>
-                                <option value="Pink">Pink</option>
-                                <option value="Plum">Plum</option>
-                                <option value="Light Grey">Light Grey</option>
-                                <option value="Orange">Orange</option>
-                                <option value="Dark Green">Dark Green</option>
-                        </select>
-              </div>
+               </select>
+            
+                      
 
             <div class="form-group">
 

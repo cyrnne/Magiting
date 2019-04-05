@@ -41,8 +41,49 @@ include('includes/session.php');
         
                 <!-- Modal body -->
                     <div class="modal-body" style="color: black;">
-                    <div class="cart" ><img src="assets/img/TEES/Pagibig (Love).jpg" style="width: 250px;"/></div>
+                   
+                    <div class="table-responsive"> 
+                <table class="table table-striped table-hover" id="prodTbl">
+                    <thead class="thead-dark" style="color: black; text-align: center;">                            
+                       <tr>
+                         <td>Product ID</td>
+                         <td>Name</td>
+                         <td>Quantity</td>
+                         <td>Size</td>
+                         <td>Color</td>
+                       </tr>
+                    </thead>                            
+                
+                    <?php
+                       include("includes/indexdb.php");
+                       include('includes/session.php');
+                      $conn = new mysqli($servername, $username, $password, $dbname);
+                       $sql = "SELECT * FROM tblcart where userID like '".$_SESSION['login_user']."'";
+                       $result = $conn->query($sql);
+                        if ($result->num_rows > 0) {
+                        // output data of each row
+                       while($row = $result->fetch_assoc()) {
+                    ?>
                     
+                     <tr style="text-align: center; color: black;">
+                         <td data-label="ID"><?php echo $row['prodID']?></td>
+                         <td data-label="Name"><?php echo $row['prodName']?></td>
+                         <td data-label="Quantity"><?php echo $row['prodQty']?></td>
+                         <td data-label="Stock"><?php echo $row['prodSize']?></td>
+                         <td data-label="Category"><?php echo $row['prodColor']?></td>
+                         
+                        
+                    
+                     </tr>
+                  <?php
+                        }
+                       }
+                    ?>
+            
+                                                
+                                            
+                </table>
+                </div>
                     
                     </div>
         
@@ -55,7 +96,7 @@ include('includes/session.php');
                         </div>
 
                 <li class="nav-item" role="presentation"><a class="nav-link" href="index.php">HOME</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link" href="ABOUTUS.PHP">ABOUT US</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="ABOUTUS.php">ABOUT US</a></li>
                 <li class="dropdown nav-item" style="margin-left: 0px;margin-right: 50px;"><a data-toggle="dropdown" aria-expanded="false" href="#" class="dropdown-toggle nav-link" style="margin-right: 65px;">PRODUCTS</a>
                     <div role="menu" class="dropdown-menu"><a role="presentation" href="PTEES.php" class="dropdown-item">Tees</a><a role="presentation" href="PHATS.php" class="dropdown-item">Hats</a></div>
                 </li>
@@ -119,37 +160,26 @@ include('includes/session.php');
                     <input type="number" min="1" max="<?php echo $row['prodStk']?>" name="quantity" placeholder="Qty:" id="qty" class="text-center product-quantity" style="width: 60px;height: 30px;" />
                     <p class="text-center product-stocks"style="padding-bottom: 0px;"><br>Only <?php echo $row['prodStk']?> stocks left</p>
 
-                      <?php
 
-                      
-                          include("includes/indexdb.php");
-                          $conn = new mysqli($servername, $username, $password, $dbname)
-                                  or die ('Cannot connect to db');
 
-                                  $result = $conn->query("select * from tblproducts where prodCat = 'Hats' ");
-
-                     ?>
-                          <select class= "form-control subj-code" name="prodColor" id="prodColor" onchange="showUser(this.value)">
-                             <?php
-                                  echo "<option value=''>Color</option>";
-
-                                  while ($row = $result->fetch_assoc()) {
-
-                                    unset($option1);
-                                    $option1 = $row['prodColor'];
-                                    echo "<option value='$option1'>$option1</option>";
-
-                                   }
-
-                                    echo "</select>";
-
-                                         if(isset($_POST['dropdownvalue'])){ //check if $_POST['examplePHP'] exists
-                
-                                          echo '<script>alert('. $_POST['dropdownvalue'] .')</script>'; // echo the data
-                                          die(); // stop execution of the script.
-                                         }
-
-                             ?> 
+                    <center><select style="margin-bottom: 15px;">
+                        <option value="" disabled selected style="display: none;">Color</option>
+                                <option value="volvo">Navy Blue</option>
+                                <option value="saab">Red</option>
+                                <option value="opel">Royal Blue</option>
+                                <option value="audi">Black</option>
+                                <option value="saab">Yellow</option>
+                                <option value="volvo">Violet</option>
+                                <option value="saab">Sky Blue</option>
+                                <option value="opel">Dark Grey</option>
+                                <option value="audi">white</option>
+                                <option value="saab">Light Green</option>
+                                <option value="volvo">Pink</option>
+                                <option value="saab">Plum</option>
+                                <option value="opel">Light Grey</option>
+                                <option value="audi">Orange</option>
+                                <option value="saab">Dark Green</option>
+                        </select></center>
                         
                     <div class="row">
                         <div class="col-6"><button class="btn btn-light" type="button">Buy Now!</button></div>

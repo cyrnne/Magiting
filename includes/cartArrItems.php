@@ -1,0 +1,5 @@
+<?php
+
+$prodNameArr = array();
+
+?>

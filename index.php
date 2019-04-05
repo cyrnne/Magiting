@@ -42,8 +42,49 @@ include('includes/session.php');
         
                 <!-- Modal body -->
                     <div class="modal-body" style="color: black;">
-                    <div class="cart" ><img src="assets/img/TEES/Pagibig (Love).jpg" style="width: 250px;"/></div>
                     
+                     <div class="table-responsive"> 
+                <table class="table table-striped table-hover" id="prodTbl">
+                    <thead class="thead-dark" style="color: black; text-align: center;">                            
+                       <tr>
+                         <td>Product ID</td>
+                         <td>Name</td>
+                         <td>Quantity</td>
+                         <td>Size</td>
+                         <td>Color</td>
+                       </tr>
+                    </thead>                            
+                
+                    <?php
+                       include("includes/indexdb.php");
+                       include('includes/session.php');
+                      $conn = new mysqli($servername, $username, $password, $dbname);
+                       $sql = "SELECT * FROM tblcart where userID like '".$_SESSION['login_user']."'";
+                       $result = $conn->query($sql);
+                        if ($result->num_rows > 0) {
+                        // output data of each row
+                       while($row = $result->fetch_assoc()) {
+                    ?>
+                    
+                     <tr style="text-align: center; color: black;">
+                         <td data-label="ID"><?php echo $row['prodID']?></td>
+                         <td data-label="Name"><?php echo $row['prodName']?></td>
+                         <td data-label="Quantity"><?php echo $row['prodQty']?></td>
+                         <td data-label="Stock"><?php echo $row['prodSize']?></td>
+                         <td data-label="Category"><?php echo $row['prodColor']?></td>
+                         
+                        
+                    
+                     </tr>
+                  <?php
+                        }
+                       }
+                    ?>
+            
+                                                
+                                            
+                </table>
+                </div>
                     
                     </div>
         
