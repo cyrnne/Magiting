@@ -312,7 +312,7 @@ else if ($_REQUEST['action']=="Delete"){
             <div class="form-group">
 
              <label>Category</label>
-                <input type="text" id="prodCat" name="prodCat" class="form-control" form="myform" value="Tees" readonly>
+                <input type="text" id="prodCat" name="prodCat" class="form-control" form="myform" value="Hats" readonly>
              </div>
            
           </div>
