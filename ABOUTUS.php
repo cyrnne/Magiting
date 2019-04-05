@@ -46,9 +46,11 @@ include('includes/session.php');
                 <h1 class="prod-heading"
                     style="margin-top: 25px;margin-bottom: 25px;">OWNERS</h1>
                 <section style="padding-top: 20px;padding-bottom: 50px;">
-                <img src="assets/img/OWNERS/job.jpg" class="rounded-circle img-fluid d-inline-block" style="width: 300px;height: 400px;margin-right: 0px;padding-right: 10px;padding-top: 10px;padding-bottom: 10px;padding-left: 10px;" />
-                <img src="assets/img/OWNERS/danaraye.jpg" class="rounded-circle img-fluid d-inline-block"
-                        style="width: 300px;height: 400px;padding-right: 10px;padding-left: 10px;padding-bottom: 10px;padding-top: 10px;" /></section>
+                <div class="owners">
+                <div class="job"><img src="assets/img/OWNERS/job.jpg" class="rounded-circle img-fluid d-inline-block" style="width: 300px;height: 400px;margin-right: 0px;padding-right: 10px;padding-top: 10px;padding-bottom: 10px;padding-left: 10px;"/><h5><br>JOB ANGELO P. CORPUZ</h5></div>
+                <div class="dana"><img src="assets/img/OWNERS/danaraye.jpg" class="rounded-circle img-fluid d-inline-block" style="width: 300px;height: 400px;padding-right: 10px;padding-left: 10px;padding-bottom: 10px;padding-top: 10px;" /><h5><br>DANARAYE C. TORRES</h5></div>
+                </section> 
+            </div>
             </div>
         </div>
     </div>

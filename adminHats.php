@@ -17,7 +17,7 @@ if($_REQUEST['action']=="Add")
                   $prodColor = $_POST['prodColor'];
 
        
-            $sql = "INSERT INTO tblproducts (prodID, prodName ,prodDesc, prodPrice, prodStk, prodColor,prodCat, prodImg) VALUES ('$prodID','$prodName','$prodDesc','$prodPrice','$prodStk','$prodColor','Hats','products/blankHat.jpg')";
+            $sql = "INSERT INTO tblproducts (prodID, prodName ,prodDesc, prodPrice, prodStk, prodColor,prodCat, prodImg) VALUES ('$prodID','$prodName','$prodDesc','$prodPrice','$prodStk','$prodColor','Hats','products/blankHat.png')";
       
 
           
