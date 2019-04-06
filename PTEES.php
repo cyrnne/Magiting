@@ -58,7 +58,7 @@ include('includes/session.php');
                        include("includes/indexdb.php");
                        include('includes/session.php');
                       $conn = new mysqli($servername, $username, $password, $dbname);
-                       $sql = "SELECT * FROM tblcart where userID like '"$_SESSION['login_user']"'";
+                       $sql = "SELECT * FROM tblcart where userID like '".$_SESSION['login_user']."'";
                        $result = $conn->query($sql);
                         if ($result->num_rows > 0) {
                         // output data of each row
