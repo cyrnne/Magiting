@@ -253,7 +253,7 @@ include('includes/session.php');
                         </div>
         
                         <!-- Modal body -->
-                        <div class="contactmodal-body" style="color: black; font-family: century gothic; margin-top:80px; font-size:15px;">
+                        <div class="contactmodal-body" style="color: black; font-family: century gothic; margin-top:80px; font-size:15px; height:2.5in;">
                         <div class="row text-center m-auto icon-features" style="width: 380px;">
                             <div class="col-4 icon-feature"><i class="fa fa-map-marker"></i>
                             <p><b>Location</b></p>
