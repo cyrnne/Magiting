@@ -92,7 +92,7 @@ else if ($_REQUEST['action']=="Delete"){
     <link rel="shortcut icon" href="assets/img/logowhite.png" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Magiting | Home</title>
+    <title>Magiting | Admin</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/STYLES.css">
@@ -112,7 +112,7 @@ else if ($_REQUEST['action']=="Delete"){
         <div class="container-fluid"><button data-toggle="collapse" data-target="#navcol-1" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1" style="margin-left: 210px;">
                 <ul class="nav navbar-nav mx-auto" style="margin: 0px;padding: 0px;margin-left: 210px;">
-                    <li role="presentation" class="nav-item" style="margin-left: 0px;"><a href="Home.html" class="nav-link">MANAGE PRODUCTS</a></li>
+                    <li role="presentation" class="nav-item" style="margin-left: 0px;"><a href="ADMIN.php" class="nav-link">MANAGE PRODUCTS</a></li>
                     <li role="presentation" class="nav-item"><a href="AboutUs.html" class="nav-link">ACCOUNTS</a></li>
                 </ul><?php echo $menuBar; ?></div>
         </div>
@@ -120,7 +120,7 @@ else if ($_REQUEST['action']=="Delete"){
     <section class="page-section about-heading">
         <div class="about-heading-content">
             <div class="row" style="margin-right: 0px;margin-left: 0px;">
-                <div class="col-9 text-center mx-auto" style="background-color: #ffffff;color: rgb(0,0,0);opacity: 1;height: 2000px;margin-top: 50px;margin-bottom: 50px;">
+                <div class="col-9 text-center mx-auto" style="background-color: #ffffff;color: rgb(0,0,0);opacity: 1;padding-bottom:20px; margin-top: 50px;margin-bottom: 50px;">
                     <h1 class="admin-heading" style="margin-top: 25px;margin-bottom: 25px;">MANAGE PRODUCTS</h1>
                     <div class="dropdown"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" style="margin-right: 0px;">PRODUCTS</button>
                         <div role="menu" class="dropdown-menu"><a role="presentation" href="ADMIN.php" class="dropdown-item">Tees</a><a role="presentation" href="adminHats.php" class="dropdown-item">Hats</a></div>
@@ -202,12 +202,7 @@ else if ($_REQUEST['action']=="Delete"){
 </body>
 </header>    
 
-
-
-
-
-
-
+        <!--FOOTER-->
 <div class="footer-dark" style="padding-top: 40px;padding-bottom: 30px;background-color: #000000;">
     <footer>
         <div class="container">
@@ -215,16 +210,98 @@ else if ($_REQUEST['action']=="Delete"){
                 <div class="col-sm-6 col-md-3 text-left item">
                     <h3>CUSTOMER SERVICE</h3>
                     <ul>
-                        <li><a href="#">FAQ<br /></a></li>
-                        <li><a href="#">Size Guide<br /></a></li>
-                        <li><a href="#">Contact Us<br /></a></li>
-                    </ul>
+
+                        <li><a href="#" data-toggle="modal" data-target="#myModalsize">Size Guide<br /></a></li>
+                        <!--SIZE GUIDE MODAL-->
+                        <!-- The Modal -->
+                        <div class="modal" id="myModalsize">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                        <!-- Modal Header -->
+
+                        <div class="modal-header" style="color: black;">
+                        <h4 class="modal-title">Size Guide</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+        
+                        <!-- Modal body -->
+                        <div class="sizemodal-body" style="color: black;">
+                        <p style="color: black; text-align: justify;"> 
+                        <center><img class="size-guide" src="assets/img/size chart.jpg" style="width: 400px;"/></center>
+                        </p>
+                    
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+
+
+                        <li><a href="#" data-toggle="modal" data-target="#myModalchart">Color Chart<br /></a></li>
+                        <!--COLOR CHART MODAL-->
+                        <!-- The Modal -->
+                        <div class="modal" id="myModalchart">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                        <!-- Modal Header -->
+
+                        <div class="modal-header" style="color: black;">
+                        <h4 class="modal-title">Color Chart</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+        
+                        <!-- Modal body -->
+                        <div class="chartmodal-body" style="color: black;">
+                        <p style="color: black; text-align: justify;"> 
+                        <center><img class="chart-guide" src="assets/img/color.jpg" style="width: 400px;"/></center>
+                        </p>
+                    
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+
+                        <li><a href="#" data-toggle="modal" data-target="#myModalcontact">Contact Us<br /></a></li>
+                        <!--CONTACT MODAL-->
+                        <!-- The Modal -->
+                        <div class="modal" id="myModalcontact">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                        <!-- Modal Header -->
+
+                        <div class="modal-header" style="color: black;">
+                        <h4 class="modal-title">Contact Us</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+        
+                        <!-- Modal body -->
+                        <div class="contactmodal-body" style="color: black; font-family: century gothic; margin-top:80px; font-size:15px;">
+                        <div class="row text-center m-auto icon-features" style="width: 380px;">
+                            <div class="col-4 icon-feature"><i class="fa fa-map-marker"></i>
+                            <p><b>Location</b></p>
+                            <p>Bazaars are To Be Announced</p>
+                            </div>
+                            <div class="col-4 icon-feature"><i class="fa fa-phone"></i>
+                            <p><b>Call Us</b></p>
+                            <p>+63 956 153 8775<br /></p>
+                            </div>
+                            <div class="col-4 icon-feature"><i class="fa fa-envelope"></i>
+                            <p><b>Email Us</b></p>
+                            <p>magitingph @gmail.com<br /></p>
+                        </div>
+                        </div>
+                    
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                 
                 </div>
+
                 <div class="col-sm-6 col-md-3 text-left item">
                     <h3>ABOUT US</h3>
                     <ul>
-                        <li><a href="AboutUs.html">Mission Vision</a></li>
-                        <li><a href="AboutUs.html">Owners</a></li>
+                        <li><a href="ABOUTUS.php">Mission Vision</a></li>
+                        <li><a href="ABOUTUS.php">Owners</a></li>
                         <li></li>
                     </ul>
                 </div>
@@ -232,7 +309,7 @@ else if ($_REQUEST['action']=="Delete"){
                     <h3>MAGITING PH</h3>
                     <p>A Baybayin movement that aims to parttake in the co-creation <br />of a generation of Active Participation and Appreciation for the <br />Filipino Identity.<br /><br /></p>
                 </div>
-                <div class="col item social"><a href="https://www.facebook.com/MagitingPH" target="_blank"><img src="assets/img/icofb.png" style="width: 30px">
+                <div class="col item social"><p style="color: grey; padding-bottom: 5px;">CHECK US OUT ON<br></p><a href="https://www.facebook.com/MagitingPH" target="_blank"><img src="assets/img/icofb.png" style="width: 30px">
                 <i class="icon ion-social-facebook"></i></a><a href="https://twitter.com/Magitingph" target="_blank"><img src="assets/img/icotwit.png" style="width: 30px">
                 <i class="icon ion-social-twitter"></i></a><a href="https://www.instagram.com/magitingph" target="_blank"><img src="assets/img/icoig.png" style="width: 30px">
                 <i class="icon ion-social-instagram"></i></a></div>
