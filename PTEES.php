@@ -189,7 +189,12 @@ include('includes/session.php');
                 
 
                     <div class="row">
+<<<<<<< HEAD
+                        <div class="col-6"><?php echo $buyNowButton; ?></div>
+
+=======
                         <div class="col-6"><button class="btn btn-light" type="button">Buy Now!</button></div>
+>>>>>>> 5c5af75bce322d0c5f650b329a20aa7c95579aae
                         <div class="col-6">
                             <p class="product-price">₱ <?php echo $price; ?><br /></p>
                         </div>
