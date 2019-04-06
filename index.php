@@ -90,7 +90,7 @@ include('includes/session.php');
         
                 <!-- Modal footer -->
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-light action-button" data-dismiss="modal">Checkout</button>
+                        <button type="button" class="btn btn-light action-button" onclick="checkoutAction();" data-dismiss="modal">Checkout</button>
                         </div>
                         </div>
                         </div>
@@ -310,6 +310,18 @@ var mySwiper = new Swiper ('.swiper-container', {
 });
 
 });
+</script>
+
+<script type="text/javascript">
+   function checkoutAction(){
+
+  var msg = confirm("Proceed to checkout?");
+    if (msg == true) {
+        window.location.href = "CHECKOUT.php";
+    } else {
+    
+    }
+   }
 </script>
 
 </body>

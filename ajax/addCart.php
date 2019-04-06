@@ -13,7 +13,10 @@ include "../PTEES.php";
                    $prodColor = $_GET['prodColor'];
                    $prodSize = $_GET['prodSize'];
                    $prodQty = $_GET['prodQty'];
-                     $prodIndexCtr = $_GET['indexNum'];
+
+                   $prodIndexCtr = $_GET['indexNum'];
+
+                    $totalPrice = $prodPriceArr[$prodIndexCtr] * $prodQty;
 
                   $userid = $_SESSION['login_user'];
               
@@ -22,7 +25,7 @@ include "../PTEES.php";
                 $conn = new mysqli($servername, $username, $password, $dbname);
          
         
-                 $sql = "INSERT INTO tblcart (prodID, userId, prodName, prodQty, prodSize, prodColor) VALUES ('$prodID', '$userid','$prodNameArr[$prodIndexCtr]', '$prodQty','$prodSize','$prodColor')";
+                 $sql = "INSERT INTO tblcart (prodID, userId, prodName, prodQty, prodSize, prodColor, prodPrice) VALUES ('$prodID', '$userid','$prodNameArr[$prodIndexCtr]', '$prodQty','$prodSize','$prodColor','$totalPrice')";
       
 
           

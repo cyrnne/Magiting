@@ -51,6 +51,7 @@ include('includes/session.php');
                          <td>Quantity</td>
                          <td>Size</td>
                          <td>Color</td>
+                         <td>Price</td>
                        </tr>
                     </thead>                            
                 
@@ -71,7 +72,7 @@ include('includes/session.php');
                          <td data-label="Quantity"><?php echo $row['prodQty']?></td>
                          <td data-label="Stock"><?php echo $row['prodSize']?></td>
                          <td data-label="Category"><?php echo $row['prodColor']?></td>
-                         
+                         <td data-label="Price"><?php echo $row['prodPrice']?></td>
                         
                     
                      </tr>
@@ -90,6 +91,8 @@ include('includes/session.php');
                 <!-- Modal footer -->
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+
+                        <button type="button" class="btn btn-light action-button" onclick="checkoutAction();" data-dismiss="modal">Checkout</button>
                         </div>
                         </div>
                         </div>
@@ -142,7 +145,7 @@ include('includes/session.php');
     <?php
                        include("includes/indexdb.php");
                       $conn = new mysqli($servername, $username, $password, $dbname);
-                       $sql = "SELECT * FROM tblproducts where prodCat like 'Hats' group by prodName";
+                       $sql = "SELECT * FROM tblproducts where prodCat like 'Hats'";
                        $result = $conn->query($sql);
                         if ($result->num_rows > 0) {
                         // output data of each row
@@ -157,7 +160,7 @@ include('includes/session.php');
             </div>
             <div class="row">
 
-                 <?php $idofProd = $row['prodID'];?> 
+               <?php $idofProd = $row['prodID'];?> 
 
               <?php $prodNameArr[$ctr] = $row['prodName']; ?>
                <?php $prodPriceArr[$ctr] = $row['prodPrice']; ?>
@@ -190,7 +193,7 @@ include('includes/session.php');
                         </select></center>
                         
                     <div class="row">
-                        <div class="col-6"><?php echo $buyNowButton; ?></div>
+                        <div class="col-6">  <button class="btn btn-light" type="button" onclick="getProdId(this.id,this.name)" id="<?php echo $idofProd; ?>" name="<?php echo $ctr;?>">Buy Now!</button></div>
                         <div class="col-6">
                             <p class="product-price">₱ <?php echo $price; ?><br /></p>
                         </div>
@@ -392,9 +395,21 @@ $window.trigger('scroll');
            xmlhttp.open("GET","ajax/addCartHats.php?q=" + id + "&indexNum=" + indexNum + "&prodColor=" + colorValue + "&prodQty=" + qtyValue,true);
           xmlhttp.send();
     } else {
-    
+            alert(indexNum);
     }
   }
+</script>
+
+<script type="text/javascript">
+   function checkoutAction(){
+
+  var msg = confirm("Proceed to checkout?");
+    if (msg == true) {
+        window.location.href = "CHECKOUT.php";
+    } else {
+    
+    }
+   }
 </script>
 
     </body>

@@ -1,89 +1,29 @@
 <?php
 include('includes/session.php');
+include('includes/indexdb.php');
+    
 
-if($_REQUEST['action']=="Add")
+    $totalPrice = 0;
 
-{
+      $conn = new mysqli($servername, $username, $password, $dbname);
 
-    try {
-
-                  include('includes/indexdb.php');
-
-                  $prodID = rand(1000,10000);
-                  $prodName = $_POST['prodName'];
-                  $prodDesc = $_POST['prodDesc'];
-                  $prodPrice = $_POST['prodPrice'];
-                  $prodStk = $_POST['prodStk'];
-                 
-
+      $sql = "SELECT sum(prodPrice) as total FROM tblcart where userId like '".$_SESSION['login_user']."'";
+      $result = $conn->query($sql);
        
-            $sql = "INSERT INTO tblproducts (prodID, prodName ,prodDesc, prodPrice, prodStk, prodCat, prodImg) VALUES ('$prodID','$prodName','$prodDesc','$prodPrice','$prodStk','Tees','products/blankTshirt.png')";
-      
-
-          
-
-                  if($conn->query($sql) === TRUE) {
-
-                   // echo "Evaluation Submitted";
-                    
-                   echo "<script>alert('Product added')</script>";
-                     
-                  }
-
-                  else{
-                       
-                    echo "<script>alert('Product not added')</script>";
-                       
-                      }
-
-
-
-          }//catch exception
-        catch(Exception $e) {
-      
-        echo 'Message: ' .$e->getMessage();
-                  
-        }
-
-}
-else if ($_REQUEST['action']=="Save"){
-
-  include('includes/indexdb.php');
-
-      $prodID = $_POST['prodID'];
-      $prodName = $_POST['prodName'];
-      $prodDesc = $_POST['prodDesc'];
-      $prodPrice = $_POST['prodPrice'];
-      $prodStk = $_POST['prodStk'];
-
-
-                      
- $sql = "UPDATE tblproducts SET prodName='$prodName',prodDesc='$prodDesc',prodPrice='$prodPrice',prodStk='$prodStk' WHERE prodID='$prodID'"; 
-        
-  if($conn->query($sql) === TRUE) {
-        
-          echo "<script>alert('Item Updated')</script>";
-    }
-    else{
-            echo "<script>alert('Item not Updated')</script>";
-    }
-}
-
-else if ($_REQUEST['action']=="Delete"){
+     if ($result->num_rows > 0) {
+    // output data of each r1ow
+    
+    
   
-  $prodID = $_POST['prodID'];
-
-    $sql = "Delete From tblproducts where prodID ='$prodID'"; 
+        while($row = $result->fetch_assoc()) {
+              $totalPrice = $row["total"]; 
         
-  if($conn->query($sql) === TRUE) {
-        
-          echo "<script>alert('Item Deleted')</script>";
-    }
-    else{
-            echo "<script>alert('Item not Deleted')</script>";
-    }
+           
+    }  
 
 }
+
+
 
 ?>
 
@@ -138,6 +78,7 @@ else if ($_REQUEST['action']=="Delete"){
                          <td>Quantity</td>
                          <td>Size</td>
                          <td>Color</td>
+                         <td>Price</td>
                        </tr>
                     </thead>                            
                 
@@ -158,6 +99,7 @@ else if ($_REQUEST['action']=="Delete"){
                          <td data-label="Quantity"><?php echo $row['prodQty']?></td>
                          <td data-label="Stock"><?php echo $row['prodSize']?></td>
                          <td data-label="Category"><?php echo $row['prodColor']?></td>
+                         <td data-label="Price"><?php echo $row['prodPrice']?></td>
                          
                         
                     
@@ -224,7 +166,7 @@ else if ($_REQUEST['action']=="Delete"){
                         <tbody>
                             <tr>
                                 <td class="text-left subtotal-lbl" style="color: rgb(0,0,0);"><strong>Subtotal (-- Items):</strong><br /></td>
-                                <td class="text-right subtotal" style="color: rgb(0,0,0);">₱800</td>
+                                <td class="text-right subtotal" style="color: rgb(0,0,0);">₱ <?php echo $totalPrice; ?></td>
                             </tr>
                             <tr>
                                 <td class="text-left ship-lbl" style="color: rgb(0,0,0);"><strong>Shipping fee:</strong></td>
@@ -232,7 +174,7 @@ else if ($_REQUEST['action']=="Delete"){
                             </tr>
                             <tr>
                                 <td class="text-right total-lbl" style="color: rgb(0,0,0);"><strong>TOTAL:</strong></td>
-                                <td class="text-right total" style="font-size: 20px;color: rgb(255,0,0);"><strong>₱850</strong><br /></td>
+                                <td class="text-right total" style="font-size: 20px;color: rgb(255,0,0);"><strong>₱ <?php echo $totalPrice + 50; ?></strong><br /></td>
                             </tr>
                         </tbody>
                     </table>
@@ -245,7 +187,7 @@ else if ($_REQUEST['action']=="Delete"){
                         <div class="col-12"><input type="text" placeholder="Address" class="form-control address-input" style="margin-bottom: 20px;margin-top: 10px;" /></div>
                     </div>
                     <div class="form-row">
-                        <div class="col-12"><button class="btn btn-light action-button" type="submit" style="font-size: 14px;padding-left: 2in;padding-right: 2in;">Place Order</button></div>
+                        <div class="col-12"><button class="btn btn-light action-button" type="submit" onclick="confirmOrder();" style="font-size: 14px;padding-left: 2in;padding-right: 2in;">Place Order</button></div>
                     </div>
                 </form>
             </div>
@@ -584,8 +526,33 @@ else if ($_REQUEST['action']=="Delete"){
     
     }
 
+     function confirmOrder(){
+    
+   
+   
+     var msg = confirm("Confirm Order?");
+    if (msg == true) {
+        var xmlhttp = new XMLHttpRequest();
+
+            xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                
+                alert("Order Successful");
+                location.reload();
+
+           }
+          };
+           xmlhttp.open("GET","includes/delCart.php",true);
+          xmlhttp.send();
+    } else {
+
+    }
+  }
+
 
     </script>
+
+
 
 </body>
 

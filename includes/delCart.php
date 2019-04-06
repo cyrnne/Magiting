@@ -5,20 +5,10 @@
 include("../includes/indexdb.php");
 include("../includes/session.php");
 
-include "../PHATS.php";
-
-
-
         
     try {
        
-                   $prodID = $_GET['q'];
-                   $prodColor = $_GET['prodColor'];
-                   $prodSize = 'Universal Fit';
-                   $prodQty = $_GET['prodQty'];
-                   $prodIndexCtr = $_GET['indexNum'];
-
-                   $totalPrice = $prodPriceArr[$prodIndexCtr] * $prodQty;
+                  
 
                   $userid = $_SESSION['login_user'];
               
@@ -27,7 +17,7 @@ include "../PHATS.php";
                 $conn = new mysqli($servername, $username, $password, $dbname);
          
         
-                 $sql = "INSERT INTO tblcart (prodID, userId, prodName, prodQty, prodSize, prodColor,prodPrice) VALUES ('$prodID', '$userid','$prodNameArr[$prodIndexCtr]', '$prodQty','$prodSize','$prodColor','$totalPrice')";
+                 $sql = "DELETE from tblcart where userId like '".$userid."'";
       
 
           
@@ -36,13 +26,13 @@ include "../PHATS.php";
 
                    // echo "Evaluation Submitted";
                       
-                    echo "Item Added";
+                    echo "Order Successful";
                      
                   }
 
                   else{
                        
-                    echo "Item not Added";
+                    echo "Order Failed";
                        
                       }
 
