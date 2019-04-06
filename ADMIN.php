@@ -14,10 +14,26 @@ if($_REQUEST['action']=="Add")
                   $prodDesc = $_POST['prodDesc'];
                   $prodPrice = $_POST['prodPrice'];
                   $prodStk = $_POST['prodStk'];
-                 
+
+                  $target_dir = "products/";
+
+                  $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+                  $uploadOk = 1;
+                  $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+                  $getImgName = basename($_FILES["fileToUpload"]["name"]);
+                  $nameImg = "products/".$getImgName;
+
+                  if ($uploadOk == 0) {
+                        echo "Sorry, your file was not uploaded.";
+                  // if everything is ok, try to upload file
+                  } else {
+          if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+      
+       // echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+
 
        
-            $sql = "INSERT INTO tblproducts (prodID, prodName ,prodDesc, prodPrice, prodStk, prodCat, prodImg) VALUES ('$prodID','$prodName','$prodDesc','$prodPrice','$prodStk','Tees','products/blankTshirt.png')";
+            $sql = "INSERT INTO tblproducts (prodID, prodName ,prodDesc, prodPrice, prodStk, prodCat, prodImg) VALUES ('$prodID','$prodName','$prodDesc','$prodPrice','$prodStk','Tees','$nameImg')";
       
 
           
@@ -35,6 +51,14 @@ if($_REQUEST['action']=="Add")
                     echo "<script>alert('Product not added')</script>";
                        
                       }
+
+    } 
+
+    else {
+        echo "Sorry, there was an error uploading your file.";
+    }
+}
+                 
 
 
 
@@ -327,7 +351,7 @@ else if ($_REQUEST['action']=="Delete"){
         <div class="modal-content" style="color: black; text-align: center;">
 
 
-            <form name="myform" id="myform" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+            <form name="myform" id="myform" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" enctype="multipart/form-data">
 
           <div class="modal-header">
               <h4 class="modal-title" id="myModalLabel">Add Item</h4>
@@ -360,7 +384,11 @@ else if ($_REQUEST['action']=="Delete"){
                 
             </div>
 
-               </select>
+             <div class="form-group">
+             <label>Select image to upload</label>
+              <input type="file" name="fileToUpload" id="fileToUpload">
+
+             </div>
             
                       
 
