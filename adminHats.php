@@ -119,7 +119,7 @@ else if ($_REQUEST['action']=="Delete"){
     <section class="page-section about-heading">
         <div class="about-heading-content">
             <div class="row" style="margin-right: 0px;margin-left: 0px;">
-                <div class="col-9 text-center mx-auto" style="background-color: #ffffff;color: rgb(0,0,0);opacity: 1;height: 2000px;margin-top: 50px;margin-bottom: 50px;">
+            <div class="col-9 text-center mx-auto" style="background-color: #ffffff;color: rgb(0,0,0);opacity: 1;padding-bottom:20px; margin-top: 50px;margin-bottom: 50px;">
                     <h1 class="admin-heading" style="margin-top: 25px;margin-bottom: 25px;">MANAGE PRODUCTS</h1>
                     <div class="dropdown"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" style="margin-right: 0px;">PRODUCTS</button>
                         <div role="menu" class="dropdown-menu"><a role="presentation" href="ADMIN.php" class="dropdown-item">Tees</a><a role="presentation" href="adminHats.php" class="dropdown-item">Hats</a></div>
