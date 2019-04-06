@@ -65,9 +65,12 @@
                     <div class="modal-body" style="color: black;">
                     <p style="color: black; text-align: justify; padding: 30px;"> 
                     Welcome to Magiting PH! <br><br>
-                    These terms and conditions outline the rules and regulations for the use of Magiting PH Website. <br><br>
-                    The Magiting Ph is an online shopping website which allows customers to directly buy items from the 
-                    seller over the Internet using a web browser.
+
+                    Please read our Terms and Condition of using carefully before accesing, using and obtaining any materials, 
+                    informations, platforms or services. We modify these Terms for any reasons at any time, these changes do not 
+                    affect any rights and obligations.<br><br>
+
+                    If you disagree with any part of the terms then you may not access the service.
                     </p>
                     
                         </div>
