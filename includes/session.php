@@ -21,6 +21,8 @@ if(!isset($_SESSION['login_user'])){
    	";
 
    	$cartView = "none";
+
+   	$buyNowButton = "<button class='btn btn-light' type='button' onclick='getProdId(this.id,this.name)' id='<?php echo $idofProd; ?>' name='<?php echo $ctr;?>' disabled  >Buy Now!</button>";
 }
 else{
 	$menuBar = "
@@ -30,6 +32,9 @@ else{
    	";
 
    	$cartView = "inline-block";
+
+
+   		$buyNowButton = "<button class='btn btn-light' type='button' onclick='getProdId(this.id,this.name)' id='<?php echo $idofProd; ?>' name='<?php echo $ctr;?>' >Buy Now!</button>";
 }
 
 ?>

@@ -232,7 +232,7 @@ include('includes/session.php');
                 
 
                     <div class="row">
-                        <div class="col-6"><button class="btn btn-light" type="button" onclick="getProdId(this.id,this.name)" id="<?php echo $idofProd; ?>" name="<?php echo $ctr;?>">Buy Now!</button></div>
+                        <div class="col-6"><?php echo $buyNowButton; ?></div>
 
                         <div class="col-6">
                             <p class="product-price">₱ <?php echo $price; ?><br /></p>
