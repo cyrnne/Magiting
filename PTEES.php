@@ -37,6 +37,9 @@ include('includes/session.php');
                     <div class="modal-header" style="color: black;">
                         <h4 class="modal-title">Cart</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                       
+
                         </div>
         
                 <!-- Modal body -->
@@ -94,6 +97,7 @@ include('includes/session.php');
                 <!-- Modal footer -->
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                         <button type="button" class="btn btn-light action-button" onclick="checkoutAction();" data-dismiss="modal">Checkout</button>
                         </div>
                         </div>
                         </div>
@@ -452,6 +456,18 @@ $window.trigger('scroll');
 
     }
   }
+</script>
+
+<script type="text/javascript">
+   function checkoutAction(){
+
+  var msg = confirm("Proceed to checkout?");
+    if (msg == true) {
+        window.location.href = "CHECKOUT.php";
+    } else {
+    
+    }
+   }
 </script>
 
     </body>

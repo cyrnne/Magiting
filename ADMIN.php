@@ -137,7 +137,7 @@ else if ($_REQUEST['action']=="Delete"){
             <div class="collapse navbar-collapse" id="navcol-1" style="margin-left: 210px;">
                 <ul class="nav navbar-nav mx-auto" style="margin: 0px;padding: 0px;margin-left: 210px;">
                     <li role="presentation" class="nav-item" style="margin-left: 0px;"><a href="ADMIN.php" class="nav-link">MANAGE PRODUCTS</a></li>
-                    <li role="presentation" class="nav-item"><a href="AboutUs.html" class="nav-link">ACCOUNTS</a></li>
+                    <li role="presentation" class="nav-item"><a href="accounts.php" class="nav-link">ACCOUNTS</a></li>
                 </ul><?php echo $menuBar; ?></div>
         </div>
     </nav>

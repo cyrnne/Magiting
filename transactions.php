@@ -1,31 +1,91 @@
 <?php
 include('includes/session.php');
-include('includes/indexdb.php');
-    
 
-    $totalPrice = 0;
-    $totalCount = 0;
+if($_REQUEST['action']=="Add")
 
-      $conn = new mysqli($servername, $username, $password, $dbname);
+{
 
-      $sql = "SELECT sum(prodPrice) as total, count(prodPrice) as totalCount FROM tblcart where userId like '".$_SESSION['login_user']."'";
-      $result = $conn->query($sql);
+    try {
+
+                  include('includes/indexdb.php');
+
+               
+                  $username = $_POST['username'];
+                  $getpass = $_POST['password'];
+                  $password = md5($getpass);
+                  $role = $_POST['role'];
+
+             
+
+                 
        
-     if ($result->num_rows > 0) {
-    // output data of each r1ow
+            $sql = "INSERT INTO tbllogin (username, password ,role) VALUES ('$username','$password','$role')";
+      
+
+          
+
+                  if($conn->query($sql) === TRUE) {
+
+                   // echo "Evaluation Submitted";
+                    
+                   echo "<script>alert('Account added')</script>";
+                     
+                  }
+
+                  else{
+                       
+                    echo "<script>alert('Account not added')</script>";
+                       
+                      }
+
     
-    
-  
-        while($row = $result->fetch_assoc()) {
-              $totalPrice = $row["total"]; 
-              $totalCount = $row["totalCount"];
-        
-           
-    }  
+
+
+          }//catch exception
+        catch(Exception $e) {
+      
+        echo 'Message: ' .$e->getMessage();
+                  
+        }
 
 }
+else if ($_REQUEST['action']=="Save"){
+
+  include('includes/indexdb.php');
+
+      $username = $_POST['username'];
+       $getpass = $_POST['password'];
+       $password = md5($getpass);
+                
 
 
+                      
+ $sql = "UPDATE tbllogin SET password='$password' WHERE username='$username'"; 
+        
+  if($conn->query($sql) === TRUE) {
+        
+          echo "<script>alert('Account Updated')</script>";
+    }
+    else{
+            echo "<script>alert('Account not Updated')</script>";
+    }
+}
+
+else if ($_REQUEST['action']=="Delete"){
+  
+ $username = $_POST['username'];
+
+    $sql = "Delete From tbllogin where username ='$username'"; 
+        
+  if($conn->query($sql) === TRUE) {
+        
+          echo "<script>alert('Account Deleted')</script>";
+    }
+    else{
+            echo "<script>alert('Account not Deleted')</script>";
+    }
+
+}
 
 ?>
 
@@ -34,7 +94,7 @@ include('includes/indexdb.php');
     <link rel="shortcut icon" href="assets/img/logowhite.png" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Magiting | Checkout</title>
+    <title>Magiting | Admin</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/STYLES.css">
@@ -48,47 +108,54 @@ include('includes/indexdb.php');
 </head>
 
 <body style="color: rgb(255,255,255);">
-<header class="home-header" style="margin-top: -10px;margin-bottom: -10px;"><img class="d-block float-left" src="assets/img/HEADERS/checkout header.jpg" style="width: 100%;" /></header>
-    <nav class="navbar navbar-light navbar-expand-lg bg-white" id="mainNav" style="background-color: #ffffff; padding-left: 1in;">
-    <div class="container-fluid"><button data-toggle="collapse" data-target="#navcol-1" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navcol-1">
-            <ul class="nav navbar-nav mx-auto" style="margin: 0px;padding: 0px;">
-                
-                <li role="presentation" class="nav-item" style="display: <?php echo $cartView; ?>;"><a href="#" class="nav-link cart" style="width: 35px;height: 35px;margin: 0px;background-image: url('assets/img/cart.png');padding-left: 8px;margin-right: 300px;" data-toggle="modal" data-target="#myModal"></a></li>
-                <!--CART MODAL-->
-                <!-- The Modal -->
-                    <div class="modal" id="myModal">
-                        <div class="modal-dialog">
-                        <div class="modal-content">
-      
-                <!-- Modal Header -->
+    <h1 class="home-heading" style="color: rgb(255,255,255);"><span class="text-center home-heading-upper" style="color: rgb(116,116,116);font-size: 30px;">A Baybayin Movement</span><span class="text-center home-heading-lower" style="font-size: 120px;">MAGITING</span></h1>
+    <nav class="navbar navbar-light navbar-expand-lg bg-white"
+        id="mainNav" style="background-color: #ffffff;">
+        <div class="container-fluid"><button data-toggle="collapse" data-target="#navcol-1" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1" style="margin-left: 210px;">
+                <ul class="nav navbar-nav mx-auto" style="margin: 0px;padding: 0px;margin-left: 210px;">
+                    <li role="presentation" class="nav-item" style="margin-left: 0px;"><a href="ADMIN.php" class="nav-link">MANAGE PRODUCTS</a></li>
+                    <li role="presentation" class="nav-item"><a href="accounts.php" class="nav-link">ACCOUNTS</a></li>
+                </ul><?php echo $menuBar; ?></div>
+        </div>
+    </nav>
+    <section class="page-section about-heading">
+        <div class="about-heading-content">
+            <div class="row" style="margin-right: 0px;margin-left: 0px;">
+                <div class="col-9 text-center mx-auto" style="background-color: #ffffff;color: rgb(0,0,0);opacity: 1;padding-bottom:20px; margin-top: 50px;margin-bottom: 50px;">
+                    <h1 class="admin-heading" style="margin-top: 25px;margin-bottom: 25px;">MANAGE ACCOUNTS</h1>
+                    <div class="dropdown"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" style="margin-right: 0px;">Transactions</button>
+                        <div role="menu" class="dropdown-menu"><a role="presentation" href="accounts.php" class="dropdown-item">Accounts</a><a role="presentation" href="transactions.php" class="dropdown-item">Transactions</a></div>
+                    </div>
 
-                    <div class="modal-header" style="color: black;">
-                        <h4 class="modal-title">Cart</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        </div>
-        
-                <!-- Modal body -->
-                    <div class="modal-body" style="color: black;">
-                   
-                    <div class="table-responsive"> 
+                   <!-- Table Dynamic -->
+ <div class="col-md-12" style="padding-left: 80px;padding-right: 80px;padding-top:30px;">
+            <!-- Website Overview-->
+            <div class="panel panel-default">
+              <div class="panel-heading main-color-bg">
+                <h3 class="panel-title">Transactions</h3>
+              
+              </div>
+              <div class="panel-body">
+                
+                <br>
+                <div class="table-responsive"> 
                 <table class="table table-striped table-hover" id="prodTbl">
                     <thead class="thead-dark" style="color: black; text-align: center;">                            
                        <tr>
-                         <td>Product ID</td>
-                         <td>Name</td>
-                         <td>Quantity</td>
-                         <td>Size</td>
-                         <td>Color</td>
-                         <td>Price</td>
+                         <td>Transaction ID</td>
+                         <td>userId</td>
+                         <td>Date</td>
+                         <td>Amount</td>
+                         <td>Customer Name</td>
+                         <td>Customer Address</td>
                        </tr>
                     </thead>                            
                 
                     <?php
                        include("includes/indexdb.php");
-                       include('includes/session.php');
                       $conn = new mysqli($servername, $username, $password, $dbname);
-                       $sql = "SELECT * FROM tblcart where userID like '".$_SESSION['login_user']."'";
+                       $sql = "SELECT * FROM tbltransactions";
                        $result = $conn->query($sql);
                         if ($result->num_rows > 0) {
                         // output data of each row
@@ -96,13 +163,12 @@ include('includes/indexdb.php');
                     ?>
                     
                      <tr style="text-align: center; color: black;">
-                         <td data-label="ID"><?php echo $row['prodID']?></td>
-                         <td data-label="Name"><?php echo $row['prodName']?></td>
-                         <td data-label="Quantity"><?php echo $row['prodQty']?></td>
-                         <td data-label="Stock"><?php echo $row['prodSize']?></td>
-                         <td data-label="Category"><?php echo $row['prodColor']?></td>
-                         <td data-label="Price"><?php echo $row['prodPrice']?></td>
-                         
+                         <td data-label="ID"><?php echo $row['transactionId']?></td>
+                         <td data-label="Name"><?php echo $row['userId']?></td>
+                         <td data-label="Description"><?php echo $row['date']?></td>
+                         <td data-label="Description"><?php echo $row['totalAmount']?></td>
+                         <td data-label="Description"><?php echo $row['customerName']?></td>
+                         <td data-label="Description"><?php echo $row['customerAddress']?></td>
                         
                     
                      </tr>
@@ -115,27 +181,14 @@ include('includes/indexdb.php');
                                             
                 </table>
                 </div>
-                    
-                    </div>
-        
-                <!-- Modal footer -->
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                        </div>
-                        </div>
-                        </div>
-                        </div>
-
-                <li class="nav-item" role="presentation"><a class="nav-link" href="index.php">HOME</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link" href="ABOUTUS.php">ABOUT US</a></li>
-                <li class="dropdown nav-item" style="margin-left: 0px;margin-right: 50px;"><a data-toggle="dropdown" aria-expanded="false" href="#" class="dropdown-toggle nav-link" style="margin-right: 65px;">PRODUCTS</a>
-                    <div role="menu" class="dropdown-menu"><a role="presentation" href="PTEES.php" class="dropdown-item">Tees</a><a role="presentation" href="PHATS.php" class="dropdown-item">Hats</a></div>
-                </li>
-            </ul><?php echo $menuBar; ?></div>
-    </div>
-</nav> 
-
-  <form id="myform" name="myform" onsubmit="return false">
+                
+               
+              </div>
+            </div>
+              
+                     
+                  
+          </div>
                    <!-- End of Table -->
 
                 </div>
@@ -144,70 +197,12 @@ include('includes/indexdb.php');
     </section>
 
 
-<!---Checkout--->
-<section class="page-section about-heading">
-    <div class="about-heading-content">
-        <div class="row">
 
-            <div class="col-9 text-center mx-auto" style="background-color: #ffffff;color: rgb(0,0,0);opacity: 1;margin-top: 50px;margin-bottom: 50px;">
-                <h1 class="prod-heading" style="margin-top: 25px;margin-bottom: 25px;">CHECKOUT</h1>
-
-                <div class="row .payment-dialog-row" style="padding-bottom: 42px;">
-    <div class="col">
-        <div class="card mx-auto credit-card-box" style="width: 500px;">
-            <div class="card-header">
-                <h3 style="background-color: #dcdcdc;"><span class="panel-title-text">Payment Details </span><img src="assets/img/cod.png" class="img-fluid panel-title-image" style="width: 280px;" /></h3>
-            </div>
-            <div class="card-body">
-                <h5 class="text-center order" style="font-size: 20px;width: 458px;">ORDER SUMMARY</h5>
-                <div class="table-responsive">
-                    <table class="table">
-                        <thead>
-                            <tr></tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="text-left subtotal-lbl" style="color: rgb(0,0,0);"><strong>Subtotal (<?php echo $totalCount; ?>
- Item/s):</strong><br /></td>
-                                <td class="text-right subtotal" style="color: rgb(0,0,0);">₱ <?php echo $totalPrice; ?></td>
-                            </tr>
-                                                   
-                            <tr>
-                                <td class="text-left ship-lbl" style="color: rgb(0,0,0);"><strong>Shipping fee:</strong></td>
-                                <td class="text-right shipfee" style="color: rgb(0,0,0);">+₱50<br /></td>
-                            </tr>
-                            <tr>
-                                <td class="text-right total-lbl" style="color: rgb(0,0,0);"><strong>TOTAL:</strong></td>
-                                <td class="text-right total" style="font-size: 20px;color: rgb(255,0,0);"><strong>₱ <?php echo $totalPrice + 50; ?></strong><br /></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <form id="payment-form" style="margin-top: -10px;">
-                    <div class="form-row">
-                        <div class="col-12"><input type="text" id="name" onchange="getName(this.value)" placeholder="Name" class="form-control name-input" style="margin-bottom: 10px;" /></div>
-                    </div>
-                    <div class="form-row">
-                        <div class="col-12"><input type="text" id="address" onchange="getAddress(this.value)" placeholder="Address" class="form-control address-input" style="margin-bottom: 20px;margin-top: 10px;" /></div>
-                    </div>
-                    <div class="form-row">
-                        <div class="col-12"><button class="btn btn-light action-button" type="submit" onclick="confirmOrder();" style="font-size: 14px;padding-left: 2in;padding-right: 2in;">Place Order</button></div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-        </div>
-    </div>
-</div>
-               
-</section>
-
+    
 </body>
 </header>    
 
-        <!--FOOTER-->
+<!--FOOTER-->
 <div class="footer-dark" style="padding-top: 40px;padding-bottom: 30px;background-color: #000000;">
     <footer>
         <div class="container">
@@ -279,7 +274,7 @@ include('includes/indexdb.php');
                         </div>
         
                         <!-- Modal body -->
-                        <div class="contactmodal-body" style="color: black; font-family: century gothic; margin-top:80px; font-size:15px;">
+                        <div class="contactmodal-body" style="color: black; font-family: century gothic; margin-top:80px; font-size:15px; height:2.5in;">
                         <div class="row text-center m-auto icon-features" style="width: 380px;">
                             <div class="col-4 icon-feature"><i class="fa fa-map-marker"></i>
                             <p><b>Location</b></p>
@@ -332,47 +327,31 @@ include('includes/indexdb.php');
         <div class="modal-content" style="color: black; text-align: center;">
 
 
-            <form name="myform" id="myform" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+            <form name="myform" id="myform" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" enctype="multipart/form-data">
 
           <div class="modal-header">
-              <h4 class="modal-title" id="myModalLabel">Add Item</h4>
+              <h4 class="modal-title" id="myModalLabel">Transactions</h4>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="clearText();"><span aria-hidden="true">&times;</span></button>
           
           </div>
           <div class="modal-body">
 
             <div class="form-group">
-                <label>Product ID</label>
-                <input type="text" id="prodID" name="prodID" class="form-control" form="myform" readonly>
+                <label>Username</label>
+                <input type="text" id="username" name="username" class="form-control" form="myform" readonly>
             </div>
 
             <div class="form-group">
-                <label>Product Name</label>
-                <input type="text" id="prodName" name="prodName" class="form-control" form="myform" required>
+                <label>Password</label>
+                <input type="text" id="password" name="password" class="form-control" form="myform" required>
             </div>
-           
-            <div class="form-group">
-                <label>Description</label>
-                <input type="text" id="prodDesc" name="prodDesc" class="form-control" form="myform" required>
-            </div>
-            <div class="form-group">
-                <label>Price</label>
-                <input type="text" id="prodPrice" name="prodPrice" class="form-control" form="myform" required>
-            </div>
-            <div class="form-group">
-                <label>Stock</label>
-                <input type="text" id="prodStk" name="prodStk" class="form-control" form="myform" required>
-                
-            </div>
-
-               </select>
-            
-                      
+        
+                  
 
             <div class="form-group">
 
-             <label>Category</label>
-                <input type="text" id="prodCat" name="prodCat" class="form-control" form="myform" value="Tees" readonly>
+             <label>Role</label>
+                <input type="text" id="role" name="role" class="form-control" form="myform" value="user" readonly>
              </div>
            
             
@@ -530,42 +509,8 @@ include('includes/indexdb.php');
     
     }
 
-    var getname = "";
-    var getaddress = "";
-
-    function getName(str){
-        getname = str;
-    }
-    function getAddress(str){
-        getaddress = str;
-    }
-
-     function confirmOrder(){
-
-   
-     var msg = confirm("Confirm Order?");
-    if (msg == true) {
-        var xmlhttp = new XMLHttpRequest();
-
-            xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                
-                alert(this.responseText);
-                location.reload();
-
-           }
-          };
-           xmlhttp.open("GET","includes/delCart.php?name=" + getname + "&address=" + getaddress,true);
-          xmlhttp.send();
-    } else {
-
-    }
-  }
-
 
     </script>
-
-
 
 </body>
 
