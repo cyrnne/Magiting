@@ -51,6 +51,7 @@ include('includes/session.php');
                          <td>Quantity</td>
                          <td>Size</td>
                          <td>Color</td>
+                         <td>Price</td>
                        </tr>
                     </thead>                            
                 
@@ -66,12 +67,13 @@ include('includes/session.php');
                     ?>
                     
                      <tr style="text-align: center; color: black;">
+                       
                          <td data-label="ID"><?php echo $row['prodID']?></td>
                          <td data-label="Name"><?php echo $row['prodName']?></td>
-                         <td data-label="Description"><?php echo $row['prodDesc']?></td>
                          <td data-label="Price"><?php echo $row['prodQty']?></td>
                          <td data-label="Stock"><?php echo $row['prodSize']?></td>
-                         <td data-label="Category"><?php echo $row['prodColor']?></td>
+                         <td data-label="Color"><?php echo $row['prodColor']?></td>
+                         <td data-label="Price"><?php echo $row['prodPrice']?></td>
                          
                         
                     
@@ -168,6 +170,9 @@ include('includes/session.php');
                       $conn = new mysqli($servername, $username, $password, $dbname);
                        $sql = "SELECT * FROM tblproducts where prodCat like 'Tees' group by prodName";
                        $result = $conn->query($sql);
+
+                       $ctr = 0;
+
                         if ($result->num_rows > 0) {
                         // output data of each row
                        while($row = $result->fetch_assoc()) {
@@ -179,17 +184,55 @@ include('includes/session.php');
                 <div class="col-md-12"><a href="#" class="product-image"><img src="<?php echo $row['prodImg']?>" /></a></div>
             </div>
             <div class="row">
+
+                <?php $idofProd = $row['prodID'];?> 
+
+              <?php $prodNameArr[$ctr] = $row['prodName']; ?>
+               <?php $prodPriceArr[$ctr] = $row['prodPrice']; ?>
+
                 <div class="col text-center" style="height: 30px; font-size: 20px; font-family: sans-serif; font-weight: bolder; color: black;"><?php echo $row['prodName']?></div>
                 <div class="col-12">
                     <p class="product-description" style="height: 60px;"><br /><?php echo $row['prodDesc']; $price = $row['prodPrice']; ?><br /><br /></p>
-                    <input type="number" min="1" max="<?php echo $row['prodStk']?>" name="quantity" placeholder="Qty:" id="qty" class="text-center product-quantity" style="width: 60px;height: 30px;" />
+                    <input type="number" min="1" max="<?php echo $row['prodStk']?>" name="quantity" placeholder="Qty:" id="qty" onchange="getQty(this.value)" class="text-center product-quantity" style="width: 60px;height: 30px;" />
                     <p class="text-center product-stocks"style="padding-bottom: 0px;"><br>Only <?php echo $row['prodStk']?> stocks left</p>
 
-                   
+                     <center><select style="margin-bottom: 15px;" id="prodSize" onchange="getSize(this.value);">
+                        <option value="" disabled selected style="display: none;">Size</option>
+                                 <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="2XL">2XL</option>
+                                
+                        </select>
+
+              <select style="margin-bottom: 15px;" id="prodColor" onchange="getColor(this.value);">
+                        <option value="" disabled selected style="display: none;">Color</option>
+                                 <option value="Navy Blue">Navy Blue</option>
+                                <option value="Red">Red</option>
+                                <option value="Royal Blue">Royal Blue</option>
+                                <option value="Black">Black</option>
+                                <option value="Yellow">Yellow</option>
+                                <option value="Violet">Violet</option>
+                                <option value="Sky Blue">Sky Blue</option>
+                                <option value="Dark Grey">Dark Grey</option>
+                                <option value="White">white</option>
+                                <option value="Light Green">Light Green</option>
+                                <option value="Pink">Pink</option>
+                                <option value="Plum">Plum</option>
+                                <option value="Light Grey">Light Grey</option>
+                                <option value="Orange">Orange</option>
+                                <option value="Dark Green">Dark Green</option>
+                        </select></center>
                 
 
                     <div class="row">
-                        <div class="col-6"><button class="btn btn-light" type="button">Buy Now!</button></div>
+                        <div class="col-6">
+                            <button class="btn btn-light" type="button" onclick="getProdId(this.id,this.name)" id="<?php echo $idofProd; ?>" name="<?php echo $ctr;?>">Buy Now!</button>
+
+                        </div>
+
                         <div class="col-6">
                             <p class="product-price">₱ <?php echo $price; ?><br /></p>
                         </div>
@@ -200,6 +243,8 @@ include('includes/session.php');
     </div>
 
         <?php
+
+            $ctr = $ctr + 1;
                         }
                        }
                     ?>
@@ -360,6 +405,53 @@ function check_if_in_view() {
 
 $window.on('scroll resize', check_if_in_view);
 $window.trigger('scroll');
+</script>
+
+<script type="text/javascript">
+
+  var colorValue = "";
+
+  var sizeValue = "";
+
+  var qtyValue = "";
+
+  function getColor(str){
+    colorValue = str;
+
+  }
+ 
+  function getSize(str){
+   sizeValue = str;
+
+  }
+ 
+
+  function getQty(str){
+    qtyValue = str;
+
+  }
+  function getProdId(id,indexNum){
+    
+    var prodQty = document.getElementById("qty").value;
+   
+     var msg = confirm("Are you sure you want to add this item to your cart?");
+    if (msg == true) {
+        var xmlhttp = new XMLHttpRequest();
+
+            xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                
+                alert("Item Added");
+                location.reload();
+
+           }
+          };
+           xmlhttp.open("GET","ajax/addCart.php?q=" + id + "&indexNum=" + indexNum + "&prodColor=" + colorValue + "&prodQty=" + qtyValue + "&prodSize=" + sizeValue,true);
+          xmlhttp.send();
+    } else {
+
+    }
+  }
 </script>
 
     </body>
