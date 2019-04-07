@@ -542,6 +542,13 @@ include('includes/indexdb.php');
 
      function confirmOrder(){
 
+        if(getName == "" || getaddress == ""){
+            alert("Please complete all needed information");
+        }
+        else{
+
+        
+
    
      var msg = confirm("Confirm Order?");
     if (msg == true) {
@@ -561,6 +568,7 @@ include('includes/indexdb.php');
 
     }
   }
+}
 
 
     </script>

@@ -112,6 +112,8 @@ include('includes/session.php');
                     <div role="menu" class="dropdown-menu"><a role="presentation" href="PTEES.php" class="dropdown-item">Tees</a><a role="presentation" href="PHATS.php" class="dropdown-item">Hats</a></div>
                 </li>
             </ul><?php echo $menuBar; ?></div>
+
+             <input type="text" name="loginCheck" id="loginCheck" value="<?php echo $_SESSION['login_user']; ?>" style="display: none;">
     </div>
 </nav>
         
@@ -236,7 +238,7 @@ include('includes/session.php');
 
                     <div class="row">
                         <div class="col-6">
-                            <button class="btn btn-light" type="button" onclick="getProdId(this.id,this.name)" id="<?php echo $idofProd; ?>" name="<?php echo $ctr;?>">Buy Now!</button>
+                           <button class='btn btn-light' type='button' onclick='getProdId(this.id,this.name)' id='<?php echo $idofProd; ?>' name='<?php echo $ctr;?>' >Buy Now!</button>
 
                         </div>
 
@@ -438,8 +440,25 @@ $window.trigger('scroll');
 
   }
   function getProdId(id,indexNum){
-    
+
     var prodQty = document.getElementById("qty").value;
+
+    var getuser = document.getElementById("loginCheck").value;
+
+
+    if(getuser == ""){
+         alert("Please Login to buy product");
+    }
+
+    else{
+
+    
+
+    if(qtyValue == "" || sizeValue == "" || colorValue == ""){
+        alert("Please complete the needed details");
+    }
+    else{
+
    
      var msg = confirm("Are you sure you want to add this item to your cart?");
     if (msg == true) {
@@ -458,7 +477,12 @@ $window.trigger('scroll');
     } else {
 
     }
+    }
+    
+    
   }
+
+}
 </script>
 
 <script type="text/javascript">
@@ -487,7 +511,7 @@ $window.trigger('scroll');
             xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 
-                alert("Item Removed");
+                alert(this.responseText);
                 location.reload();
 
            }
