@@ -167,13 +167,11 @@ include('includes/indexdb.php');
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="text-left subtotal-lbl" style="color: rgb(0,0,0);"><strong>Subtotal (-- Items):</strong><br /></td>
+                                <td class="text-left subtotal-lbl" style="color: rgb(0,0,0);"><strong>Subtotal (<?php echo $totalCount; ?>
+ Item/s):</strong><br /></td>
                                 <td class="text-right subtotal" style="color: rgb(0,0,0);">₱ <?php echo $totalPrice; ?></td>
                             </tr>
-                            <tr>
-                                <td class="text-left ship-lbl" style="color: rgb(0,0,0);"><strong>Number of Items:</strong></td>
-                                <td class="text-right shipfee" style="color: rgb(0,0,0);"><?php echo $totalCount; ?><br /></td>
-                            </tr>
+                                                   
                             <tr>
                                 <td class="text-left ship-lbl" style="color: rgb(0,0,0);"><strong>Shipping fee:</strong></td>
                                 <td class="text-right shipfee" style="color: rgb(0,0,0);">+₱50<br /></td>
