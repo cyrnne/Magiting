@@ -72,6 +72,9 @@ include('includes/session.php');
                          <td data-label="Quantity"><?php echo $row['prodQty']?></td>
                          <td data-label="Stock"><?php echo $row['prodSize']?></td>
                          <td data-label="Category"><?php echo $row['prodColor']?></td>
+                         <td data-label="Category">
+                            <button type="button" class="btn btn-light action-button" id="<?php echo $row['prodID']?>" onclick="delCartItem(this.id)" style=" float: right;">Delete</button>
+                         </td>
                          
                         
                     
@@ -322,6 +325,34 @@ var mySwiper = new Swiper ('.swiper-container', {
     
     }
    }
+</script>
+
+<script type="text/javascript">
+  
+
+    function delCartItem(id){
+    
+    
+   
+     var msg = confirm("Are you sure you want to delete this item?");
+    if (msg == true) {
+        var xmlhttp = new XMLHttpRequest();
+
+            xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                
+                alert("Item Removed");
+                location.reload();
+
+           }
+          };
+           xmlhttp.open("GET","ajax/delCartItem.php?q=" + id,true);
+          xmlhttp.send();
+    } else {
+
+    }
+  }
+
 </script>
 
 </body>

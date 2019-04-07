@@ -73,6 +73,9 @@ include('includes/session.php');
                          <td data-label="Stock"><?php echo $row['prodSize']?></td>
                          <td data-label="Category"><?php echo $row['prodColor']?></td>
                          <td data-label="Price"><?php echo $row['prodPrice']?></td>
+                          <td data-label="Category">
+                            <button type="button" class="btn btn-light action-button" id="<?php echo $row['prodID']?>" onclick="delCartItem(this.id)" style=" float: right;">Delete</button>
+                         </td>
                         
                     
                      </tr>

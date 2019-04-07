@@ -454,11 +454,9 @@ else if ($_REQUEST['action']=="Delete"){
                 hideAddBtn();
                 showSaveBtn();
               
-               document.getElementById("prodID").value = this.cells[0].innerHTML;
-               document.getElementById("prodName").value = this.cells[1].innerHTML;
-               document.getElementById("prodDesc").value = this.cells[2].innerHTML;
-               document.getElementById("prodPrice").value = this.cells[3].innerHTML;
-               document.getElementById("prodStk").value = this.cells[4].innerHTML;
+               document.getElementById("username").value = this.cells[0].innerHTML;
+               document.getElementById("password").value = this.cells[1].innerHTML;
+               document.getElementById("role").value = this.cells[2].innerHTML;
                
      };
       }
