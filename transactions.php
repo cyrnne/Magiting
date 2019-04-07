@@ -9,31 +9,17 @@ if($_REQUEST['action']=="Add")
 
                   include('includes/indexdb.php');
 
-                  $prodID = rand(1000,10000);
-                  $prodName = $_POST['prodName'];
-                  $prodDesc = $_POST['prodDesc'];
-                  $prodPrice = $_POST['prodPrice'];
-                  $prodStk = $_POST['prodStk'];
+               
+                  $username = $_POST['username'];
+                  $getpass = $_POST['password'];
+                  $password = md5($getpass);
+                  $role = $_POST['role'];
 
-                  $target_dir = "products/";
+             
 
-                  $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-                  $uploadOk = 1;
-                  $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-                  $getImgName = basename($_FILES["fileToUpload"]["name"]);
-                  $nameImg = "products/".$getImgName;
-
-                  if ($uploadOk == 0) {
-                        echo "Sorry, your file was not uploaded.";
-                  // if everything is ok, try to upload file
-                  } else {
-          if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-      
-       // echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-
-
+                 
        
-            $sql = "INSERT INTO tblproducts (prodID, prodName ,prodDesc, prodPrice, prodStk, prodCat, prodImg) VALUES ('$prodID','$prodName','$prodDesc','$prodPrice','$prodStk','Tees','$nameImg')";
+            $sql = "INSERT INTO tbllogin (username, password ,role) VALUES ('$username','$password','$role')";
       
 
           
@@ -42,24 +28,17 @@ if($_REQUEST['action']=="Add")
 
                    // echo "Evaluation Submitted";
                     
-                   echo "<script>alert('Product added')</script>";
+                   echo "<script>alert('Account added')</script>";
                      
                   }
 
                   else{
                        
-                    echo "<script>alert('Product not added')</script>";
+                    echo "<script>alert('Account not added')</script>";
                        
                       }
 
-    } 
-
-    else {
-        echo "Sorry, there was an error uploading your file.";
-    }
-}
-                 
-
+    
 
 
           }//catch exception
@@ -74,37 +53,36 @@ else if ($_REQUEST['action']=="Save"){
 
   include('includes/indexdb.php');
 
-      $prodID = $_POST['prodID'];
-      $prodName = $_POST['prodName'];
-      $prodDesc = $_POST['prodDesc'];
-      $prodPrice = $_POST['prodPrice'];
-      $prodStk = $_POST['prodStk'];
+      $username = $_POST['username'];
+       $getpass = $_POST['password'];
+       $password = md5($getpass);
+                
 
 
                       
- $sql = "UPDATE tblproducts SET prodName='$prodName',prodDesc='$prodDesc',prodPrice='$prodPrice',prodStk='$prodStk' WHERE prodID='$prodID'"; 
+ $sql = "UPDATE tbllogin SET password='$password' WHERE username='$username'"; 
         
   if($conn->query($sql) === TRUE) {
         
-          echo "<script>alert('Item Updated')</script>";
+          echo "<script>alert('Account Updated')</script>";
     }
     else{
-            echo "<script>alert('Item not Updated')</script>";
+            echo "<script>alert('Account not Updated')</script>";
     }
 }
 
 else if ($_REQUEST['action']=="Delete"){
   
-  $prodID = $_POST['prodID'];
+ $username = $_POST['username'];
 
-    $sql = "Delete From tblproducts where prodID ='$prodID'"; 
+    $sql = "Delete From tbllogin where username ='$username'"; 
         
   if($conn->query($sql) === TRUE) {
         
-          echo "<script>alert('Item Deleted')</script>";
+          echo "<script>alert('Account Deleted')</script>";
     }
     else{
-            echo "<script>alert('Item not Deleted')</script>";
+            echo "<script>alert('Account not Deleted')</script>";
     }
 
 }
@@ -145,9 +123,9 @@ else if ($_REQUEST['action']=="Delete"){
         <div class="about-heading-content">
             <div class="row" style="margin-right: 0px;margin-left: 0px;">
                 <div class="col-9 text-center mx-auto" style="background-color: #ffffff;color: rgb(0,0,0);opacity: 1;padding-bottom:20px; margin-top: 50px;margin-bottom: 50px;">
-                    <h1 class="admin-heading" style="margin-top: 25px;margin-bottom: 25px;">MANAGE PRODUCTS</h1>
-                    <div class="dropdown"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" style="margin-right: 0px;">PRODUCTS</button>
-                        <div role="menu" class="dropdown-menu"><a role="presentation" href="ADMIN.php" class="dropdown-item">Tees</a><a role="presentation" href="adminHats.php" class="dropdown-item">Hats</a></div>
+                    <h1 class="admin-heading" style="margin-top: 25px;margin-bottom: 25px;">MANAGE ACCOUNTS</h1>
+                    <div class="dropdown"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" style="margin-right: 0px;">Transactions</button>
+                        <div role="menu" class="dropdown-menu"><a role="presentation" href="accounts.php" class="dropdown-item">Accounts</a><a role="presentation" href="transactions.php" class="dropdown-item">Transactions</a></div>
                     </div>
 
                    <!-- Table Dynamic -->
@@ -155,8 +133,8 @@ else if ($_REQUEST['action']=="Delete"){
             <!-- Website Overview-->
             <div class="panel panel-default">
               <div class="panel-heading main-color-bg">
-                <h3 class="panel-title">T - Shirts</h3>
-                <button class="btn btn-light action-button" id="addBtn" style="color: white; background-color: black; border: none; float: left; margin-bottom: 10px;" data-toggle="modal" data-target="#addUser" onclick="showAddBtn();">Add Item</button>
+                <h3 class="panel-title">Transactions</h3>
+              
               </div>
               <div class="panel-body">
                 
@@ -165,20 +143,19 @@ else if ($_REQUEST['action']=="Delete"){
                 <table class="table table-striped table-hover" id="prodTbl">
                     <thead class="thead-dark" style="color: black; text-align: center;">                            
                        <tr>
-                         <td>Product ID</td>
-                         <td>Name</td>
-                         <td>Description</td>
-                         <td>Price</td>
-                         <td>Stock</td>
-                         <td>Category</td>
-                         <td>Image</td>
+                         <td>Transaction ID</td>
+                         <td>userId</td>
+                         <td>Date</td>
+                         <td>Amount</td>
+                         <td>Customer Name</td>
+                         <td>Customer Address</td>
                        </tr>
                     </thead>                            
                 
                     <?php
                        include("includes/indexdb.php");
                       $conn = new mysqli($servername, $username, $password, $dbname);
-                       $sql = "SELECT * FROM tblproducts where prodCat like 'Tees'";
+                       $sql = "SELECT * FROM tbltransactions";
                        $result = $conn->query($sql);
                         if ($result->num_rows > 0) {
                         // output data of each row
@@ -186,13 +163,12 @@ else if ($_REQUEST['action']=="Delete"){
                     ?>
                     
                      <tr style="text-align: center; color: black;">
-                         <td data-label="ID"><?php echo $row['prodID']?></td>
-                         <td data-label="Name"><?php echo $row['prodName']?></td>
-                         <td data-label="Description"><?php echo $row['prodDesc']?></td>
-                         <td data-label="Price"><?php echo $row['prodPrice']?></td>
-                         <td data-label="Stock"><?php echo $row['prodStk']?></td>
-                         <td data-label="Category"><?php echo $row['prodCat']?></td>
-                         <td data-label="Image"><img src="<?php echo $row['prodImg']?>" style="height: 50px; width: 60px;"></td>
+                         <td data-label="ID"><?php echo $row['transactionId']?></td>
+                         <td data-label="Name"><?php echo $row['userId']?></td>
+                         <td data-label="Description"><?php echo $row['date']?></td>
+                         <td data-label="Description"><?php echo $row['totalAmount']?></td>
+                         <td data-label="Description"><?php echo $row['customerName']?></td>
+                         <td data-label="Description"><?php echo $row['customerAddress']?></td>
                         
                     
                      </tr>
@@ -354,48 +330,28 @@ else if ($_REQUEST['action']=="Delete"){
             <form name="myform" id="myform" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" enctype="multipart/form-data">
 
           <div class="modal-header">
-              <h4 class="modal-title" id="myModalLabel">Add Item</h4>
+              <h4 class="modal-title" id="myModalLabel">Transactions</h4>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="clearText();"><span aria-hidden="true">&times;</span></button>
           
           </div>
           <div class="modal-body">
 
             <div class="form-group">
-                <label>Product ID</label>
-                <input type="text" id="prodID" name="prodID" class="form-control" form="myform" readonly>
+                <label>Username</label>
+                <input type="text" id="username" name="username" class="form-control" form="myform" readonly>
             </div>
 
             <div class="form-group">
-                <label>Product Name</label>
-                <input type="text" id="prodName" name="prodName" class="form-control" form="myform" required>
+                <label>Password</label>
+                <input type="text" id="password" name="password" class="form-control" form="myform" required>
             </div>
-           
-            <div class="form-group">
-                <label>Description</label>
-                <input type="text" id="prodDesc" name="prodDesc" class="form-control" form="myform" required>
-            </div>
-            <div class="form-group">
-                <label>Price</label>
-                <input type="text" id="prodPrice" name="prodPrice" class="form-control" form="myform" required>
-            </div>
-            <div class="form-group">
-                <label>Stock</label>
-                <input type="text" id="prodStk" name="prodStk" class="form-control" form="myform" required>
-                
-            </div>
-
-             <div class="form-group">
-             <label>Select image to upload</label>
-              <input type="file" name="fileToUpload" id="fileToUpload">
-
-             </div>
-            
-                      
+        
+                  
 
             <div class="form-group">
 
-             <label>Category</label>
-                <input type="text" id="prodCat" name="prodCat" class="form-control" form="myform" value="Tees" readonly>
+             <label>Role</label>
+                <input type="text" id="role" name="role" class="form-control" form="myform" value="user" readonly>
              </div>
            
             

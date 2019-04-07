@@ -181,10 +181,10 @@ include('includes/indexdb.php');
                 </div>
                 <form id="payment-form" style="margin-top: -10px;">
                     <div class="form-row">
-                        <div class="col-12"><input type="text" placeholder="Name" class="form-control name-input" style="margin-bottom: 10px;" /></div>
+                        <div class="col-12"><input type="text" id="name" onchange="getName(this.value)" placeholder="Name" class="form-control name-input" style="margin-bottom: 10px;" /></div>
                     </div>
                     <div class="form-row">
-                        <div class="col-12"><input type="text" placeholder="Address" class="form-control address-input" style="margin-bottom: 20px;margin-top: 10px;" /></div>
+                        <div class="col-12"><input type="text" id="address" onchange="getAddress(this.value)" placeholder="Address" class="form-control address-input" style="margin-bottom: 20px;margin-top: 10px;" /></div>
                     </div>
                     <div class="form-row">
                         <div class="col-12"><button class="btn btn-light action-button" type="submit" onclick="confirmOrder();" style="font-size: 14px;padding-left: 2in;padding-right: 2in;">Place Order</button></div>
@@ -526,9 +526,18 @@ include('includes/indexdb.php');
     
     }
 
+    var getname = "";
+    var getaddress = "";
+
+    function getName(str){
+        getname = str;
+    }
+    function getAddress(str){
+        getaddress = str;
+    }
+
      function confirmOrder(){
-    
-   
+
    
      var msg = confirm("Confirm Order?");
     if (msg == true) {
@@ -537,12 +546,12 @@ include('includes/indexdb.php');
             xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 
-                alert("Order Successful");
+                alert(this.responseText);
                 location.reload();
 
            }
           };
-           xmlhttp.open("GET","includes/delCart.php",true);
+           xmlhttp.open("GET","includes/delCart.php?name=" + getname + "&address=" + getaddress,true);
           xmlhttp.send();
     } else {
 
