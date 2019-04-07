@@ -4,10 +4,11 @@ include('includes/indexdb.php');
     
 
     $totalPrice = 0;
+    $totalCount = 0;
 
       $conn = new mysqli($servername, $username, $password, $dbname);
 
-      $sql = "SELECT sum(prodPrice) as total FROM tblcart where userId like '".$_SESSION['login_user']."'";
+      $sql = "SELECT sum(prodPrice) as total, count(prodPrice) as totalCount FROM tblcart where userId like '".$_SESSION['login_user']."'";
       $result = $conn->query($sql);
        
      if ($result->num_rows > 0) {
@@ -17,6 +18,7 @@ include('includes/indexdb.php');
   
         while($row = $result->fetch_assoc()) {
               $totalPrice = $row["total"]; 
+              $totalCount = $row["totalCount"];
         
            
     }  
@@ -167,6 +169,10 @@ include('includes/indexdb.php');
                             <tr>
                                 <td class="text-left subtotal-lbl" style="color: rgb(0,0,0);"><strong>Subtotal (-- Items):</strong><br /></td>
                                 <td class="text-right subtotal" style="color: rgb(0,0,0);">₱ <?php echo $totalPrice; ?></td>
+                            </tr>
+                            <tr>
+                                <td class="text-left ship-lbl" style="color: rgb(0,0,0);"><strong>Number of Items:</strong></td>
+                                <td class="text-right shipfee" style="color: rgb(0,0,0);"><?php echo $totalCount; ?><br /></td>
                             </tr>
                             <tr>
                                 <td class="text-left ship-lbl" style="color: rgb(0,0,0);"><strong>Shipping fee:</strong></td>
