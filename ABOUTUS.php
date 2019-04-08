@@ -23,7 +23,81 @@ include('includes/session.php');
     <div class="container-fluid"><button data-toggle="collapse" data-target="#navcol-1" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navcol-1">
             <ul class="nav navbar-nav mx-auto" style="margin: 0px;padding: 0px;">
-                 <li role="presentation" class="nav-item" style="display: <?php echo $cartView; ?>;"><a href="#" class="nav-link cart" style="width: 35px;height: 35px;margin: 0px;background-image: url('assets/img/cart.png');padding-left: 8px;margin-right: 300px;"></a></li>
+
+                 <li role="presentation" class="nav-item" style="display: <?php echo $cartView; ?>;"><a href="#" class="nav-link cart" style="width: 35px;height: 35px;margin: 0px;background-image: url('assets/img/cart.png');padding-left: 8px;margin-right: 300px;" data-toggle="modal" data-target="#myModal"></a></li>
+
+                 <!--CART MODAL-->
+                <!-- The Modal -->
+                    <div class="modal" id="myModal">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+      
+                <!-- Modal Header -->
+
+                    <div class="modal-header" style="color: black;">
+                        <h4 class="modal-title">Cart</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+        
+                <!-- Modal body -->
+                    <div class="modal-body" style="color: black;">
+                    
+                     <div class="table-responsive"> 
+                <table class="table table-striped table-hover" id="prodTbl">
+                    <thead class="thead-dark" style="color: black; text-align: center;">                            
+                       <tr>
+                         <td>Product ID</td>
+                         <td>Name</td>
+                         <td>Quantity</td>
+                         <td>Size</td>
+                         <td>Color</td>
+                       </tr>
+                    </thead>                            
+                
+                    <?php
+                       include("includes/indexdb.php");
+                       include('includes/session.php');
+                      $conn = new mysqli($servername, $username, $password, $dbname);
+                       $sql = "SELECT * FROM tblcart where userID like '".$_SESSION['login_user']."'";
+                       $result = $conn->query($sql);
+                        if ($result->num_rows > 0) {
+                        // output data of each row
+                       while($row = $result->fetch_assoc()) {
+                    ?>
+                    
+                     <tr style="text-align: center; color: black;">
+                         <td data-label="ID"><?php echo $row['prodID']?></td>
+                         <td data-label="Name"><?php echo $row['prodName']?></td>
+                         <td data-label="Quantity"><?php echo $row['prodQty']?></td>
+                         <td data-label="Stock"><?php echo $row['prodSize']?></td>
+                         <td data-label="Category"><?php echo $row['prodColor']?></td>
+                         <td data-label="Category">
+                            <button type="button" class="btn btn-light action-button" id="<?php echo $row['prodID']?>" onclick="delCartItem(this.id)" style=" float: right;">Delete</button>
+                         </td>
+                         
+                        
+                    
+                     </tr>
+                  <?php
+                        }
+                       }
+                    ?>
+            
+                                                
+                                            
+                </table>
+                </div>
+                    
+                    </div>
+        
+                <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light action-button" onclick="checkoutAction();" data-dismiss="modal">Checkout</button>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+
                 <li class="nav-item" role="presentation"><a class="nav-link" href="index.php">HOME</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" href="ABOUTUS.PHP">ABOUT US</a></li>
                 <li class="dropdown nav-item" style="margin-left: 0px;margin-right: 50px;"><a data-toggle="dropdown" aria-expanded="false" href="#" class="dropdown-toggle nav-link" style="margin-right: 65px;">PRODUCTS</a>
@@ -173,6 +247,47 @@ include('includes/session.php');
 </div>
 
 </section>
+
+<script type="text/javascript">
+   function checkoutAction(){
+
+  var msg = confirm("Proceed to checkout?");
+    if (msg == true) {
+        window.location.href = "CHECKOUT.php";
+    } else {
+    
+    }
+   }
+</script>
+
+<script type="text/javascript">
+  
+
+    function delCartItem(id){
+    
+    
+   
+     var msg = confirm("Are you sure you want to delete this item?");
+    if (msg == true) {
+        var xmlhttp = new XMLHttpRequest();
+
+            xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                
+                alert(this.responseText);
+                location.reload();
+
+           }
+          };
+           xmlhttp.open("GET","ajax/delCartItem.php?q=" + id,true);
+          xmlhttp.send();
+    } else {
+
+    }
+  }
+     
+
+</script>
 </body>
 
 </html>
