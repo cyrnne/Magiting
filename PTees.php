@@ -37,6 +37,9 @@ include('includes/session.php');
                     <div class="modal-header" style="color: black;">
                         <h4 class="modal-title">Cart</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                       
+
                         </div>
         
                 <!-- Modal body -->
@@ -74,6 +77,9 @@ include('includes/session.php');
                          <td data-label="Stock"><?php echo $row['prodSize']?></td>
                          <td data-label="Color"><?php echo $row['prodColor']?></td>
                          <td data-label="Price"><?php echo $row['prodPrice']?></td>
+                          <td data-label="Category">
+                            <button type="button" class="btn btn-light action-button" id="<?php echo $row['prodID']?>" onclick="delCartItem(this.id)" style=" float: right;">Delete</button>
+                         </td>
                          
                         
                     
@@ -94,6 +100,7 @@ include('includes/session.php');
                 <!-- Modal footer -->
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                         <button type="button" class="btn btn-light action-button" onclick="checkoutAction();" data-dismiss="modal">Checkout</button>
                         </div>
                         </div>
                         </div>
@@ -105,6 +112,8 @@ include('includes/session.php');
                     <div role="menu" class="dropdown-menu"><a role="presentation" href="PTEES.php" class="dropdown-item">Tees</a><a role="presentation" href="PHATS.php" class="dropdown-item">Hats</a></div>
                 </li>
             </ul><?php echo $menuBar; ?></div>
+
+             <input type="text" name="loginCheck" id="loginCheck" value="<?php echo $_SESSION['login_user']; ?>" style="display: none;">
     </div>
 </nav>
         
@@ -187,7 +196,7 @@ include('includes/session.php');
 
                 <?php $idofProd = $row['prodID'];?> 
 
-              <?php $prodNameArr[$ctr] = $row['prodName']; ?>
+               <?php $prodNameArr[$ctr] = $row['prodName']; ?>
                <?php $prodPriceArr[$ctr] = $row['prodPrice']; ?>
 
                 <div class="col text-center" style="height: 30px; font-size: 20px; font-family: sans-serif; font-weight: bolder; color: black;"><?php echo $row['prodName']?></div>
@@ -229,7 +238,7 @@ include('includes/session.php');
 
                     <div class="row">
                         <div class="col-6">
-                            <button class="btn btn-light" type="button" onclick="getProdId(this.id,this.name)" id="<?php echo $idofProd; ?>" name="<?php echo $ctr;?>">Buy Now!</button>
+                           <button class='btn btn-light' type='button' onclick='getProdId(this.id,this.name)' id='<?php echo $idofProd; ?>' name='<?php echo $ctr;?>' >Buy Now!</button>
 
                         </div>
 
@@ -431,8 +440,25 @@ $window.trigger('scroll');
 
   }
   function getProdId(id,indexNum){
-    
+
     var prodQty = document.getElementById("qty").value;
+
+    var getuser = document.getElementById("loginCheck").value;
+
+
+    if(getuser == ""){
+         alert("Please Login to buy product");
+    }
+
+    else{
+
+    
+
+    if(qtyValue == "" || sizeValue == "" || colorValue == ""){
+        alert("Please complete the needed details");
+    }
+    else{
+
    
      var msg = confirm("Are you sure you want to add this item to your cart?");
     if (msg == true) {
@@ -451,7 +477,52 @@ $window.trigger('scroll');
     } else {
 
     }
+    }
+    
+    
   }
+
+}
+</script>
+
+<script type="text/javascript">
+   function checkoutAction(){
+
+  var msg = confirm("Proceed to checkout?");
+    if (msg == true) {
+        window.location.href = "CHECKOUT.php";
+    } else {
+    
+    }
+   }
+</script>
+
+<script type="text/javascript">
+  
+
+    function delCartItem(id){
+    
+    
+   
+     var msg = confirm("Are you sure you want to delete this item?");
+    if (msg == true) {
+        var xmlhttp = new XMLHttpRequest();
+
+            xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                
+                alert(this.responseText);
+                location.reload();
+
+           }
+          };
+           xmlhttp.open("GET","ajax/delCartItem.php?q=" + id,true);
+          xmlhttp.send();
+    } else {
+
+    }
+  }
+
 </script>
 
     </body>
