@@ -113,7 +113,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="illustration"><img src="assets/img/login.png" alt="test" style="margin-bottom: 8px;" /></div>
                 <div class="form-group"><input type="text" id="username" name="username" placeholder="Username" class="form-control" required /></div>
                 <div class="form-group"><input type="password" id="pass" name="pass" placeholder="Password" class="form-control" required /></div>
-                <div class="form-group"><button class="btn btn-primary btn-block" type="submit" name="action" id="but" value="Login" style="background-color: #000000;">Log In</button></div><a href="#" class="forgot">Forgot your username or password?</a>
+                <div class="form-group"><button class="btn btn-primary btn-block" type="submit" name="action" id="but" value="Login" style="background-color: #000000;">Log In</button></div>
+                <!-- <a href="#" class="forgot">Forgot your username or password?</a> -->
             </form>
         </div>
 
