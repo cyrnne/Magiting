@@ -242,7 +242,7 @@ include('includes/session.php');
         
                 <!-- Modal footer -->
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-light action-button" onclick="checkoutAction();" data-dismiss="modal">Checkout</button>
+                       
                         </div>
                         </div>
                         </div>
