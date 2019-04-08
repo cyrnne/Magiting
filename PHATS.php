@@ -170,10 +170,34 @@ include('includes/session.php');
               <?php $prodNameArr[$ctr] = $row['prodName']; ?>
                <?php $prodPriceArr[$ctr] = $row['prodPrice']; ?>
 
+               <?php $checkqty = $row['prodStk']; 
+               
+               $disableStat = "false";
+               $displaySet = "block";
+             
+              if($checkqty < 1){
+                $disableStat = "true";
+                $displaySet = "none";
+               }
+               ?>
+
                 <div class="col text-center" style="height: 30px; font-size: 20px; font-family: sans-serif; font-weight: bolder; color: black;"><?php echo $row['prodName']?></div>
                 <div class="col-12">
                     <p class="product-description" style="height: 60px;"><br /><?php echo $row['prodDesc']; $price = $row['prodPrice']; ?><br /><br /></p>
-                    <input type="number" min="1" max="<?php echo $row['prodStk']?>" name="quantity" placeholder="Qty:" id="qty" onchange="getQty(this.value);" class="text-center product-quantity" style="width: 60px;height: 30px;" />
+                   
+                    <?php 
+                    if($disableStat == "false"){
+              ?>
+                    <input type="number" min="1" max="<?php echo $row['prodStk']?>" name="quantity" placeholder="Qty:" id="qty" onchange="getQty(this.value)" class="text-center product-quantity"  style="width: 60px;height: 30px;" />
+              <?php
+                    }else{
+              ?> 
+                    <input type="number" min="1" max="<?php echo $row['prodStk']?>" name="quantity" placeholder="Qty:" id="qty" onchange="getQty(this.value)" class="text-center product-quantity"  style="width: 60px;height: 30px;" 
+                    disabled />
+              <?php      
+                    }
+              ?>
+
                     <p class="text-center product-stocks"style="padding-bottom: 0px;"><br>Only <?php echo $row['prodStk']?> stocks left</p>
 
 
@@ -199,7 +223,18 @@ include('includes/session.php');
                         
                     <div class="row">
                         <div class="col-6">  
-                           <button class='btn btn-light' type='button' onclick='getProdId(this.id,this.name)' id='<?php echo $idofProd; ?>' name='<?php echo $ctr;?>' >Buy Now!</button>
+                           <?php 
+                                if($disableStat == "false"){
+                                 ?>
+                                  <button class='btn btn-light' type='button' onclick='getProdId(this.id,this.name)' id='<?php echo $idofProd; ?>' name='<?php echo $ctr;?>'  >Buy Now!</button>   
+                                <?php 
+                            }
+                                else{
+                                    ?>
+                                     <button class='btn btn-light' type='button' onclick='getProdId(this.id,this.name)' id='<?php echo $idofProd; ?>' name='<?php echo $ctr;?>' disabled  >Buy Now!</button> 
+                                     <?php 
+                                }
+                            ?>
                         </div>
                         <div class="col-6">
                             <p class="product-price">₱ <?php echo $price; ?><br /></p>
