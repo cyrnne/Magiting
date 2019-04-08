@@ -8,7 +8,7 @@ include('includes/indexdb.php');
 
       $conn = new mysqli($servername, $username, $password, $dbname);
 
-      $sql = "SELECT sum(prodPrice) as total, count(prodPrice) as totalCount FROM tblcart where userId like '".$_SESSION['login_user']."'";
+      $sql = "SELECT sum(prodPrice) as total, sum(prodQty) as totalCount FROM tblcart where userId like '".$_SESSION['login_user']."'";
       $result = $conn->query($sql);
        
      if ($result->num_rows > 0) {
