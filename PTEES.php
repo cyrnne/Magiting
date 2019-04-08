@@ -196,7 +196,7 @@ include('includes/session.php');
 
                 <?php $idofProd = $row['prodID'];?> 
 
-              <?php $prodNameArr[$ctr] = $row['prodName']; ?>
+               <?php $prodNameArr[$ctr] = $row['prodName']; ?>
                <?php $prodPriceArr[$ctr] = $row['prodPrice']; ?>
 
                 <div class="col text-center" style="height: 30px; font-size: 20px; font-family: sans-serif; font-weight: bolder; color: black;"><?php echo $row['prodName']?></div>

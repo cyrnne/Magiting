@@ -211,6 +211,7 @@ include('includes/session.php');
     </div>
 
     <?php
+     $ctr = $ctr + 1;
                         }
                        }
                     ?>
@@ -395,10 +396,8 @@ $window.trigger('scroll');
     }
     else{
 
-
-
        if(qtyValue == "" || colorValue == ""){
-        alert("Please complete the needed details");
+        alert("Please complete required details");
     }
     else{
    
