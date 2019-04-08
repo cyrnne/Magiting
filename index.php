@@ -25,8 +25,13 @@ include('includes/session.php');
     <div class="container-fluid"><button data-toggle="collapse" data-target="#navcol-1" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navcol-1">
             <ul class="nav navbar-nav mx-auto" style="margin: 0px;padding: 0px;">
-            
-                <li role="presentation" class="nav-item" style="display: <?php echo $cartView; ?>;"><a href="#" class="nav-link cart" style="width: 35px;height: 35px;margin: 0px;background-image: url('assets/img/cart.png');padding-left: 8px;margin-right: 300px;" data-toggle="modal" data-target="#myModal"></a></li>
+  
+
+                <li role="presentation" class="nav-item" style="display: <?php echo $cartView; ?>;"><a href="#" class="nav-link cart" style="width: 35px;height: 35px;margin: 0px;background-image: url('assets/img/cart.png');" data-toggle="modal" data-target="#myModal"></a></li>
+
+                <button id="recentTrans" name="recentTrans" data-toggle="modal" data-target="#myModalTransItemized" style="display: none;">Click me</button>
+
+                <li role="presentation" class="nav-item" style="display: <?php echo $cartView; ?>;"><a href="#" class="nav-link cart" style="width: 35px;height: 35px;margin: 0px;background-image: url('assets/img/history.png');padding-left: 8px;margin-right: 300px;" data-toggle="modal" data-target="#myModalTrans"></a></li>
                 <!--CART MODAL-->
                 <!-- The Modal -->
                     <div class="modal" id="myModal">
@@ -98,6 +103,152 @@ include('includes/session.php');
                         </div>
                         </div>
                         </div>
+
+                <!-- Transaction History --> 
+                
+                 <!--CART MODAL-->
+                <!-- The Modal -->
+                    <div class="modal" id="myModalTrans">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+      
+                <!-- Modal Header -->
+
+                    <div class="modal-header" style="color: black;">
+                        <h4 class="modal-title">Transaction</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+        
+                <!-- Modal body -->
+                    <div class="modal-body" style="color: black;">
+                    
+                     <div class="table-responsive"> 
+                <table class="table table-striped table-hover" id="transTbl">
+                    <thead class="thead-dark" style="color: black; text-align: center;">                            
+                       <tr>
+                         <td>Transaction ID</td>
+                         <td>Date</td>
+                         <td>Total Amount</td>
+                       </tr>
+                    </thead>                            
+                
+                    <?php
+                       include("includes/indexdb.php");
+                       include('includes/session.php');
+                      $conn = new mysqli($servername, $username, $password, $dbname);
+                       $sql = "SELECT * FROM tbltransactions where userID like '".$_SESSION['login_user']."'";
+                       $result = $conn->query($sql);
+                        if ($result->num_rows > 0) {
+                        // output data of each row
+                       while($row = $result->fetch_assoc()) {
+                    ?>
+                    
+                     <tr style="text-align: center; color: black;">
+                         <td data-label="Trans ID"><?php echo $row['transactionId']?></td>
+                         <td data-label="Date"><?php echo $row['date']?></td>
+                         <td data-label="Amount"><?php echo $row['totalAmount']?></td>
+                        
+                         
+                        
+                    
+                     </tr>
+                  <?php
+                        }
+                       }
+                    ?>
+            
+                                                
+                                            
+                </table>
+                </div>
+                    
+                    </div>
+        
+                <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light action-button" onclick="checkoutAction();" data-dismiss="modal">Checkout</button>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+
+                <!-- End -->    
+
+                <!-- Transaction Itemized --> 
+                
+                 <!--CART MODAL-->
+                <!-- The Modal -->
+                    <div class="modal" id="myModalTransItemized">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+      
+                <!-- Modal Header -->
+
+                    <div class="modal-header" style="color: black;">
+                        <h4 class="modal-title">Transaction History</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+        
+                <!-- Modal body -->
+                    <div class="modal-body" style="color: black;">
+                    
+                     <div class="table-responsive"> 
+                <table class="table table-striped table-hover" id="transTblItemized">
+                    <thead class="thead-dark" style="color: black; text-align: center;">                            
+                       <tr>
+                         <td>Transaction ID</td>
+                         <td>ID</td>
+                         <td>Name</td>
+                         <td>Color</td>
+                         <td>Size</td>
+                         <td>Price</td>
+                       </tr>
+                    </thead>                            
+                
+                    <?php
+                       include("includes/indexdb.php");
+                       include('includes/session.php');
+                      $conn = new mysqli($servername, $username, $password, $dbname);
+                       $sql = "SELECT * FROM tblTransProd where userID like '".$_SESSION['login_user']."'";
+                       $result = $conn->query($sql);
+                        if ($result->num_rows > 0) {
+                        // output data of each row
+                       while($row = $result->fetch_assoc()) {
+                    ?>
+                    
+                     <tr style="text-align: center; color: black;">
+                         <td data-label="Trans ID"><?php echo $row['transactionId']?></td>
+                         <td data-label="Date"><?php echo $row['prodID']?></td>
+                         <td data-label="Amount"><?php echo $row['prodName']?></td>
+                         <td data-label="Amount"><?php echo $row['prodColor']?></td>
+                         <td data-label="Amount"><?php echo $row['prodSize']?></td>
+                         <td data-label="Amount"><?php echo $row['prodPrice']?></td>
+                        
+                         
+                        
+                    
+                     </tr>
+                  <?php
+                        }
+                       }
+                    ?>
+            
+                                                
+                                            
+                </table>
+                </div>
+                    
+                    </div>
+        
+                <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light action-button" onclick="checkoutAction();" data-dismiss="modal">Checkout</button>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+
+                <!-- End -->          
   
                 <li class="nav-item" role="presentation"><a class="nav-link" href="index.php">HOME</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" href="ABOUTUS.php">ABOUT US</a></li>
@@ -302,6 +453,8 @@ include('includes/session.php');
 </div>
 
 
+
+
 <script>
 $(function(){
 var mySwiper = new Swiper ('.swiper-container', {
@@ -354,6 +507,25 @@ var mySwiper = new Swiper ('.swiper-container', {
   }
 
 </script>
+
+<script>
+    
+      var table = document.getElementById('transTbl');
+      
+      for(var i = 1; i < table.rows.length; i++)
+      {
+          table.rows[i].onclick = function()
+          {
+               //rIndex = this.rowIndex;
+              
+                var addBtn = document.getElementById('recentTrans');
+                addBtn.click();
+
+                
+               
+     };
+      }
+    </script>
 
 </body>
 
