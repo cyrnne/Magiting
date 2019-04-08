@@ -77,6 +77,7 @@ else if ($_REQUEST['action']=="Save"){
       $prodName = $_POST['prodName'];
       $prodDesc = $_POST['prodDesc'];
       $prodPrice = $_POST['prodPrice'];
+      $prodStk = $_POST['prodStk'];
 
 
                       
